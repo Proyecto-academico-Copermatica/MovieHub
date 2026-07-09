@@ -443,3 +443,6 @@ Desktop.ini
 
 # .NET local overrides
 appsettings.*.local.json
+
+# Ignorar configuraciones de VS Code en cualquier parte del monorepo
+**/.vscode/
