@@ -1,6 +1,27 @@
 # Flujo de trabajo con Git — MovieHub
 
 Guía para que los 5 integrantes trabajemos sin pisarnos el código. Léela antes de tu primer commit.
+---
+
+## ⏱️ El flujo diario en 3 pasos (TL;DR)
+
+Si tienes prisa, haz esto todos los días:
+
+```text
+📥 1. TRAER CAMBIOS (En main)
+   ├── git checkout main
+   └── git pull origin main
+
+🌿 2. SINCRONIZAR TU RAMA (En tu rama)
+   ├── git checkout feature/tu-rama
+   └── git merge main
+
+🚀 3. TRABAJAR Y SUBIR
+   ├── (Escribes código...)
+   ├── git add .
+   ├── git commit -m "feat: descripción"
+   └── git push origin feature/tu-rama
+```
 
 ## Reglas de oro
 
