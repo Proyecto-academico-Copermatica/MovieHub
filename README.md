@@ -1,6 +1,6 @@
 # MovieHub
 
-Plataforma web para gestionar un catálogo de películas y series: exploración, valoraciones, favoritos, búsquedas y estadísticas.
+Plataforma web para gestionar un catálogo de películas: exploración, valoraciones, favoritos, búsquedas y estadísticas.
 
 ## Estado actual del proyecto
 
@@ -10,11 +10,11 @@ Plataforma web para gestionar un catálogo de películas y series: exploración,
 
 MovieHub permite:
 
-- Explorar un catálogo de películas y series, con ficha individual de cada obra
-- Valorar obras (1-5 estrellas), con cálculo automático de la puntuación media
-- Marcar y eliminar obras de favoritos
-- Buscar por título y filtrar por género o productora
-- Consultar rankings y estadísticas (mejor valoradas, más recientes, ranking de productoras...)
+- Explorar un catálogo de películas, con ficha individual de cada una
+- Valorar películas (1-5 estrellas), con cálculo automático de la puntuación media
+- Marcar y eliminar películas de favoritos
+- Buscar por título y filtrar por género
+- Consultar rankings y estadísticas (mejor valoradas, más recientes...)
 
 ## Tecnologías
 
@@ -46,26 +46,20 @@ MovieHub/
 
 ## Modelo de datos / funcionalidades mínimas
 
-### Obra (película o serie)
+### Película
 
 | Campo | Detalle |
 |---|---|
 | título | — |
 | descripción | — |
-| tipo | película / serie |
 | género(s) | relación N:M con Género |
-| director/creador | — |
-| productora | relación N:1 con Productora |
+| director | — |
 | año de estreno | — |
-| duración | minutos, o nº de temporadas/episodios si es serie |
+| duración | minutos |
 | puntuación media | calculada a partir de las valoraciones |
 | imagen | póster |
 
 CRUD completo: crear, modificar, eliminar, consultar.
-
-### Productoras
-
-nombre, país, año de fundación, descripción. CRUD completo.
 
 ### Géneros
 
@@ -73,33 +67,30 @@ Ejemplos: Acción, Comedia, Drama, Terror, Ciencia ficción, Documental, Animaci
 
 ### Usuarios
 
-Registro, modificación de perfil, marcar obras como favoritas, valorar obras. Valorar y gestionar favoritos requiere usuario autenticado.
+Registro, modificación de perfil, marcar películas como favoritas, valorar películas. Valorar y gestionar favoritos requiere usuario autenticado.
 
 ### Valoraciones
 
-1 a 5 estrellas por usuario y obra. La puntuación media se recalcula automáticamente.
+1 a 5 estrellas por usuario y película. La puntuación media se recalcula automáticamente.
 
 ### Favoritos
 
-Añadir o eliminar obras de la lista de favoritos del usuario.
+Añadir o eliminar películas de la lista de favoritos del usuario.
 
 ### Consultas mínimas
 
 - mejor valoradas
 - más recientes (por año de estreno)
 - por género
-- por productora
 - búsqueda por título
-- ranking de productoras con mejor valoración
-- estadísticas generales (total de obras, media global, distribución por tipo)
+- estadísticas generales (total de películas, media global)
 
 ## Frontend Angular
 
 - Página principal
 - Menú de navegación
-- Listado de obras (películas/series)
+- Listado de películas
 - Ficha individual
-- Listado de productoras
 - Listado de géneros
 - Formulario de alta y edición
 - Buscador y filtros
@@ -110,8 +101,7 @@ Se valorará el uso de Angular Material.
 
 ## Base de datos
 
-- Obra – Productora: N:1
-- Obra – Género: N:M
+- Película – Género: N:M
 - Usuario – Valoración: 1:N
 - Usuario – Favoritos: N:M
 - Claves foráneas correctas, migraciones y datos iniciales (seed)
@@ -138,15 +128,7 @@ cd MovieHub
 cd MovieHubAPI
 ```
 
-Configurar la cadena de conexión en `appsettings.json`:
-
-```json
-"ConnectionStrings": {
-  "DefaultConnection": "Server=localhost;Database=MovieHubDB;Trusted_Connection=True;TrustServerCertificate=True"
-}
-```
-
-Aplicar las migraciones (crea la base de datos y los datos iniciales):
+Asegúrate de tener SQL Server disponible y aplica las migraciones:
 
 ```bash
 dotnet ef database update
@@ -179,7 +161,7 @@ cd MovieHubAPI
 dotnet test
 ```
 
-Cubrirán: CRUD de obras, validaciones, consultas, favoritos y valoraciones. *(Pendiente de implementación — ver "Estado actual".)*
+Cubrirán: CRUD de películas, validaciones, consultas, favoritos y valoraciones. *(Pendiente de implementación — ver "Estado actual".)*
 
 ## Flujo de trabajo con Git
 
@@ -193,3 +175,15 @@ Resumen rápido:
 6. Merge en `main` y eliminación de la rama.
 
 Para las normas detalladas y cómo evitar conflictos, ver [`CONTRIBUTING.md`](./CONTRIBUTING.md).
+
+---
+
+📖 **Guías por rol** → [`docs/`](./docs/)
+
+| Guía | Para | Contenido |
+|---|---|---|
+| [`guia-bd.md`](./docs/guia-bd.md) | Base de datos | Migraciones EF Core, relaciones, seed, errores típicos |
+| [`guia-backend.md`](./docs/guia-backend.md) | Backend | Pipeline modelo→DTO→servicio→controlador, validación |
+| [`guia-frontend.md`](./docs/guia-frontend.md) | Frontend | Estructura Angular, componentes, servicios, rutas |
+| [`guia-funcionalidades.md`](./docs/guia-funcionalidades.md) | Funcionalidades | Features que tocan ambas capas (valoraciones, favoritos...) |
+| [`guia-calidad.md`](./docs/guia-calidad.md) | Calidad | Tests, CI/CD, revisión de PRs |
