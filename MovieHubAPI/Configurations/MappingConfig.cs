@@ -1,5 +1,5 @@
 ﻿using Mapster;
-using MovieHubAPI.DTOs;
+using MovieHubAPI.DTOs.Pelicula;
 
 namespace MovieHubAPI.Configurations
 {
