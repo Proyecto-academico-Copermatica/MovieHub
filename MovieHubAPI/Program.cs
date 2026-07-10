@@ -1,6 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using MovieHubAPI.Interfaces;
 using MovieHubAPI.Services;
+using MovieHubAPI.Configurations;
 // using Microsoft.AspNetCore.Authentication.JwtBearer;
 // using Microsoft.IdentityModel.Tokens;
 // using System.Text;
@@ -69,6 +70,7 @@ builder.Services.AddDbContext<DbContext>(
 
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
+MappingConfig.Configure();
 
 var app = builder.Build();
 app.UseCors("AllowAngularApp");
