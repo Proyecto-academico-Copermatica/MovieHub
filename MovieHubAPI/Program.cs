@@ -1,5 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 
+
+
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddCors(options =>
@@ -21,14 +23,14 @@ builder.Services.AddSwaggerGen();
 
 //Inyectar el contexto de la base de datos
 
-/*
-builder.Services.AddDbContext<MovieHubContext>(
+
+builder.Services.AddDbContext<DbContext>(
     Options =>
         Options.UseSqlServer(
             builder.Configuration
                 .GetConnectionString(
                     "MovieHubConnection")));
-*/
+
 
 //Inyectar los servicios de la capa de negocio
 
