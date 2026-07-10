@@ -13,6 +13,7 @@ Rol asignado: **[@P4bM4rx](https://github.com/P4bM4rx)** — rama `feature/datab
 ## Tecnologías
 
 - .NET 10 + EF Core 10 + SQL Server
+- Identity (`IdentityUser<long>`, `IdentityRole<long>`, `IdentityDbContext`)
 - Migraciones desde la **Package Manager Console** de Visual Studio
 - Connection string: `MovieHubConnection` en `appsettings.json`
 
@@ -86,15 +87,26 @@ git push origin feature/database
 
 ---
 
-## Cómo configurar las relaciones del modelo actual
+## Relaciones del modelo actual
 
-Según el README actualizado:
+El DbContext (`DbContext.cs`) configura las relaciones explícitamente en `OnModelCreating`:
 
-| Relación | Tipo | Cómo se hace en EF Core |
+| Relación | Tipo | Implementación real |
 |---|---|---|
-| Película – Género | N:M | `modelBuilder.Entity<Pelicula>().HasMany(...).WithMany(...)` |
-| Usuario – Valoración | 1:N | FK `UsuarioId` en `Valoracion` |
-| Usuario – Favoritos | N:M | Tabla intermedia `Favoritos` con `UserId` + `PeliculaId` |
+| Película – Género | N:M | Tabla intermedia `PeliculaGeneroModel` con clave compuesta `(PeliculaId, GeneroId)` |
+| Usuario – Valoración | 1:N | FK `UsuarioId` en `ValoracionModel`, índice único `(UsuarioId, PeliculaId)` para evitar duplicados |
+| Usuario – Favoritos | N:M | Tabla intermedia `FavoritoModel` con clave compuesta `(UsuarioId, PeliculaId)` |
+
+### Modelos actuales
+
+```csharp
+// PeliculaModel  →  PeliculaGeneroModel  ←  GeneroModel
+// UsuarioModel (IdentityUser<long>)  →  ValoracionModel  ←  PeliculaModel
+// UsuarioModel (IdentityUser<long>)  →  FavoritoModel  ←  PeliculaModel
+```
+
+> La herencia de `IdentityUser<long>` hace que `UsuarioModel` tenga el Id como `long`.
+> El DbContext hereda de `IdentityDbContext<UsuarioModel, IdentityRole<long>, long>`.
 
 ---
 
@@ -102,11 +114,11 @@ Según el README actualizado:
 
 ### Error: conflicto en el snapshot al hacer `git merge main`
 
-**Por qué pasa:** Otro compañero tocó una entidad y su rama se fusionó en `main`. El archivo `MyContextModelSnapshot.cs` entra en conflicto.
+**Por qué pasa:** Otro compañero tocó una entidad y su rama se fusionó en `main`. El archivo `DbContextModelSnapshot.cs` entra en conflicto.
 
 **Solución:**
 
-1. Resuelve el conflicto en `MyContextModelSnapshot.cs` manualmente (elige los cambios de ambas partes si son compatibles)
+1. Resuelve el conflicto en `DbContextModelSnapshot.cs` manualmente (elige los cambios de ambas partes si son compatibles)
 2. Una vez resuelto y commiteado el merge, verifica que el snapshot refleja el estado real del modelo *(Package Manager Console)*:
 
    ```
@@ -151,13 +163,15 @@ dotnet tool install --global dotnet-ef
 
 ## Seed data
 
-Cuando añadas datos iniciales, usa `HasData()` dentro de `OnModelCreating` en el `MovieHubContext`:
+*(Pendiente de implementar)*
+
+Cuando añadas datos iniciales, usa `HasData()` dentro de `OnModelCreating` en `DbContext`:
 
 ```csharp
-modelBuilder.Entity<Genero>().HasData(
-    new Genero { Id = 1, Nombre = "Acción" },
-    new Genero { Id = 2, Nombre = "Comedia" },
-    new Genero { Id = 3, Nombre = "Drama" }
+modelBuilder.Entity<GeneroModel>().HasData(
+    new GeneroModel { Id = 1, Nombre = "Acción" },
+    new GeneroModel { Id = 2, Nombre = "Comedia" },
+    new GeneroModel { Id = 3, Nombre = "Drama" }
 );
 ```
 
