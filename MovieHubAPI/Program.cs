@@ -1,4 +1,6 @@
 using Microsoft.EntityFrameworkCore;
+using MovieHubAPI.Interfaces;
+using MovieHubAPI.Services;
 // using Microsoft.AspNetCore.Authentication.JwtBearer;
 // using Microsoft.IdentityModel.Tokens;
 // using System.Text;
@@ -21,6 +23,11 @@ builder.Services.AddCors(options =>
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+//Negocio
+
+builder.Services.AddScoped<IPeliculaService, PeliculaService>();
+builder.Services.AddScoped<IGeneroService, GeneroService>();
 
 //Inyectar el contexto de la base de datos
 
