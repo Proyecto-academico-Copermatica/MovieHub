@@ -9,22 +9,23 @@ Rol asignado: **[@claauudiiaacr](https://github.com/claauudiiaacr)** — rama `f
 ## Tecnologías
 
 - Angular 22 (standalone components, sin NgModules)
-- Angular Material (instalar: `ng add @angular/material`)
+- Build system: `@angular/build` (Vite/esbuild)
+- Angular Material (pendiente de instalar: `ng add @angular/material`)
 - SCSS para estilos
 - Señales (Signals) para estado reactivo
+- Tests: Vitest (integrados por defecto en Angular CLI 22)
 
 ---
 
-## Estructura de carpetas
+## Estructura de carpetas (propuesta)
+
+Actualmente el proyecto solo tiene el scaffold inicial (`app/` con componente raíz). La estructura recomendada es:
 
 ```
 src/app/
 ├── core/                      # Singleton services, interceptors, guards
-│   ├── services/
-│   │   └── api.service.ts     # HttpClient base
-│   └── core.providers.ts
-│
-├── shared/                    # Componentes reutilizables (sin lógica de negocio)
+│   └── services/
+├── shared/                    # Componentes reutilizables
 │   ├── components/
 │   │   ├── estrella-valoracion/
 │   │   └── buscador/
@@ -191,7 +192,7 @@ export const PELICULAS_ROUTES: Routes = [
 ];
 ```
 
-Y se registran en `app.routes.ts` con lazy loading:
+Y se registran en `app.routes.ts` con lazy loading (actualmente el array de rutas está vacío):
 
 ```typescript
 // app.routes.ts
@@ -214,7 +215,7 @@ export const routes: Routes = [
 
 ## Configurar HttpClient (NO lo olvides)
 
-En `app.config.ts`:
+> ⚠️ **Pendiente:** Actualmente `HttpClient` no está configurado. Añádelo en `app.config.ts`:
 
 ```typescript
 import { provideHttpClient, withFetch } from '@angular/common/http';
@@ -223,16 +224,20 @@ export const appConfig: ApplicationConfig = {
   providers: [
     provideHttpClient(withFetch()),
     provideRouter(routes),
-    // ...
+    provideBrowserGlobalErrorListeners(),
   ],
 };
 ```
+
+No olvides instalar `@angular/common/http` si no está (debería venir incluido en `@angular/common`).
 
 ---
 
 ## Angular Material
 
-Instálalo si no lo está:
+> ⚠️ **Pendiente de instalar.** Actualmente el proyecto no incluye Angular Material.
+
+Instálalo:
 
 ```bash
 ng add @angular/material   # (Terminal normal)
@@ -257,11 +262,12 @@ Componentes que seguramente uses:
 ## Errores frecuentes
 
 | Error | Causa | Solución |
-|---|---|---|
+|---|---|---|---|
 | `NullInjectorError: No provider for HttpClient` | No llamaste a `provideHttpClient()` en `app.config.ts` | Añadirlo |
 | `Cannot find a differ supporting object '...'` | Usaste `*ngFor` con un signal en lugar de llamarlo como función | Usar `@for` de Angular 17+ o `peliculas()` |
-| 404 al llamar a la API | La URL del backend es incorrecta o CORS no permite el origen | Verificar puerto en `launchSettings.json` y policy CORS en `Program.cs` |
+| 404 al llamar a la API | La URL del backend es incorrecta o CORS no permite el origen | Verificar puerto (`7154`) y policy CORS en `Program.cs` |
 | El componente no aparece | No está importado en el template o la ruta no está registrada | Comprobar `imports` del componente y `app.routes.ts` |
+| `ng test` falla | Angular 22 usa Vitest por defecto | Asegúrate de tener `@angular/build` actualizado; el comando es `ng test` sin flags |
 
 ---
 
@@ -270,7 +276,7 @@ Componentes que seguramente uses:
 | Comando | Qué hace |
 |---|---|
 | `ng serve` | Arrancar servidor de desarrollo (`http://localhost:4200`) |
-| `ng g c features/peliculas/pages/listado-peliculas --standalone` | Generar componente |
+| `ng g c features/peliculas/pages/listado-peliculas` | Generar componente (standalone por defecto) |
 | `ng g s features/peliculas/services/pelicula` | Generar servicio |
 | `ng add @angular/material` | Añadir Angular Material |
 
