@@ -269,6 +269,41 @@ No hace falta registrarlo manualmente — `AddValidatorsFromAssemblyContaining<P
 
 ---
 
+## ExceptionHandlingMiddleware
+
+Middleware global que captura cualquier excepción no controlada en el pipeline y devuelve una respuesta JSON con formato ProblemDetails.
+
+### Formato de respuesta
+
+```json
+{
+  "status": 500,
+  "title": "Error interno del servidor",
+  "detail": "Ha ocurrido un error inesperado. Inténtalo de nuevo más tarde.",
+  "traceId": "00-abc123..."
+}
+```
+
+### Mapeo de excepciones
+
+| Excepción | Status HTTP |
+|-----------|-------------|
+| `ArgumentException` | 400 |
+| `KeyNotFoundException` | 404 |
+| Cualquier otra | 500 |
+
+### Comportamiento por entorno
+
+- **Development:** el campo `detail` incluye el mensaje de la excepción y el stack trace completo.
+- **Producción:** solo mensaje genérico, sin filtrar información interna.
+
+### Ubicación
+
+- `Middleware/ExceptionHandlingMiddleware.cs` — implementación.
+- `Program.cs` — registrado al inicio del pipeline con `app.UseMiddleware<ExceptionHandlingMiddleware>()`.
+
+---
+
 ## Errores frecuentes
 
 | Error | Causa | Solución |
@@ -280,6 +315,7 @@ No hace falta registrarlo manualmente — `AddValidatorsFromAssemblyContaining<P
 | 405 Method Not Allowed | Usaste `[HttpPost]` pero envías GET | Revisar el verbo HTTP en el endpoint |
 | MappingConfig deja de tener efecto | Alguien borró la línea en `Program.cs` | Asegurar que `MappingConfig.Configure()` está antes de `var app = builder.Build();` |
 | Error de compilación con `DbContext` | Conflicto con `System.Data.Common.DbContext` | Usar el namespace global o alias; nuestro `DbContext` no tiene namespace |
+| El endpoint lanza excepción pero devuelve 500 genérico | El middleware captura errores no controlados | Revisar el log del backend para ver el detalle real |
 
 ---
 
