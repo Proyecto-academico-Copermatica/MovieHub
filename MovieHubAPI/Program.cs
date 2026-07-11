@@ -4,6 +4,7 @@ using MovieHubAPI.Configurations;
 using MovieHubAPI.Filters;
 using MovieHubAPI.Interfaces;
 using MovieHubAPI.Services;
+using MovieHubAPI.Middleware;
 // using Microsoft.AspNetCore.Authentication.JwtBearer;
 // using Microsoft.IdentityModel.Tokens;
 // using System.Text;
