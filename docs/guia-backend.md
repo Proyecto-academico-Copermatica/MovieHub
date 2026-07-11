@@ -88,8 +88,7 @@ TypeAdapterConfig<PeliculaModel, PeliculaDto>.NewConfig()
     .Map(dest => dest.Generos, src => src.PeliculaGeneros.Select(pg => pg.Genero.Nombre).ToList());
 ```
 
-> ⚠️ **Importante:** Actualmente `MappingConfig.Configure()` **no se llama** en `Program.cs`.
-> Si añades un nuevo mapeo personalizado, asegúrate de invocarlo al arrancar la app.
+> ✅ `MappingConfig.Configure()` ya está activo en `Program.cs`. Si añades un nuevo mapeo personalizado, añádelo en `MappingConfig.cs`.
 
 ---
 
