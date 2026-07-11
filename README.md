@@ -6,7 +6,7 @@ Plataforma web para gestionar un catálogo de películas: exploración, valoraci
 
 ### Implementado
 - **Backend:** CRUD completo de Películas y Géneros (modelos, DTOs, servicios, controladores)
-- **Base de datos:** Migración inicial con Identity (`UsuarioModel` hereda de `IdentityUser<long>`), tablas `AspNet*`, relaciones N:M con claves compuestas
+- **Base de datos:** Migración inicial con Identity (`UsuarioModel` hereda de `IdentityUser<long>`), tablas `AspNet*`, relaciones N:M con claves compuestas, seed data de 245 películas y 30 géneros
 - **Mapping:** Configuración de Mapster para DTOs de Películas (`MappingConfig.cs`)
 - **Swagger:** Documentación interactiva disponible en `/swagger`
 - **CORS:** Permitido para `http://localhost:4200`
@@ -128,7 +128,7 @@ Se valorará el uso de Angular Material.
 
 ## Requisitos previos
 
-- .NET SDK 8.0 o superior
+- .NET SDK 10.0 o superior
 - Node.js 18+ y npm
 - Angular CLI (`npm install -g @angular/cli`)
 - SQL Server (local o en contenedor Docker)

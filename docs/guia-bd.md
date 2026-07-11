@@ -163,16 +163,36 @@ dotnet tool install --global dotnet-ef
 
 ## Seed data
 
-*(Pendiente de implementar)*
+Implementado mediante `HasData()` en archivos de configuración separados dentro de `Data/Configurations/`:
 
-Cuando añadas datos iniciales, usa `HasData()` dentro de `OnModelCreating` en `DbContext`:
+- `GeneroConfig.cs` — 30 géneros (IDs 1–30)
+- `PeliculaConfig.cs` — 245 películas con título, descripción, director, año, duración, póster y puntuación (2.5–5.0)
+- `PeliculaGeneroConfig.cs` — ~830 relaciones película-género
+
+Las configuraciones se registran automáticamente vía `ApplyConfigurationsFromAssembly` en el DbContext:
 
 ```csharp
-modelBuilder.Entity<GeneroModel>().HasData(
-    new GeneroModel { Id = 1, Nombre = "Acción" },
-    new GeneroModel { Id = 2, Nombre = "Comedia" },
-    new GeneroModel { Id = 3, Nombre = "Drama" }
-);
+// MovieHubDbContext.cs
+protected override void OnModelCreating(ModelBuilder modelBuilder)
+{
+    modelBuilder.ApplyConfigurationsFromAssembly(typeof(MovieHubDbContext).Assembly);
+}
+```
+
+Cada archivo de configuración implementa `IEntityTypeConfiguration<T>` y usa `HasData()`:
+
+```csharp
+// Ejemplo: PeliculaConfig.cs
+public class PeliculaConfig : IEntityTypeConfiguration<PeliculaModel>
+{
+    public void Configure(EntityTypeBuilder<PeliculaModel> builder)
+    {
+        builder.HasData(
+            new PeliculaModel { Id = 1, Titulo = "Inception", ... },
+            new PeliculaModel { Id = 2, Titulo = "The Matrix", ... }
+        );
+    }
+}
 ```
 
 > `HasData()` requiere que especifiques la clave primaria explícitamente.
