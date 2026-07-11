@@ -7,7 +7,7 @@ namespace MovieHubAPI.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
-    [EndpointGroupName("Géneros")]
+    [Tags("Géneros")]
     public class GenerosController : ControllerBase, IGeneroApi
     {
         private readonly IGeneroService _generoService;
