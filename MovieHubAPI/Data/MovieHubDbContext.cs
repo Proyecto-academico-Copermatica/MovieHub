@@ -65,5 +65,6 @@ public class MovieHubDbContext : IdentityDbContext<UsuarioModel, IdentityRole<lo
         builder.Entity<UsuarioModel>()
             .Property(u => u.Id)
             .ValueGeneratedOnAdd();
+        builder.ApplyConfigurationsFromAssembly(typeof(MovieHubDbContext).Assembly);
     }
 }
