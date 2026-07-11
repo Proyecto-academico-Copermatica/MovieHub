@@ -100,7 +100,7 @@ Define el contrato del servicio. Todas las interfaces están bajo el namespace `
 // IPeliculaService.cs
 public interface IPeliculaService
 {
-    Task<List<PeliculaDto>> GetAllAsync();
+    Task<PaginadosDto<PeliculaDto>> GetAllPaginadoAsync(int page, int pageSize);
     Task<PeliculaDto?> GetByIdAsync(int id);
     Task<PeliculaDto> CreateAsync(CreatePeliculaDto dto);
     Task<PeliculaDto?> UpdateAsync(int id, UpdatePeliculaDto dto);
@@ -119,18 +119,31 @@ Toda la lógica de negocio va aquí. Los controladores **no** tienen lógica. Lo
 ```csharp
 public class PeliculaService : IPeliculaService
 {
-    private readonly DbContext _context;
+    private readonly MovieHubDbContext _context;
 
-    public PeliculaService(DbContext context) => _context = context;
+    public PeliculaService(MovieHubDbContext context) => _context = context;
 
-    public async Task<List<PeliculaDto>> GetAllAsync()
+    public async Task<PaginadosDto<PeliculaDto>> GetAllPaginadoAsync(int page, int pageSize)
     {
-        var peliculas = await _context.Peliculas
+        var query = _context.Peliculas
             .Include(p => p.PeliculaGeneros)
             .ThenInclude(pg => pg.Genero)
+            .AsQueryable();
+
+        var totalCount = await query.CountAsync();
+
+        var peliculas = await query
+            .Skip((page - 1) * pageSize)
+            .Take(pageSize)
             .ToListAsync();
 
-        return peliculas.Adapt<List<PeliculaDto>>();
+        return new PaginadosDto<PeliculaDto>(
+            peliculas.Adapt<List<PeliculaDto>>(),
+            page,
+            pageSize,
+            totalCount,
+            (int)Math.Ceiling(totalCount / (double)pageSize)
+        );
     }
 
     // ... resto de métodos
@@ -158,10 +171,14 @@ public class PeliculasController : ControllerBase
     }
 
     [HttpGet]
-    public async Task<ActionResult<List<PeliculaDto>>> GetAll()
+    public async Task<ActionResult<PaginadosDto<PeliculaDto>>> GetAll(
+        [FromQuery] int page = 1,
+        [FromQuery] int pageSize = 10)
     {
-        var peliculas = await _peliculaService.GetAllAsync();
-        return Ok(peliculas);
+        if (pageSize > 50) pageSize = 50;
+        if (page < 1) page = 1;
+        var resultado = await _peliculaService.GetAllPaginadoAsync(page, pageSize);
+        return Ok(resultado);
     }
 
     [HttpGet("{id}")]
