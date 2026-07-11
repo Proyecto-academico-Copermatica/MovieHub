@@ -18,6 +18,7 @@ namespace MovieHubAPI.Controllers
             _peliculaService = peliculaService;
         }
 
+        [HttpGet]
         public async Task<ActionResult<PaginadosDto<PeliculaDto>>> GetAll(
             [FromQuery] int page = 1,
             [FromQuery] int pageSize = 10)
@@ -28,6 +29,7 @@ namespace MovieHubAPI.Controllers
             return Ok(resultado);
         }
 
+        [HttpGet("{id}")]
         public async Task<ActionResult<PeliculaDto>> GetById(int id)
         {
             var pelicula = await _peliculaService.GetByIdAsync(id);
@@ -35,12 +37,14 @@ namespace MovieHubAPI.Controllers
             return Ok(pelicula);
         }
 
+        [HttpPost]
         public async Task<ActionResult<PeliculaDto>> Create(CreatePeliculaDto dto)
         {
             var pelicula = await _peliculaService.CreateAsync(dto);
             return CreatedAtAction(nameof(GetById), new { id = pelicula.Id }, pelicula);
         }
 
+        [HttpPut("{id}")]
         public async Task<ActionResult<PeliculaDto>> Update(int id, UpdatePeliculaDto dto)
         {
             var pelicula = await _peliculaService.UpdateAsync(id, dto);
@@ -48,6 +52,7 @@ namespace MovieHubAPI.Controllers
             return Ok(pelicula);
         }
 
+        [HttpDelete("{id}")]
         public async Task<IActionResult> Delete(int id)
         {
             var deleted = await _peliculaService.DeleteAsync(id);
