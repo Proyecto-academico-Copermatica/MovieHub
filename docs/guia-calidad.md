@@ -53,7 +53,7 @@ MovieHubAPI.Tests/
 public class PeliculaServiceTests
 {
     [Fact]
-    public async Task GetAllAsync_CuandoExistenPeliculas_RetornaLista()
+    public async Task GetAllPaginadoAsync_CuandoExistenPeliculas_RetornaPagina()
     {
         // Arrange
         var options = new DbContextOptionsBuilder<MovieHubContext>()
@@ -67,10 +67,11 @@ public class PeliculaServiceTests
         var service = new PeliculaService(context);
 
         // Act
-        var result = await service.GetAllAsync();
+        var result = await service.GetAllPaginadoAsync(1, 10);
 
         // Assert
-        Assert.Single(result);
+        Assert.Single(result.Items);
+        Assert.Equal(1, result.TotalCount);
     }
 }
 ```
