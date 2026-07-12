@@ -267,6 +267,8 @@ Los validadores se registran automáticamente via `AddValidatorsFromAssemblyCont
 | `Validators/Pelicula/UpdatePeliculaValidator.cs` | `UpdatePeliculaDto` | Mismas reglas que Create |
 | `Validators/Genero/CreateGeneroValidator.cs` | `CreateGeneroDto` | Nombre (NotEmpty, max 50) |
 | `Validators/Genero/UpdateGeneroValidator.cs` | `UpdateGeneroDto` | Mismas reglas que Create |
+| `Validators/Usuario/RegisterValidator.cs` | `RegisterDto` | UserName (NotEmpty, max 50), Email (NotEmpty, EmailAddress, max 100), Password (NotEmpty, min 6, al menos una mayúscula, minúscula y dígito) |
+| `Validators/Usuario/LoginValidator.cs` | `LoginDto` | Email (NotEmpty, EmailAddress), Password (NotEmpty) |
 
 ### Cómo añadir un validador nuevo
 
