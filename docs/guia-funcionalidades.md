@@ -10,6 +10,8 @@ Rol asignado: **[@Anua472](https://github.com/Anua472)** — rama `feature/featu
 
 Tus features tocan **Angular y ASP.NET a la vez**: valoraciones, favoritos, filtros, búsquedas, rankings y estadísticas. Eres el puente entre backend y frontend.
 
+> 🔐 **Autenticación disponible** — El backend ya expone endpoints de auth (`POST /api/Usuarios/register`, `POST /api/Usuarios/login`, `GET /api/Usuarios/me`). El `userId` necesario para favoritos y valoraciones se obtiene del response del login (`AuthResponseDto.UserId`). Consulta a @dawcarlosp para más detalles.
+
 ---
 
 ## Regla de oro para no romper nada
