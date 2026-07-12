@@ -4840,10 +4840,10 @@ namespace MovieHubAPI.Migrations
                         new
                         {
                             Id = 54,
-                            Anio = 0,
+                            Anio = 2014,
                             Descripcion = "Guardianes de la Galaxia es una traducción al castellano de diversos productos de entretenimiento, un equipo de superhéroes ficticios que aparece en cómics estadounidenses publicados por Marvel Comics. Específicamente, puede referirse a:",
                             Director = "James Gunn",
-                            Duracion = 0,
+                            Duracion = 121,
                             PosterUrl = "https://upload.wikimedia.org/wikipedia/en/3/33/Guardians_of_the_Galaxy_%28film%29_poster.jpg",
                             PuntuacionMedia = 4.8m,
                             Titulo = "Guardianes de la Galaxia"
@@ -4862,10 +4862,10 @@ namespace MovieHubAPI.Migrations
                         new
                         {
                             Id = 56,
-                            Anio = 0,
+                            Anio = 2015,
                             Descripcion = "Ant-Man is a 2015 American superhero film based on the Marvel Comics Ant-Man characters Scott Lang and Hank Pym. Produced by Marvel Studios and distributed by Walt Disney Studios Motion Pictures, it is the 12th film in the Marvel Cinematic Universe (MCU). The film was directed by Peyton Reed from a screenplay by the writing teams of Edgar Wright & Joe Cornish and Adam McKay & Paul Rudd. It stars Rudd as Scott Lang / Ant-Man alongside Evangeline Lilly, Corey Stoll, Bobby Cannavale, Michael Peña, Tip \"T.I.\" Harris, Anthony Mackie, Wood Harris, Judy Greer, Abby Ryder Fortson, David Dastmalchian, and Michael Douglas as Hank Pym. In the film, Lang must help defend Pym's Ant-Man shrinking technology and plot a heist with worldwide ramifications. Development of Ant-Man began in April 2006 with the hiring of Wright to direct and co-write with Cornish. By April 2011, Wright and Cornish had completed three drafts of the script and Wright shot test footage for the film in July 2012. Pre-production began in October 2013 after being put on hold so that Wright could complete The World's End. Casting began in December 2013, with the hiring of Rudd to play Lang. In May 2014, Wright left the project citing creative differences, though he still received screenplay and story credits with Cornish. The following month, Reed was brought in to replace Wright, while McKay was hired to contribute to the script with Rudd. Filming took place between August and December 2014 in San Francisco and Metro Atlanta. Ant-Man held its world premiere at the Dolby Theatre in Hollywood, Los Angeles, on June 29, 2015, and was released in the United States on July 17, as the final film in Phase Two of the MCU. It grossed more than $519 million worldwide and received positive reviews from critics, who generally welcomed the film's smaller stakes than other MCU films, as well as its cast (particularly Rudd, Peña, Lilly, and Douglas), humor, and visual effects. Two sequels have been released: Ant-Man and the Wasp (2018) and Ant-Man and the Wasp: Quantumania (2023).",
                             Director = "Peyton Reed",
-                            Duracion = 0,
+                            Duracion = 117,
                             PosterUrl = "https://upload.wikimedia.org/wikipedia/en/1/12/Ant-Man_%28film%29_poster.jpg",
                             PuntuacionMedia = 4m,
                             Titulo = "Ant-Man"
@@ -4895,10 +4895,10 @@ namespace MovieHubAPI.Migrations
                         new
                         {
                             Id = 59,
-                            Anio = 0,
+                            Anio = 2017,
                             Descripcion = "Guardians of the Galaxy Vol. 2 is a 2017 American superhero film based on the Marvel Comics superhero team Guardians of the Galaxy, produced by Marvel Studios and distributed by Walt Disney Studios Motion Pictures. It is the sequel to Guardians of the Galaxy (2014) and the 15th film in the Marvel Cinematic Universe (MCU). Written and directed by James Gunn, the film stars an ensemble cast featuring Chris Pratt, Zoe Saldaña, Dave Bautista, Vin Diesel, Bradley Cooper, Michael Rooker, Karen Gillan, Pom Klementieff, Sylvester Stallone, and Kurt Russell. In the film, the Guardians travel throughout the cosmos as they help Peter Quill (Pratt) learn more about his mysterious parentage. The film was officially announced at the 2014 San Diego Comic-Con before the theatrical release of the first film, along with Gunn's return as writer and director from the first film, with the title of the sequel revealed a year later in June 2015. Principal photography began in February 2016 at Pinewood Atlanta Studios in Fayette County, Georgia, with many crew changes from the first film due to other commitments. Filming concluded in June 2016. Gunn chose to set the sequel shortly after the first film to explore the characters' new roles as the Guardians, and to follow the storyline of Quill's father established throughout that previous film. Russell was confirmed as Quill's father in July 2016, portraying Ego, a departure from Quill's comic father. Guardians of the Galaxy Vol. 2 premiered in Tokyo on April 10, 2017, and was released in the United States on May 5, 2017, as part of Phase Three of the MCU. It grossed more than $869 million worldwide, making it the eighth-highest-grossing film of 2017, while also outgrossing its predecessor. The film received praise for its visuals, direction, soundtrack, action sequences, humor, and performances, though some critics deemed it inferior to the original. It received a nomination for Best Visual Effects at the 90th Academy Awards. A sequel, Guardians of the Galaxy Vol. 3, was released on May 5, 2023, preceded by the Disney+ special The Guardians of the Galaxy Holiday Special in November 2022.",
                             Director = "James Gunn",
-                            Duracion = 0,
+                            Duracion = 136,
                             PosterUrl = "https://upload.wikimedia.org/wikipedia/en/3/32/Guardians_of_the_Galaxy_Vol._2_poster.jpg",
                             PuntuacionMedia = 2.9m,
                             Titulo = "Guardianes de la Galaxia Vol. 2"
@@ -4939,10 +4939,10 @@ namespace MovieHubAPI.Migrations
                         new
                         {
                             Id = 63,
-                            Anio = 0,
+                            Anio = 2018,
                             Descripcion = "Avengers: Infinity War is a 2018 American superhero film based on the Marvel Comics superhero team the Avengers. Produced by Marvel Studios and distributed by Walt Disney Studios Motion Pictures, it is the sequel to The Avengers (2012) and Avengers: Age of Ultron (2015), and the 19th film in the Marvel Cinematic Universe (MCU). Directed by Anthony and Joe Russo and written by Christopher Markus and Stephen McFeely, the film features an ensemble cast including Robert Downey Jr., Chris Hemsworth, Mark Ruffalo, Chris Evans, Scarlett Johansson, Benedict Cumberbatch, Don Cheadle, Tom Holland, Chadwick Boseman, Paul Bettany, Elizabeth Olsen, Anthony Mackie, Sebastian Stan, Danai Gurira, Letitia Wright, Dave Bautista, Zoe Saldaña, Josh Brolin, and Chris Pratt. In the film, the Avengers and the Guardians of the Galaxy attempt to stop Thanos from collecting the six powerful Infinity Stones as part of his quest to kill half of all life in the universe. The film was announced in October 2014 as Avengers: Infinity War – Part 1. The Russo brothers came on board to direct in April 2015, and a month later, Markus and McFeely signed on to write the script for the film, which draws inspiration from Jim Starlin's 1991 comic book The Infinity Gauntlet and Jonathan Hickman's 2013 comic book Infinity. In 2016, Marvel shortened the title to Avengers: Infinity War. Filming began in January 2017 at Pinewood Atlanta Studios in Fayette County, Georgia, with a large cast consisting mostly of actors reprising their roles from previous MCU films, including Brolin as Thanos. The production lasted until July 2017, shooting back-to-back with a direct sequel, Avengers: Endgame (2019). Additional filming took place in Scotland, the Downtown Atlanta area, and New York City. With an estimated budget of $325–400 million, the film is one of the most expensive films ever made. Avengers: Infinity War premiered at the Dolby Theatre in Hollywood, Los Angeles, on April 23, 2018, and was released in the United States on April 27 as part of Phase Three of the MCU. The film received positive reviews from critics, with praise for Brolin's performance and the Russo brothers' direction, as well as the visual effects, action sequences, dark tone, and musical score. It was a major box-office success, becoming the fourth film and the first superhero film to gross over $2 billion worldwide, breaking numerous box office records, and becoming the highest-grossing film of 2018 and the fourth-highest-grossing film at the time of its release both worldwide and in the United States and Canada. It received a nomination for Best Visual Effects at the 91st Academy Awards, among numerous other accolades. The sequel, Avengers: Endgame, was released in April 2019.",
                             Director = "Anthony Russo, Joe Russo",
-                            Duracion = 0,
+                            Duracion = 149,
                             PosterUrl = "https://upload.wikimedia.org/wikipedia/en/4/4d/Avengers_Infinity_War_poster.jpg",
                             PuntuacionMedia = 3.9m,
                             Titulo = "Vengadores: Infinity War"
@@ -4950,10 +4950,10 @@ namespace MovieHubAPI.Migrations
                         new
                         {
                             Id = 64,
-                            Anio = 0,
+                            Anio = 2018,
                             Descripcion = "Ant-Man and the Wasp is a 2018 American superhero film based on Marvel Comics featuring the characters Scott Lang / Ant-Man and Hope Pym / Wasp. Produced by Marvel Studios and distributed by Walt Disney Studios Motion Pictures, it is the sequel to Ant-Man (2015) and the 20th film in the Marvel Cinematic Universe (MCU). The film was directed by Peyton Reed and written by the writing teams of Chris McKenna and Erik Sommers, and Paul Rudd, Andrew Barrer and Gabriel Ferrari. It stars Rudd as Lang and Evangeline Lilly as Hope van Dyne, alongside Michael Peña, Walton Goggins, Hannah John-Kamen, David Dastmalchian, Tip \"T.I.\" Harris, Judy Greer, Bobby Cannavale, Randall Park, Abby Ryder Fortson, Michelle Pfeiffer, Laurence Fishburne, and Michael Douglas. In the film, the titular pair work with Hank Pym (Douglas) to retrieve Janet van Dyne (Pfeiffer) from the Quantum Realm. Talks for a sequel to Ant-Man began shortly after that film was released. Ant-Man and the Wasp was officially announced in October 2015, with Rudd and Lilly returning to reprise their roles. A month later, Ant-Man director Reed was officially set to return. He had joined the first film later in its production and was excited to develop this one from the beginning. He also looked forward to introducing Hope van Dyne as the Wasp in this film, and insisted on treating Lang and her as equals. Filming took place from August to November 2017, at Pinewood Atlanta Studios in Fayette County, Georgia, as well as Metro Atlanta; San Francisco; Savannah, Georgia; and Hawaii. Ant-Man and the Wasp had its world premiere in Hollywood, Los Angeles, on June 25, 2018, and was released in the United States on July 6, 2018, as part of Phase Three of the MCU. The film was a critical and commercial success, receiving praise for its performances (particularly those of Rudd and Lilly), humor, and levity, and grossing over $622 million worldwide. A sequel, Ant-Man and the Wasp: Quantumania, was released in February 2023.",
                             Director = "Peyton Reed",
-                            Duracion = 0,
+                            Duracion = 118,
                             PosterUrl = "https://upload.wikimedia.org/wikipedia/en/2/2c/Ant-Man_and_the_Wasp_poster.jpg",
                             PuntuacionMedia = 4.2m,
                             Titulo = "Ant-Man y la Avispa"
@@ -4961,10 +4961,10 @@ namespace MovieHubAPI.Migrations
                         new
                         {
                             Id = 65,
-                            Anio = 0,
+                            Anio = 2019,
                             Descripcion = "Captain Marvel is a 2019 American superhero film based on Marvel Comics featuring the character Carol Danvers / Captain Marvel. Produced by Marvel Studios and distributed by Walt Disney Studios Motion Pictures, it is the 21st film in the Marvel Cinematic Universe (MCU). The film was directed by Anna Boden and Ryan Fleck from a screenplay they co-wrote with Geneva Robertson-Dworet. It stars Brie Larson as Carol Danvers, alongside Samuel L. Jackson, Ben Mendelsohn, Djimon Hounsou, Lee Pace, Lashana Lynch, Gemma Chan, Annette Bening, Clark Gregg, and Jude Law. Set in 1995, the story follows Danvers as she becomes Captain Marvel after Earth is caught in a galactic conflict. Development began by May 2013. The film was officially announced in October 2014 as Marvel Studios' first female-led project. Nicole Perlman and Meg LeFauve were hired to write it the following April after submitting separate takes on the character, and borrowed elements from Roy Thomas's 1971 \"Kree–Skrull War\" comic book storyline. Larson was announced as Danvers at the 2016 San Diego Comic-Con, with Boden and Fleck hired to direct in April 2017. Robertson-Dworet was soon hired to re-write the script, and the rest of the cast were added by the start of filming. Location shooting began in January 2018, with principal photography starting that March in California and concluding in Louisiana in July 2018. Several actors reprise their roles from previous MCU films, including Jackson and Gregg. They were both digitally de-aged in post-production to reflect the film's 1990s setting. Captain Marvel premiered in London on February 27, 2019, and was theatrically released in the United States on March 8 as part of Phase Three of the MCU. The film grossed over $1.1 billion worldwide, making it the first female-led superhero film to pass the billion-dollar mark. It became the fifth-highest-grossing film of 2019 and was the 23rd-highest-grossing film of all time during its theatrical run. The film received generally positive reviews from critics, with praise for the performances—particularly Larson's. Audience responses were also positive, although the audience reception section on Rotten Tomatoes was subject to review bombing. A sequel, The Marvels, was released on November 10, 2023.",
                             Director = "Anna Boden, Ryan Fleck",
-                            Duracion = 0,
+                            Duracion = 123,
                             PosterUrl = "https://upload.wikimedia.org/wikipedia/en/4/4e/Captain_Marvel_%28film%29_poster.jpg",
                             PuntuacionMedia = 4.6m,
                             Titulo = "Capitana Marvel"
@@ -4972,10 +4972,10 @@ namespace MovieHubAPI.Migrations
                         new
                         {
                             Id = 66,
-                            Anio = 0,
+                            Anio = 2019,
                             Descripcion = "Avengers: Endgame is a 2019 American superhero film based on the Marvel Comics superhero team the Avengers. Produced by Marvel Studios and distributed by Walt Disney Studios Motion Pictures, it is the direct sequel to Avengers: Infinity War (2018) and the 22nd film in the Marvel Cinematic Universe (MCU). Directed by Anthony and Joe Russo and written by Christopher Markus and Stephen McFeely, the film features an ensemble cast that includes Robert Downey Jr., Chris Evans, Mark Ruffalo, Chris Hemsworth, Scarlett Johansson, Jeremy Renner, Don Cheadle, Paul Rudd, Brie Larson, Karen Gillan, Danai Gurira, Benedict Wong, Jon Favreau, Bradley Cooper, Gwyneth Paltrow, and Josh Brolin. In the film, the surviving members of the Avengers and their allies attempt to reverse Thanos's actions in Infinity War, which erased half of all life in the universe. The film was announced in October 2014 as Avengers: Infinity War – Part 2, but Marvel Studios later removed this title. The Russo brothers joined as directors in April 2015, with Markus and McFeely signing on to write the script a month later. It is a conclusion to the story of the MCU up to that point, ending several main characters' story arcs. The plot revisits moments from earlier films, bringing back actors and settings from throughout the franchise. Filming began in August 2017 at Pinewood Atlanta Studios in Fayette County, Georgia, shooting back-to-back with Infinity War, and ended in January 2018. Additional filming took place in the Metro and downtown Atlanta areas, New York state, Scotland, and England. The official title was announced in December 2018. With an estimated budget range of $356–400 million, Endgame is one of the most expensive films ever produced. Avengers: Endgame premiered at the Los Angeles Convention Center on April 22, 2019, and was released in the United States on April 26 as part of Phase Three of the MCU. The film received positive reviews from critics, with praise for its direction, acting, musical score, action scenes, visual effects, and emotional weight, with critics lauding its culmination of the 22-film story. It grossed nearly $2.8 billion worldwide, surpassing Infinity War's entire theatrical run in eleven days and setting several box-office records. It was the highest-grossing film of all time from July 2019 to March 2021, when it was surpassed by the previous record-holder, Avatar (2009). Endgame was nominated for Best Visual Effects at the 92nd Academy Awards, among numerous other accolades. An extended version, titled Avengers: Endgame Encore, will be released in theaters in September 2026 in anticipation of the film's two sequels, Avengers: Doomsday and Avengers: Secret Wars, which are respectively scheduled for release in December 2026 and 2027.",
                             Director = "Anthony Russo, Joe Russo",
-                            Duracion = 0,
+                            Duracion = 181,
                             PosterUrl = "https://upload.wikimedia.org/wikipedia/en/0/0d/Avengers_Endgame_poster.jpg",
                             PuntuacionMedia = 4.4m,
                             Titulo = "Vengadores: Endgame"
@@ -4994,10 +4994,10 @@ namespace MovieHubAPI.Migrations
                         new
                         {
                             Id = 68,
-                            Anio = 0,
+                            Anio = 2021,
                             Descripcion = "Black Widow is a 2021 American superhero film based on Marvel Comics featuring the character of the same name. Produced by Marvel Studios and distributed by Walt Disney Studios Motion Pictures, it is the 24th film in the Marvel Cinematic Universe (MCU). The film was directed by Cate Shortland from a screenplay by Eric Pearson and stars Scarlett Johansson as Natasha Romanoff / Black Widow alongside Florence Pugh, David Harbour, O-T Fagbenle, Olga Kurylenko, William Hurt, Ray Winstone, and Rachel Weisz. Mostly set during the events of Captain America: Civil War (2016), the film sees Romanoff on the run and forced to confront her past as a Russian spy before she became an Avenger. Lionsgate Films began developing a Black Widow film in April 2004, with David Hayter attached to write and direct. The project did not move forward and the character's film rights had reverted to Marvel Studios by June 2006. Johansson was cast in the role for several MCU films beginning with Iron Man 2 (2010), and began discussing a solo film with Marvel. Work began in late 2017 and Shortland was hired in July 2018. Jac Schaeffer and Ned Benson contributed to the script before Pearson joined. The film was written to be a prequel that expands on Romanoff's history and helps end her MCU story following the character's death in Avengers: Endgame (2019). Shortland put an emphasis on the fight sequences and said this was the most violent MCU film so far. Filming took place from May to October 2019 in Norway, England, Budapest, Morocco, and Macon, Georgia. Black Widow premiered at events around the world on June 29, 2021, and was released in the United States on July 9, simultaneously in theaters and through Disney+ with Premier Access. It is the first film in Phase Four of the MCU, and was delayed three times from an original May 2020 release date due to the COVID-19 pandemic. Black Widow broke several pandemic box office records and grossed over $379 million worldwide. The film received positive reviews from critics, with particular praise for the action sequences and for the performances of Johansson and Pugh. In July 2021, Johansson filed a lawsuit against Disney over the simultaneous release, which was settled two months later.",
                             Director = "Cate Shortland",
-                            Duracion = 0,
+                            Duracion = 134,
                             PosterUrl = "https://upload.wikimedia.org/wikipedia/en/e/e9/Black_Widow_%282021_film%29_poster.jpg",
                             PuntuacionMedia = 2.6m,
                             Titulo = "Viuda Negra (película)"
@@ -5038,10 +5038,10 @@ namespace MovieHubAPI.Migrations
                         new
                         {
                             Id = 72,
-                            Anio = 0,
+                            Anio = 2022,
                             Descripcion = "Doctor Strange in the Multiverse of Madness is a 2022 American superhero film based on Marvel Comics featuring the character Doctor Strange. Produced by Marvel Studios and distributed by Walt Disney Studios Motion Pictures, it is the sequel to Doctor Strange (2016) and the 28th film in the Marvel Cinematic Universe (MCU). The film was directed by Sam Raimi, written by Michael Waldron, and stars Benedict Cumberbatch as Stephen Strange, alongside Elizabeth Olsen, Chiwetel Ejiofor, Benedict Wong, Xochitl Gomez, Michael Stuhlbarg, and Rachel McAdams. In the film, Strange must protect America Chavez (Gomez), a teenager capable of traveling the multiverse, from the Scarlet Witch (Olsen). Doctor Strange director and co-writer Scott Derrickson had plans for a sequel by October 2016. He signed to return as director in December 2018, when Cumberbatch was confirmed to return. The film's title was announced in July 2019 along with Olsen's involvement, while Jade Halley Bartlett was hired to write the film that October. Derrickson stepped down as director in January 2020, citing creative differences. Waldron and Raimi joined the following month and started over, adding elements of the horror genre that Raimi had worked with previously and making Wanda the villain of the film, continuing her story from the Disney+ miniseries WandaVision (2021). Filming began in November 2020 in London but was put on hold in January 2021 due to the COVID-19 pandemic. Production resumed by March 2021 and concluded in mid-April in Somerset. Shooting also occurred in Surrey and Los Angeles. With a production budget of $350.6 million, Doctor Strange in the Multiverse of Madness is one of the most expensive films ever made. Doctor Strange in the Multiverse of Madness premiered at the Dolby Theatre in Hollywood, Los Angeles, on May 2, 2022, and was released in the United States on May 6, as part of Phase Four of the MCU. The film received generally positive reviews from critics and grossed $955.8 million worldwide, making it the fourth-highest-grossing film of 2022.",
                             Director = "Sam Raimi",
-                            Duracion = 0,
+                            Duracion = 126,
                             PosterUrl = "https://upload.wikimedia.org/wikipedia/en/1/17/Doctor_Strange_in_the_Multiverse_of_Madness_poster.jpg",
                             PuntuacionMedia = 4.9m,
                             Titulo = "Doctor Strange en el Multiverso de la Locura"
@@ -5071,10 +5071,10 @@ namespace MovieHubAPI.Migrations
                         new
                         {
                             Id = 75,
-                            Anio = 0,
+                            Anio = 2023,
                             Descripcion = "Ant-Man and the Wasp: Quantumania is a 2023 American superhero film based on Marvel Comics featuring the characters Scott Lang / Ant-Man and Hope Pym / Wasp. Produced by Marvel Studios and distributed by Walt Disney Studios Motion Pictures, it is the sequel to Ant-Man (2015) and Ant-Man and the Wasp (2018), and the 31st film in the Marvel Cinematic Universe (MCU). It was directed by Peyton Reed, written by Jeff Loveness, and stars Paul Rudd as Scott Lang and Evangeline Lilly as Hope van Dyne, alongside Jonathan Majors, Kathryn Newton, David Dastmalchian, Katy O'Brian, William Jackson Harper, Bill Murray, Michelle Pfeiffer, Corey Stoll, and Michael Douglas. In the film, Scott, Hope, and their family are accidentally transported to the Quantum Realm and face off against Kang the Conqueror (Majors). Plans for a third Ant-Man film were confirmed in November 2019, with Reed and Rudd returning. Loveness was hired by April 2020, with development beginning during the COVID-19 pandemic. The title and new cast members, including the additions of Majors and Newton, were announced in December 2020. Filming in Turkey began in early February 2021, and additional filming occurred in San Francisco in mid-June. Principal photography began at the end of July at Pinewood Studios in Buckinghamshire and ended in November. With a net production budget of $330.1 million, it is one of the most expensive films ever made. Ant-Man and the Wasp: Quantumania premiered in Westwood, Los Angeles, on February 6, 2023, and was released in the United States on February 17. It is the first film, and beginning, of Phase Five of the MCU. The film received mixed reviews from critics and was a box-office disappointment, grossing $476.1 million worldwide and becoming one of the few MCU films to not break-even in its theatrical run.",
                             Director = "Peyton Reed",
-                            Duracion = 0,
+                            Duracion = 124,
                             PosterUrl = "https://upload.wikimedia.org/wikipedia/en/3/30/Ant-Man_and_the_Wasp_Quantumania_poster.jpg",
                             PuntuacionMedia = 4.1m,
                             Titulo = "Ant-Man y la Avispa: Quantumanía"
@@ -5082,10 +5082,10 @@ namespace MovieHubAPI.Migrations
                         new
                         {
                             Id = 76,
-                            Anio = 0,
+                            Anio = 2023,
                             Descripcion = "Guardians of the Galaxy Vol. 3 (marketed as Guardians of the Galaxy Volume 3) is a 2023 American superhero film based on Marvel Comics featuring the superhero team Guardians of the Galaxy. Produced by Marvel Studios and distributed by Walt Disney Studios Motion Pictures, it is the sequel to Guardians of the Galaxy (2014) and Guardians of the Galaxy Vol. 2 (2017), and the 32nd film in the Marvel Cinematic Universe (MCU). Written and directed by James Gunn, it features an ensemble cast including Chris Pratt, Zoe Saldaña, Dave Bautista, Karen Gillan, Pom Klementieff, Vin Diesel, Bradley Cooper, Will Poulter, Sean Gunn, Chukwudi Iwuji, Linda Cardellini, Nathan Fillion, and Sylvester Stallone. In the film, the other Guardians race to save the life of Rocket (Cooper) from his creator, the High Evolutionary (Iwuji), who is an alien scientist trying to perfect the universe. James Gunn had initial ideas for a third and final Guardians of the Galaxy film by November 2014, and announced his return to write and direct in April 2017 ahead of Vol. 2's release. Vol. 3 explores the origin story of Rocket, with whom Gunn personally identifies. Disney fired Gunn from Vol. 3 in July 2018 after controversial jokes he made on Twitter resurfaced. Gunn received support from several cast members, and the studio reversed course by that October. His return was publicly revealed in March 2019, and he restarted work on the film after completing his film The Suicide Squad (2021) and the first season of its spin-off series Peacemaker (2022) for DC Films. New cast members, including Iwuji and Poulter, joined by the start of filming, which took place at Trilith Studios in Atlanta, Georgia, from November 2021 to May 2022. Guardians of the Galaxy Vol. 3 premiered at Disneyland Paris on April 22, 2023, and was released in the United States on May 5, as part of Phase Five of the MCU. Like its predecessors, it was a critical and commercial success, with many critics deeming it to be a satisfactory conclusion to the trilogy. It grossed over $845.6 million worldwide, becoming the fourth-highest-grossing film of 2023. At the 96th Academy Awards, the film was nominated for Best Visual Effects.",
                             Director = "James Gunn",
-                            Duracion = 0,
+                            Duracion = 150,
                             PosterUrl = "https://upload.wikimedia.org/wikipedia/en/7/74/Guardians_of_the_Galaxy_Vol._3_poster.jpg",
                             PuntuacionMedia = 3.5m,
                             Titulo = "Guardianes de la Galaxia Vol. 3"
@@ -5115,10 +5115,10 @@ namespace MovieHubAPI.Migrations
                         new
                         {
                             Id = 79,
-                            Anio = 0,
+                            Anio = 2025,
                             Descripcion = "Captain America: Brave New World is a 2025 American superhero film based on Marvel Comics featuring the character Sam Wilson / Captain America. Produced by Marvel Studios and distributed by Walt Disney Studios Motion Pictures, it is the fourth installment in the Captain America film series, a continuation of the television miniseries The Falcon and the Winter Soldier (2021), and the 35th film in the Marvel Cinematic Universe (MCU). The film was directed by Julius Onah from a screenplay by Rob Edwards and the writing teams of Malcolm Spellman & Dalan Musson and Onah & Peter Glanz. It stars Anthony Mackie as Sam Wilson / Captain America alongside Danny Ramirez, Shira Haas, Carl Lumbly, Xosha Roquemore, Giancarlo Esposito, Liv Tyler, Tim Blake Nelson, and Harrison Ford. In the film, Wilson investigates a conspiracy involving U.S. president Thaddeus Ross (Ford). Captain America: Civil War (2016) ended the Captain America trilogy starring Chris Evans as Steve Rogers, and Wilson becomes the new Captain America in The Falcon and the Winter Soldier. Series writers Spellman and Musson were writing a new Captain America film by April 2021, and Mackie signed on that August. Onah joined in July 2022, when the title Captain America: New World Order was announced. Additional cast members joined later that year. Nelson and Tyler returned from the second MCU film, The Incredible Hulk (2008), while Ford replaced William Hurt as Ross following Hurt's death in March 2022; Ross becomes the superpowered Red Hulk in the film. Filming took place from March to June 2023 at Trilith Studios in Atlanta, Georgia, with additional filming in Washington, D.C. The subtitle was changed to Brave New World during filming. Matthew Orton joined in December 2023 to write for reshoots, which took place between May and November 2024, and added Esposito to the film. The involvement of Edwards and Glanz was revealed that December. Captain America: Brave New World premiered on February 11, 2025, at the TCL Chinese Theatre in Hollywood, Los Angeles, and was released in the United States on February 14 as part of Phase Five of the MCU. It grossed $415 million worldwide. The film received mixed reviews from critics for its story, connections to other MCU projects, and visual effects. The performances, particularly those of Mackie and Ford, received praise.",
                             Director = "Julius Onah",
-                            Duracion = 0,
+                            Duracion = 118,
                             PosterUrl = "https://upload.wikimedia.org/wikipedia/en/a/a4/Captain_America_Brave_New_World_poster.jpg",
                             PuntuacionMedia = 3.2m,
                             Titulo = "Capitán América: Brave New World"
@@ -5137,10 +5137,10 @@ namespace MovieHubAPI.Migrations
                         new
                         {
                             Id = 81,
-                            Anio = 0,
+                            Anio = 2026,
                             Descripcion = "The Fantastic Four: First Steps is a 2025 American superhero film based on the Marvel Comics superhero team the Fantastic Four. Produced by Marvel Studios and distributed by Walt Disney Studios Motion Pictures, it is the 37th film in the Marvel Cinematic Universe (MCU) and the second reboot of the Fantastic Four film series. The film was directed by Matt Shakman from a screenplay by Josh Friedman, Eric Pearson, and the team of Jeff Kaplan and Ian Springer. It features an ensemble cast including Pedro Pascal, Vanessa Kirby, Ebon Moss-Bachrach, and Joseph Quinn as the titular team, alongside Julia Garner, Sarah Niles, Mark Gatiss, Natasha Lyonne, Paul Walter Hauser, and Ralph Ineson. The film is set in the 1960s of a retro-futuristic world which the Fantastic Four must protect from the planet-devouring cosmic being Galactus (Ineson). 20th Century Fox began work on a new Fantastic Four film following the failure of Fantastic Four (2015). After the studio was acquired by Disney in March 2019, control of the franchise was transferred to Marvel Studios, and a new film was announced that July. Jon Watts was set to direct in December 2020, but stepped down in April 2022. Shakman replaced him that September when Kaplan and Springer were working on the script. Casting began by early 2023, and Friedman joined in March to rewrite the script. The film is differentiated from previous Fantastic Four films by avoiding the team's origin story. Pearson joined to polish the script by mid-February 2024, when the main cast and the title The Fantastic Four were announced. The subtitle was added in July, when filming began. It took place until November 2024 at Pinewood Studios in England, and on location in England and Spain. The Fantastic Four: First Steps premiered at the Dorothy Chandler Pavilion in Los Angeles on July 21, 2025, and was released in the United States on July 25, as the first film in Phase Six of the MCU. It received generally positive reviews from critics and grossed $521.9 million worldwide, making it the highest-grossing Fantastic Four film. A sequel is in development.",
                             Director = "Matt Shakman",
-                            Duracion = 0,
+                            Duracion = 145,
                             PosterUrl = "https://upload.wikimedia.org/wikipedia/en/1/13/The_Fantastic_Four_First_Steps_poster.jpg",
                             PuntuacionMedia = 3.9m,
                             Titulo = "Los Cuatro Fantásticos: Primeros Pasos"
@@ -5151,7 +5151,7 @@ namespace MovieHubAPI.Migrations
                             Anio = 2026,
                             Descripcion = "Spider-Man: Brand New Day (Spider-Man: un nuevo día en Hispanoamérica) es una próxima película de superhéroes estadounidense basada en el personaje de Marvel Comics Spider-Man, coproducida por Columbia Pictures y Marvel Studios, y distribuida por Sony Pictures Releasing. Está destinada a ser parte del Universo cinematográfico de Marvel (UCM) y la cuarta película de las películas de Spider-Man en el UCM. La película será dirigida por Destin Daniel Cretton de un guion de Chris McKenna y Erik Sommers, y se espera que esté protagonizada por Tom Holland como Peter Parker / Spider-Man, junto a Zendaya, Sadie Sink, Jacob Batalon, Jon Bernthal, Tramell Tillman, Michael Mando y Mark Ruffalo.",
                             Director = "Destin Daniel Cretton",
-                            Duracion = 0,
+                            Duracion = 135,
                             PosterUrl = "https://upload.wikimedia.org/wikipedia/en/9/9a/Spider-Man_Brand_New_Day_poster.jpg",
                             PuntuacionMedia = 3.2m,
                             Titulo = "Spider-Man: Brand New Day"
@@ -5162,7 +5162,7 @@ namespace MovieHubAPI.Migrations
                             Anio = 2026,
                             Descripcion = "Avengers: Doomsday (Vengadores: Doomsday en España) es una próxima película de superhéroes estadounidense de 2026 basada en el equipo de superhéroes de Marvel Comics, los Vengadores. Producida por Marvel Studios y AGBO, y distribuida por Walt Disney Studios Motion Pictures, está destinada a ser la quinta película de la Hexalogía de Avengers, después de Avengers: Endgame (2019), y la película número 39 del Universo cinematográfico de Marvel (UCM). Dirigida por Anthony y Joe Russo y escrita por Michael Waldron y Stephen McFeely, la película cuenta con un reparto coral liderado por Robert Downey Jr.",
                             Director = "Hermanos Russo",
-                            Duracion = 0,
+                            Duracion = 142,
                             PosterUrl = "https://upload.wikimedia.org/wikipedia/en/e/ee/Avengers_Doomsday_poster.jpg",
                             PuntuacionMedia = 4m,
                             Titulo = "Avengers: Doomsday"
@@ -5225,10 +5225,10 @@ namespace MovieHubAPI.Migrations
                         new
                         {
                             Id = 89,
-                            Anio = 0,
+                            Anio = 2005,
                             Descripcion = "V for Vendetta is a 2005 dystopian thriller film directed by James McTeigue from a screenplay by the Wachowskis. It was McTeigue's directorial debut. It is based on the 1988–89 DC Vertigo Comics limited series graphic novel V for Vendetta by Alan Moore, David Lloyd, and Tony Weare. The cast includes Natalie Portman, Hugo Weaving, Stephen Rea and John Hurt. The film, which is set in a future where a fascist totalitarian regime has subjugated the United Kingdom, centres on V (Weaving), a masked vigilante who attempts to ignite a revolution, and Evey Hammond (Portman), a young woman caught up in V's plot. Produced by Silver Pictures, Virtual Studios and Anarchos Productions, Inc., V for Vendetta was originally scheduled for release by Warner Bros. Pictures on 4 November 2005—a day before the 400th Guy Fawkes Night—but was delayed; it instead opened in the United States on 17 March 2006. The film received mostly positive reviews from critics and was a box office success, grossing $134.7 million against a budget of $50–54 million. Alan Moore, who was dissatisfied with the film adaptations of his other works From Hell (2001) and The League of Extraordinary Gentlemen (2003), declined to watch the film and asked not to be credited or paid royalties. Some political groups have seen V for Vendetta as an allegory of oppression by government; anarchists have used it to promote their beliefs. The film is credited for popularizing the use of the Guy Fawkes mask by anti-establishment political groups and activists.",
                             Director = "James McTeigue",
-                            Duracion = 0,
+                            Duracion = 132,
                             PosterUrl = "https://upload.wikimedia.org/wikipedia/en/9/9f/Vforvendettamov.jpg",
                             PuntuacionMedia = 2.7m,
                             Titulo = "V de Venganza"
@@ -5258,10 +5258,10 @@ namespace MovieHubAPI.Migrations
                         new
                         {
                             Id = 92,
-                            Anio = 0,
+                            Anio = 2016,
                             Descripcion = "Batman v Superman: Dawn of Justice is a 2016 American superhero film based on the DC Comics characters Batman and Superman. Directed by Zack Snyder and written by Chris Terrio and David S. Goyer, it is a follow-up to Man of Steel (2013) and the second film in the DC Extended Universe (DCEU). The film stars Ben Affleck as Batman and Henry Cavill as Superman, alongside an ensemble cast including Amy Adams, Jesse Eisenberg, Diane Lane, Laurence Fishburne, Jeremy Irons, Holly Hunter, and Gal Gadot. Batman v Superman: Dawn of Justice is the first live-action film to feature Batman and Superman together, as well as the first live-action cinematic portrayal of Wonder Woman. In the film, criminal mastermind Lex Luthor manipulates Batman into a preemptive battle with Superman, whom Luthor is obsessed with destroying. The film was announced at the 2013 San Diego Comic-Con after the release of Man of Steel. Snyder stated that the film would take inspiration from the Batman comic book series The Dark Knight Returns by Frank Miller, but clarified that it would follow an original premise. The incarnation of Batman in the film is different from the character's previous portrayal by Christian Bale in The Dark Knight trilogy, serving as a cinematic reboot of the character. The film is also inspired by narrative elements from the Superman comic book series The Death of Superman. Pre-production began at East Los Angeles College in October 2013, and principal photography started in May 2014 in Detroit. Additional filming also took place in Illinois and New Mexico, concluding in December. Batman v Superman: Dawn of Justice premiered at the Auditorio Nacional in Mexico City on March 19, 2016, and was released in the United States on March 25, by Warner Bros. Pictures. It grossed $874 million worldwide against a budget of $250–325 million, becoming the seventh-highest-grossing film of 2016, while also having the biggest opening weekend for a superhero film at the time of its release. It received mixed reviews from critics. A director's cut, dubbed the \"Ultimate Edition\", features 31 minutes of additional footage and was released to home media formats later in 2016. A follow-up, titled Justice League, was released on November 17, 2017.",
                             Director = "Zack Snyder",
-                            Duracion = 0,
+                            Duracion = 151,
                             PosterUrl = "https://upload.wikimedia.org/wikipedia/en/3/31/Batman_v_Superman_Dawn_of_Justice_poster.jpg",
                             PuntuacionMedia = 4.1m,
                             Titulo = "Batman v Superman: El Origen de la Justicia"
@@ -5269,10 +5269,10 @@ namespace MovieHubAPI.Migrations
                         new
                         {
                             Id = 93,
-                            Anio = 0,
+                            Anio = 2016,
                             Descripcion = "El Escuadrón Suicida (en inglés Suicide Squad) es el nombre de un equipo ficticio de supervillanos que aparece en los cómics estadounidenses publicados por DC Comics. La primera versión de Escuadrón Suicida debutó en The Brave and the Bold # 25 (septiembre de 1959) y la segunda versión moderna, creada por John Ostrander, debutó en Legends # 3 (enero de 1987). Uno de los dos equipos salva al mundo de una amenazante carrera de salvajes.",
                             Director = "David Ayer",
-                            Duracion = 0,
+                            Duracion = 123,
                             PosterUrl = "https://upload.wikimedia.org/wikipedia/en/5/5c/Suicide_Squad_%282016_film%29_poster.png",
                             PuntuacionMedia = 4.5m,
                             Titulo = "Escuadrón Suicida (película)"
@@ -5280,10 +5280,10 @@ namespace MovieHubAPI.Migrations
                         new
                         {
                             Id = 94,
-                            Anio = 0,
+                            Anio = 2017,
                             Descripcion = "Wonder Woman is a 2017 superhero film based on the DC Comics character Wonder Woman. Directed by Patty Jenkins from a screenplay by Allan Heinberg, and based on a story by Heinberg, Zack Snyder, and Jason Fuchs, it is the fourth film in the DC Extended Universe (DCEU). Gal Gadot stars as Diana Prince / Wonder Woman alongside Chris Pine, Robin Wright, Danny Huston, David Thewlis, Connie Nielsen, and Elena Anaya. The film follows Diana, an Amazon princess, as she leaves her home island of Themyscira after the American spy Steve Trevor informs her about World War I. Believing it to be orchestrated by Ares, the god of war, she sets out to stop the conflict. Development of a live-action Wonder Woman film began in 1996, with Ivan Reitman initially set to produce and possibly direct. The project remained in development hell for many years, with writers and directors like Jon Cohen, Todd Alcott, and Joss Whedon attached at various points. Warner Bros. officially announced the film in 2010, and Patty Jenkins was hired as the director in 2015. The film drew inspiration from William Moulton Marston's 1940s Wonder Woman stories, George Pérez's 1980s comics, and the New 52 version of the character. Principal photography began on November 21, 2015, in the United Kingdom, France, and Italy, and concluded on May 9, 2016. Additional filming occurred in November 2016. Wonder Woman premiered at the Pantages Theatre in Hollywood on May 26, 2017, and was released in the United States by Warner Bros. Pictures on June 2. The film received positive reviews, with praise for Jenkins' direction, performances, visuals, story, action sequences, and cultural significance, though some criticism was directed at the climax. It grossed over $824 million worldwide, making it the tenth highest-grossing film of 2017 and the highest-grossing film by a solo female director until it was surpassed by Barbie (2023). The American Film Institute included Wonder Woman in its top ten films of 2017, and the film won the Hugo Award for Best Dramatic Presentation in 2018. A sequel, Wonder Woman 1984, was released in December 2020, with Patty Jenkins returning as director and Gal Gadot, Chris Pine, Robin Wright, and Connie Nielsen reprising their roles. Plans for a third film were cancelled after DC Films was restructured into DC Studios in 2022.",
                             Director = "Patty Jenkins",
-                            Duracion = 0,
+                            Duracion = 141,
                             PosterUrl = "https://upload.wikimedia.org/wikipedia/en/b/b0/Wonder_Woman_%282017_film%29_poster.jpg",
                             PuntuacionMedia = 3.6m,
                             Titulo = "Wonder Woman (película)"
@@ -5324,10 +5324,10 @@ namespace MovieHubAPI.Migrations
                         new
                         {
                             Id = 98,
-                            Anio = 0,
+                            Anio = 2020,
                             Descripcion = "Birds of Prey (and the Fantabulous Emancipation of One Harley Quinn) (also known as Harley Quinn: Birds of Prey, or simply Birds of Prey) is a 2020 American superhero film based on the DC Comics team the Birds of Prey. Directed by Cathy Yan and written by Christina Hodson, it is the eighth installment in the DC Extended Universe (DCEU) and serves as a spin-off and sequel to Suicide Squad (2016). The film stars Margot Robbie as Harley Quinn alongside Mary Elizabeth Winstead, Jurnee Smollett-Bell, Rosie Perez, Chris Messina, Ella Jay Basco, Ali Wong, and Ewan McGregor. It follows Harley Quinn, who, after breaking up with the Joker, is threatened by Gotham City crime lord Roman Sionis and joins forces with Helena Bertinelli, Dinah Lance, and Renee Montoya (who form the Birds of Prey) to save Cassandra Cain. Robbie, who also served as producer, pitched the idea for Birds of Prey to Warner Bros. Pictures in 2015. The film was announced in May 2016, with Hodson being hired to write the script that November, followed by Yan signing on to direct in April 2018. The majority of the cast and crew were confirmed by December 2018. Principal photography lasted from January to April 2019 in Downtown Los Angeles, parts of the Los Angeles Arts District, and soundstages at Warner Bros. Studios in Burbank, California. Additional filming took place in September 2019. Birds of Prey had its world premiere in Mexico City on January 25, 2020, and was released in the United States in IMAX, Dolby Cinema, ScreenX and 4DX on February 7. The film received generally positive reviews from critics, but was a box-office disappointment, grossing $205.5 million worldwide, falling short of its reported break-even point of $250–300 million.",
                             Director = "Cathy Yan",
-                            Duracion = 0,
+                            Duracion = 109,
                             PosterUrl = "https://upload.wikimedia.org/wikipedia/en/1/1c/Birds_of_Prey_%282020_film%29_poster.jpg",
                             PuntuacionMedia = 3.8m,
                             Titulo = "Aves de Presa (película)"
@@ -5346,10 +5346,10 @@ namespace MovieHubAPI.Migrations
                         new
                         {
                             Id = 100,
-                            Anio = 0,
+                            Anio = 2021,
                             Descripcion = "Zack Snyder's Justice League is the 2021 director's cut and the original version of the 2017 American superhero film Justice League, the fifth film set within the DC Extended Universe (DCEU), which is based on the DC Comics superhero team Justice League. It is director Zack Snyder's original vision of the film prior to his departure from the production. The film follows Batman (Ben Affleck), Wonder Woman (Gal Gadot), Cyborg (Ray Fisher), Aquaman (Jason Momoa), the Flash (Ezra Miller), and Superman (Henry Cavill) as they form an alliance to stop the extradimensional New God Steppenwolf (Ciarán Hinds) and his army of Parademons from conquering Earth for his overlord, Darkseid (Ray Porter). The production of the theatrical film was difficult, and the script frequently underwent major changes. In May 2017, Snyder stepped down during production following the death of his daughter, and Joss Whedon was hired to finish the film, completing it as an uncredited additional director. Whedon wrote and directed new sequences and incorporated a brighter, more humorous tone while significantly reducing the runtime in accordance with directives from Warner Bros. Pictures. The theatrical version polarized critics and underperformed at the box office, prompting Warner Bros. to develop future DCEU films around individual characters with less emphasis on a broader shared universe. Many people expressed interest in Snyder's version of the film, often colloquially referred to as the Snyder Cut. Although most industry insiders reported its release unlikely, Warner Bros. moved ahead with it in February 2020. In May 2020, Snyder announced it would be released as Zack Snyder's Justice League on HBO Max. $70 million was spent to complete the visual effects, score, and editing, with new material being shot in October 2020. The film is dedicated to the memory of Autumn Snyder. Zack Snyder's Justice League was released on HBO Max in the United States on March 18, 2021. It became the fourth-most-streamed film on the platform that year. The film was released to positive reviews from critics, who generally considered it better than the theatrical cut, but criticised the lengthy runtime.",
                             Director = "Zack Snyder",
-                            Duracion = 0,
+                            Duracion = 242,
                             PosterUrl = "https://upload.wikimedia.org/wikipedia/en/6/60/Zack_Snyder%27s_Justice_League.png",
                             PuntuacionMedia = 4.7m,
                             Titulo = "La Liga de la Justicia de Zack Snyder"
@@ -5357,10 +5357,10 @@ namespace MovieHubAPI.Migrations
                         new
                         {
                             Id = 101,
-                            Anio = 0,
+                            Anio = 2021,
                             Descripcion = "The Suicide Squad is a 2021 American superhero film based on the DC Comics team Suicide Squad. Written and directed by James Gunn, it is a sequel to Suicide Squad (2016) and the tenth film in the DC Extended Universe (DCEU). The film stars an ensemble cast including Margot Robbie, Idris Elba, John Cena, Joel Kinnaman, David Dastmalchian, Daniela Melchior, Michael Rooker, Jai Courtney, Peter Capaldi, Alice Braga, Pete Davidson, Sylvester Stallone, and Viola Davis. In the film, a group of convicts join a task force known as the \"Suicide Squad\" in exchange for lighter sentences. They are sent to the South American island nation of Corto Maltese to destroy all traces of the giant alien starfish Starro the Conqueror before it falls into the local government's control. Warner Bros. Pictures originally hired Gavin O'Connor to direct. However, O'Connor left due to creative differences, and Gunn was hired to write and direct the film after being temporarily fired by Disney and Marvel Studios as director of Guardians of the Galaxy Vol. 3 (2023). He drew inspiration from war films and John Ostrander's 1980s Suicide Squad comics. Filming took place from September 2019 to February 2020, primarily in Atlanta, Georgia, as well as in Colón, Panama, and Porto, Portugal. The film had the biggest sets ever built for a Warner Bros. production. The Suicide Squad premiered theatrically in the United Kingdom on July 30, 2021, and was released in the United States on August 5, simultaneously in theaters and on the streaming service HBO Max. Unlike its predecessor, the film received positive reviews from critics and became the most-streamed DCEU film on HBO Max. The Suicide Squad grossed $169 million against a $185 million production budget. Its box office performance was attributed to factors such as the COVID-19 pandemic, the film's availability on HBO Max, and its relationship to the first Suicide Squad. It was followed by a spin-off television series, Peacemaker, in 2022, and an animated series, Creature Commandos, in 2024. A further television series, Waller, is in development.",
                             Director = "James Gunn",
-                            Duracion = 0,
+                            Duracion = 132,
                             PosterUrl = "https://upload.wikimedia.org/wikipedia/en/0/06/The_Suicide_Squad_%28film%29_poster.jpg",
                             PuntuacionMedia = 2.5m,
                             Titulo = "El Escuadrón Suicida"
@@ -5434,7 +5434,7 @@ namespace MovieHubAPI.Migrations
                         new
                         {
                             Id = 108,
-                            Anio = 0,
+                            Anio = 2025,
                             Descripcion = "Superman es un superhéroe perteneciente al grupo de cómics estadounidenses publicados por DC Comics. El personaje fue creado por el escritor estadounidense Jerry Siegel y el artista canadiense Joe Shuster, y debutó en el cómic Action Comics #1 el 18 de abril de 1938 (aunque la portada lo data de junio de 1938), cuando ambos se encontraban viviendo en Cleveland, Ohio. Superman ha sido adaptado a varios otros medios, que incluyen seriales de radio, novelas, películas, programas de televisión, teatro y videojuegos. Las traducciones tempranas de Superman en el ámbito hispanohablante tradujeron el personaje como Superhombre o Ciclón. Según las historietas, que se han complejizado a través del tiempo, Superman nació en el planeta ficticio Krypton y recibió el nombre de nacimiento Kal-El. Cuando era un bebé, sus padres, el científico Jor-El y su esposa Lara Lor-Van, lo enviaron a la Tierra en una pequeña nave espacial momentos antes de que Krypton fuera destruido en un cataclismo natural. Su nave aterrizó en un campo del medio oeste estadounidense, cerca de la ciudad ficticia de Smallville. Fue encontrado y adoptado por los agricultores Jonathan y Martha Kent, quienes lo llamaron Clark Kent. Clark desarrolló varias habilidades sobrehumanas, como una fuerza increíble y una piel impermeable. Sus padres adoptivos le aconsejaron que usara sus habilidades en beneficio de la humanidad y decidió luchar contra el crimen como un justiciero; sin embargo, para proteger su privacidad, decidió usar un traje distintivo y adoptó el alias «Superman», literalmente: Súperhombre. Entre sus apodos están: «El Hombre de Acero», «El Hombre del Mañana» y «El Último Hijo de Krypton», tomados de las historietas, y, de manera un tanto peyorativa: «el gran boy scout azul», por su apego a la legalidad. Superman se ha enfrentado a numerosos criminales, entre ellos Brainiac y el General Zod, pero su archienemigo es el millonario Lex Luthor. Clark Kent, por su parte, trabaja como reportero en el periódico Daily Planet de la también imaginaria ciudad de Metrópolis. Ahí se muestra como tímido y apocado, compañero de la audaz periodista Lois Lane, con la cual se vincula románticamente; entre sus compañeros de trabajo, su mejor amigo es el fotógrafo Jimmy Olsen. El editor en jefe del diario, Perry White, es el jefe de Kent y a menudo lo trata con condescendencia. Excepto sus padres, y ocasionalmente algún otro personaje, nadie sabe que Superman y Clark Kent son la misma persona. Además de las historietas, ha aparecido en varios seriales de radio, programas de televisión, películas, tiras periódicas y videojuegos. Con el éxito de sus aventuras, este personaje definió al superhéroe y estableció su primacía dentro del cómic estadounidense. Su apariencia del personaje es distintiva y se volvió icónica: un traje azul y rojo, con una capa y un emblema con una letra “S” estilizada en su pecho, el cual se ha convertido en un símbolo del personaje. DC Comics/Warner Bros. expandió lentamente el reparto de personajes secundarios, poderes y símbolos de Superman a través de los años. Se modificó su pasado para permitir sus aventuras como Superboy y se crearon otros supervivientes de Krypton, incluyendo a Supergirl y Krypto, el Superperro. Además, Superman fue licenciado y adaptado a una gran variedad de medios, desde la radio a la televisión y el cine. En este último se dio la que quizás sea su interpretación más notable: Christopher Reeve tanto en Superman: la película (1978) como en su secuela Superman II (1981), películas de Richard Donner que recibieron la aclamación unánime de la crítica y se volvieron las películas más exitosas de Warner Bros. en su momento. No obstante, las dos siguientes secuelas, Superman III y Superman IV: The Quest for Peace no tuvieron tanto éxito a nivel de recaudación. Brandon Routh es interpretado en la película Superman Returns, que fue estrenada en 2006, fue poco exitosa dentro de los Estados Unidos, pero en el resto del mundo sobrepasó las expectativas iniciales de sus creadores. Henry Cavill lo interpreta en las películas del Universo extendido de DC El hombre de acero (2013), Batman v Superman: Dawn of Justice (2016), Liga de la Justicia (2017), en la versión de Liga de la Justicia de Zack Snyder (2021) y en un cameo final de Black Adam (2022). En diciembre de 2022, Cavill anunció que dejaba de interpretar a Superman. David Corenswet es quien interpreta al personaje desde la primera película del DCU, Superman (2025),aparece en Supergirl (2026) y regresará en la proxima película Man of Tomorrow (2027).",
                             Director = "James Gunn",
                             Duracion = 129,
@@ -5456,10 +5456,10 @@ namespace MovieHubAPI.Migrations
                         new
                         {
                             Id = 110,
-                            Anio = 0,
+                            Anio = 1997,
                             Descripcion = "Jackie Brown es una película de 1997 escrita y dirigida por Quentin Tarantino basada en la novela Rum Punch (Cóctel explosivo, 1992) de Elmore Leonard. La protagonizan Pam Grier, Robert Forster, Robert De Niro, Samuel L. Jackson, Bridget Fonda y Michael Keaton.",
                             Director = "Quentin Tarantino",
-                            Duracion = 0,
+                            Duracion = 154,
                             PosterUrl = "https://upload.wikimedia.org/wikipedia/en/8/89/Jackie_Brown_%281997%29.png",
                             PuntuacionMedia = 4.9m,
                             Titulo = "Jackie Brown (película)"
@@ -5797,10 +5797,10 @@ namespace MovieHubAPI.Migrations
                         new
                         {
                             Id = 141,
-                            Anio = 0,
+                            Anio = 2012,
                             Descripcion = "Wreck-It Ralph is a 2012 American animated comedy film produced by Walt Disney Animation Studios. It was directed by Rich Moore and produced by Clark Spencer, from a screenplay by Phil Johnston and Jennifer Lee. John Lasseter served as the film's executive producer. Featuring the voices of John C. Reilly, Sarah Silverman, Jack McBrayer, and Jane Lynch, the film tells the story of Ralph (Reilly), an arcade game villain who rebels against his \"bad guy\" role and dreams of becoming a hero. The concept of Wreck-It Ralph originated in the late 1980s under the working title High Score and evolved through various iterations. Moore sought to capture an authentic video-game world by including real video game characters like Bowser, Clyde, and Doctor Eggman, while focusing on creating new characters. For animation, Disney introduced new reflectance functions and a real-time virtual camera system. The team researched candy factories and food photography to inspire the design of the Sugar Rush game world. Henry Jackman composed the score, and the soundtrack featured original songs by Owl City, AKB48, and Skrillex, among others. Wreck-It Ralph premiered at the El Capitan Theatre in Los Angeles on October 29, 2012, and went into general release on November 2. The film was a critical and commercial success, grossing $496 million worldwide against a $165 million budget and winning the Annie Award for Best Animated Feature, as well as receiving nominations for the Golden Globe and Academy Award for Best Animated Feature. A sequel, Ralph Breaks the Internet, was released in 2018.",
                             Director = "Rich Moore",
-                            Duracion = 0,
+                            Duracion = 108,
                             PosterUrl = "https://upload.wikimedia.org/wikipedia/en/1/15/Wreckitralphposter.jpeg",
                             PuntuacionMedia = 3.7m,
                             Titulo = "Rompe Ralph"
@@ -5918,10 +5918,10 @@ namespace MovieHubAPI.Migrations
                         new
                         {
                             Id = 152,
-                            Anio = 0,
+                            Anio = 1998,
                             Descripcion = "A Bug's Life (stylized in all lowercase) is a 1998 American animated comedy film produced by Pixar Animation Studios for Walt Disney Pictures. It was directed by John Lasseter, written by Andrew Stanton, Donald McEnery, and Bob Shaw, from a story conceived by Lasseter, Stanton, and Joe Ranft, and stars the voices of Dave Foley, Kevin Spacey, Julia Louis-Dreyfus, and Hayden Panettiere. In the film, a misfit anthropomorphic ant named Flik looks for \"tough warriors\" to save his ant colony from a protection racket run by a gang of grasshoppers. However, the \"warriors\" he brings back are a troupe of Circus Bugs. The film's plot was initially inspired by Aesop's fable The Ant and the Grasshopper. Production on A Bug's Life began shortly after the release of Toy Story in 1995. The ants in the film were redesigned to be more appealing, and Pixar's animation unit employed technical innovations in computer animation. Randy Newman composed the music for the film. During production, a controversial public feud erupted between Steve Jobs and Lasseter of Pixar and DreamWorks co-founder Jeffrey Katzenberg due to the parallel production of his similar film Antz, which was released the month prior. A Bug's Life premiered at the El Capitan Theatre in Los Angeles on November 14, 1998, and was released in the United States on November 25. It received positive reviews for its animation, story, humor, and voice acting. It became a commercial success, having grossed $363 million at the box office. It was the first film to be digitally transferred frame-by-frame and released on DVD, and has been released multiple times on home video.",
                             Director = "John Lasseter",
-                            Duracion = 0,
+                            Duracion = 95,
                             PosterUrl = "https://upload.wikimedia.org/wikipedia/en/c/cc/A_Bug%27s_Life.jpg",
                             PuntuacionMedia = 4.1m,
                             Titulo = "Bichos: Una Aventura en Miniatura"
@@ -5973,10 +5973,10 @@ namespace MovieHubAPI.Migrations
                         new
                         {
                             Id = 157,
-                            Anio = 0,
+                            Anio = 2006,
                             Descripcion = "Cars (titulada Cars: Una aventura sobre ruedas en Hispanoamérica) es una película de comedia deportiva animada por ordenador de 2006 producida por Pixar Animation Studios y lanzada por Walt Disney Pictures. Fue dirigida por John Lasseter a partir de un guion propio junto con Daniel Fogelman, Joseph Henry Ranft, Kiel Murray, Philip Lorin y Jorgen Klubien, y una historia ideada más en profundidad por Lasseter y Ranft. Fue la última producción independiente por parte de Pixar antes de ser comprada por Disney en enero de 2006.",
                             Director = "John Lasseter",
-                            Duracion = 0,
+                            Duracion = 117,
                             PosterUrl = "https://upload.wikimedia.org/wikipedia/en/3/34/Cars_2006.jpg",
                             PuntuacionMedia = 3.3m,
                             Titulo = "Cars (película)"
@@ -5995,10 +5995,10 @@ namespace MovieHubAPI.Migrations
                         new
                         {
                             Id = 159,
-                            Anio = 0,
+                            Anio = 2009,
                             Descripcion = "Up is a 2009 American animated adventure comedy-drama film directed by Pete Docter and written by Bob Peterson and Docter. Produced by Pixar Animation Studios for Walt Disney Pictures, the film centers on Carl Fredricksen (voiced by Ed Asner), an elderly widower who, by attaching numerous helium balloons to his house, travels to South America with youngster Russell (voiced by Jordan Nagai) in order to fulfill a promise that he made to his late wife. Along the way, they befriend a talking dog (voiced by Peterson) as well as an exotic bird and encounter Carl's childhood idol Charles Muntz (voiced by Christopher Plummer), who has sinister plans to capture the bird. Originally titled Heliums, Docter conceived the outline for Up in 2004 based on fantasies of escaping from life when it became too irritating. He and eleven other Pixar artists spent three days in Venezuela for research and inspiration. The designs of the characters were caricatured and stylized considerably, and animators were challenged with creating realistic cloth. Composer Michael Giacchino composed the film's score. It was Pixar's first film to be presented in 3D format. Up debuted at the 62nd Cannes Film Festival on May 13, 2009, and was released in the United States on May 29. It received critical acclaim for its screenplay, animation, characters, themes, narrative, emotional depth, humor, Asner's performance, Giacchino's musical score and its opening montage. The National Board of Review and the American Film Institute named Up one of the top-ten films of 2009. Up grossed $735 million worldwide, finishing its theatrical run as the sixth-highest-grossing film of 2009. It was nominated for five awards at the 82nd Academy Awards, winning two, and received numerous other accolades. Among its Academy Award nominations, it became the second of three animated films ever to receive a nomination for the Academy Award for Best Picture (after 1991's Beauty and the Beast and before 2010's Toy Story 3), ultimately losing to The Hurt Locker. Since then, it has been and continues to be regarded as one of the greatest animated films of the 21st century and of all time. A short-form sequel series, Dug Days, premiered on Disney+ on September 1, 2021.",
                             Director = "Pete Docter",
-                            Duracion = 0,
+                            Duracion = 96,
                             PosterUrl = "https://upload.wikimedia.org/wikipedia/en/0/05/Up_%282009_film%29.jpg",
                             PuntuacionMedia = 3.1m,
                             Titulo = "Up: Una Aventura de Altura"
@@ -6138,10 +6138,10 @@ namespace MovieHubAPI.Migrations
                         new
                         {
                             Id = 172,
-                            Anio = 0,
+                            Anio = 2021,
                             Descripcion = "Luca hace referencia a varios artículos:",
                             Director = "Enrico Casarosa",
-                            Duracion = 0,
+                            Duracion = 95,
                             PosterUrl = "https://upload.wikimedia.org/wikipedia/en/3/33/Luca_%282021_film%29.png",
                             PuntuacionMedia = 3.9m,
                             Titulo = "Luca (película)"
@@ -6149,10 +6149,10 @@ namespace MovieHubAPI.Migrations
                         new
                         {
                             Id = 173,
-                            Anio = 0,
+                            Anio = 2022,
                             Descripcion = "El término red puede hacer referencia a:",
                             Director = "Domee Shi",
-                            Duracion = 0,
+                            Duracion = 100,
                             PosterUrl = "https://upload.wikimedia.org/wikipedia/en/9/9e/Turning_Red_poster.jpg",
                             PuntuacionMedia = 3.7m,
                             Titulo = "Red (película)"
@@ -6160,7 +6160,7 @@ namespace MovieHubAPI.Migrations
                         new
                         {
                             Id = 174,
-                            Anio = 0,
+                            Anio = 2022,
                             Descripcion = "Lightyear es una película animada estadounidense de ciencia ficción, acción y aventura de 2022 producida por Pixar Animation Studios y Walt Disney Pictures, estrenada en Estados Unidos el 17 de junio de 2022. La película es un spin-off de la franquicia Toy Story de Pixar y que a su vez, funciona como historia para el personaje ficticio Buzz Lightyear, quien inspiró la figura de acción del mismo nombre. Fue dirigida por Angus MacLane en su debut como director y protagonizada por Chris Evans dándole voz en el papel principal, y compartiendo créditos con Keke Palmer, Peter Sohn, James Brolin, Taika Waititi, Dale Soules, Uzo Aduba, Mary McDonald-Lewis, Efren Ramírez y Isiah Whitlock Jr.",
                             Director = "Angus MacLane",
                             Duracion = 25,
@@ -6204,10 +6204,10 @@ namespace MovieHubAPI.Migrations
                         new
                         {
                             Id = 178,
-                            Anio = 0,
+                            Anio = 1977,
                             Descripcion = "Star Wars (later retitled as Star Wars: Episode IV – A New Hope) is a 1977 American epic space opera film written and directed by George Lucas. Produced by Lucasfilm Ltd. and distributed by Twentieth Century-Fox, it is the first film in the Star Wars franchise and the fourth chronological chapter of the \"Skywalker Saga\". Set in a fictional galaxy under the rule of the tyrannical Galactic Empire, the film follows a resistance movement, called the Rebel Alliance, that aims to destroy the Empire's ultimate weapon, the Death Star. When the rebel leader Princess Leia is captured by the Galactic Empire, Luke Skywalker acquires stolen architectural plans for the Death Star and sets out to rescue her while learning the ways of a metaphysical power known as \"the Force\" from the Jedi Master Obi-Wan Kenobi. The film stars Mark Hamill, Harrison Ford, Carrie Fisher, Peter Cushing, Alec Guinness, Anthony Daniels, Kenny Baker, Peter Mayhew, David Prowse, and James Earl Jones. Lucas had the idea for a science fiction film in the vein of Flash Gordon around the time he completed his first film, THX 1138 (1971), and he began working on a treatment after completing American Graffiti (1973). After numerous rewrites, principal photography began in March 1976 in locations including Tunisia and Elstree Studios in Hertfordshire, England. Lucas formed the visual effects company Industrial Light & Magic to help create the film's visual effects. Star Wars suffered production difficulties: the cast and crew believed the film would be a failure, and it went $3 million over budget due to delays. Few were confident in the film's box office prospects. It was released in a small number of theaters in the United States on May 25, 1977, and quickly became a surprise blockbuster, leading to it being expanded to a much wider release. Star Wars opened to critical acclaim, with particular praise for its special effects. It grossed $410 million worldwide during its initial run, surpassing Jaws (1975) to become the highest-grossing film until the release of E.T. the Extra-Terrestrial (1982); subsequent releases have brought its total gross to $775 million. When adjusted for inflation, Star Wars is the second-highest-grossing film in North America (behind Gone with the Wind) and the fourth-highest-grossing film of all time. It received six Academy Awards, two BAFTA Awards, and thirteen Saturn Awards, among others. The film has been reissued many times with Lucas' support, including the 1981 reissue giving the film the subtitle Episode IV – A New Hope, and the 1997 \"Special Edition\". The reissues have contained many changes, including new scenes, visual effects, and dialogue. Often regarded as one of the greatest and most influential films of all time, Star Wars quickly became a worldwide pop culture phenomenon, launching an industry of tie-in products, including novels, comics, video games, amusement park attractions and merchandise such as toys, games, and clothing. It became one of the first 25 films selected by the United States Library of Congress for preservation in the National Film Registry in 1989, and its soundtrack was added to the U.S. National Recording Registry in 2004. The Empire Strikes Back (1980) and Return of the Jedi (1983) followed Star Wars, rounding out the original Star Wars trilogy. A prequel trilogy and a sequel trilogy have since been released, in addition to various spin-off films and television series.",
                             Director = "George Lucas",
-                            Duracion = 0,
+                            Duracion = 121,
                             PosterUrl = "https://upload.wikimedia.org/wikipedia/en/8/87/StarWarsMoviePoster1977.jpg",
                             PuntuacionMedia = 3.6m,
                             Titulo = "Star Wars: Episodio IV - Una Nueva Esperanza"
@@ -6215,10 +6215,10 @@ namespace MovieHubAPI.Migrations
                         new
                         {
                             Id = 179,
-                            Anio = 0,
+                            Anio = 1983,
                             Descripcion = "Return of the Jedi (also known as Star Wars: Episode VI – Return of the Jedi) is a 1983 American epic space opera film directed by Richard Marquand from a screenplay by Lawrence Kasdan and George Lucas. The sequel to The Empire Strikes Back (1980), it is the third installment in the original Star Wars trilogy and the sixth chronological film in the \"Skywalker Saga\". The film follows the ongoing struggle between the Galactic Empire and the Rebel Alliance. As the Rebels attempt to destroy the Empire's second Death Star, Luke Skywalker tries to bring his father, Darth Vader, back from the dark side of the Force. The film stars Mark Hamill, Harrison Ford, Carrie Fisher, Billy Dee Williams, Anthony Daniels, David Prowse, Kenny Baker, Peter Mayhew, and Frank Oz. Steven Spielberg, David Lynch, and David Cronenberg were considered to direct the film before Marquand signed on as director. The production team relied on Lucas' storyboards during pre-production. While writing the shooting script, Lucas, Kasdan, Marquand, and producer Howard Kazanjian spent two weeks in conference discussing ideas to construct it. Kazanjian's schedule pushed shooting to begin a few weeks early to allow Industrial Light & Magic more time to work on the film's effects in post-production. Filming took place in England, California, and Arizona from January to May 1982 (1982-05). Return of the Jedi was released in theaters by 20th Century-Fox on May 25, 1983. It grossed $374 million worldwide during its initial theatrical run, becoming the highest-grossing film of 1983. It was well received by critics, with strong praise going to the performances of the actors, John Williams' score, the special effects and the action sequences. Several re-releases and revisions to the film have followed over the decades, which have brought its total gross to $482 million. The United States Library of Congress selected it for preservation in the National Film Registry in 2021. A prequel trilogy, released between 1999 and 2005, and a sequel trilogy, released between 2015 and 2019, followed.",
                             Director = "Richard Marquand",
-                            Duracion = 0,
+                            Duracion = 131,
                             PosterUrl = "https://upload.wikimedia.org/wikipedia/en/b/b2/ReturnOfTheJediPoster1983.jpg",
                             PuntuacionMedia = 3.6m,
                             Titulo = "Star Wars: Episodio VI - El Retorno del Jedi"
@@ -6226,10 +6226,10 @@ namespace MovieHubAPI.Migrations
                         new
                         {
                             Id = 180,
-                            Anio = 0,
+                            Anio = 1974,
                             Descripcion = "The Godfather Part II is a 1974 American epic gangster film produced and directed by Francis Ford Coppola, loosely based on the 1969 novel The Godfather by Mario Puzo, who co-wrote the screenplay with Coppola. It is both a sequel and a prequel to the 1972 film The Godfather, presenting two parallel dramas: one picks up the 1958 story of Michael Corleone (Al Pacino), the new Don of the Corleone family, protecting the family business in the aftermath of an attempt on his life; the other covers the journey of his father, Vito Corleone (Robert De Niro), from his Sicilian childhood to the founding of his family enterprise in New York City. The ensemble cast also features Robert Duvall, Diane Keaton, Talia Shire, Morgana King, John Cazale, Marianna Hill and Lee Strasberg. Following the first film's success, Paramount Pictures began developing a follow-up, with many of the cast and crew returning. Coppola, who was given more creative control, had wanted to make both a sequel and a prequel to The Godfather that would tell the story of Vito's rise and Michael's fall. Principal photography began in October 1973 and wrapped up in June 1974. The Godfather Part II premiered in New York City on December 12, 1974, and was released in the United States on December 20, 1974. It grossed $48 million in the United States and Canada and up to $93 million worldwide on a $13 million budget. The film was nominated for eleven Academy Awards and became the first sequel to win Best Picture. Its six Oscar wins also included Best Director for Coppola, Best Supporting Actor for De Niro, and Best Adapted Screenplay for Coppola and Puzo. Pacino won Best Actor at the BAFTAs and was nominated at the Oscars. The Godfather Part II is considered to be one of the greatest films of all time, as well as a rare example of a sequel that rivals its predecessor. Like its predecessor, Part II remains a highly influential film, especially in the gangster genre. In 1997, the American Film Institute ranked it as the 32nd-greatest film in American film history and it retained this position 10 years later. It was selected for preservation in the US National Film Registry of the Library of Congress in 1993, being deemed \"culturally, historically, or aesthetically significant\". Pauline Kael wrote: \"The Godfather was the greatest gangster picture ever made, and had metaphorical overtones that took it far beyond the gangster genre. In Part II, the wider themes are no longer merely implied. The second film shows the consequences of the actions in the first; it's all one movie, in two great big pieces, and it comes together in your head while you watch.\" The Godfather Part III, the final installment in the trilogy, was released in 1990.",
                             Director = "Francis Ford Coppola",
-                            Duracion = 0,
+                            Duracion = 202,
                             PosterUrl = "https://upload.wikimedia.org/wikipedia/en/0/03/Godfather_part_ii.jpg",
                             PuntuacionMedia = 3.7m,
                             Titulo = "El Padrino II"
@@ -6248,10 +6248,10 @@ namespace MovieHubAPI.Migrations
                         new
                         {
                             Id = 182,
-                            Anio = 0,
+                            Anio = 1939,
                             Descripcion = "Gone with the Wind is a 1939 American epic historical romance film adapted from the 1936 novel by Margaret Mitchell. It was produced by David O. Selznick of Selznick International Pictures and directed by Victor Fleming. Set in the American South during the Civil War and Reconstruction, the film tells the story of Scarlett O'Hara (Vivien Leigh), the strong-willed daughter of a Georgia plantation owner, following her romantic pursuit of Ashley Wilkes (Leslie Howard), who is married to his cousin Melanie Hamilton (Olivia de Havilland), and her subsequent marriage to Rhett Butler (Clark Gable). The production was troubled. The start of filming was delayed for two years until January 1939 because Selznick was determined to secure Gable for the role of Rhett, and filming concluded in July. The role of Scarlett was challenging to cast, and 1,400 unknown women were interviewed for the part. Sidney Howard's initial screenplay underwent many revisions by several writers to reduce it to a suitable length. The original director, George Cukor, was fired shortly after filming began and was replaced by Fleming, who in turn was briefly replaced by Sam Wood while taking some time off due to exhaustion. Post-production concluded in November 1939, just a month before its premiere. Gone With the Wind received generally positive reviews upon its release on December 15, 1939. While the casting was widely praised, the long running time received criticism. At the 12th Academy Awards, Gone with the Wind received ten Academy Awards (eight competitive, two honorary) from thirteen nominations, including wins for Best Picture, Best Director (Fleming), Best Adapted Screenplay (posthumously awarded to Sidney Howard), Best Actress (Leigh), and Best Supporting Actress (Hattie McDaniel, becoming the first African American to win an Academy Award). It set records for the total number of wins and nominations at the time. Gone with the Wind was immensely popular when first released. It became the highest-earning film made up to that point and held the record for over a quarter of a century. When adjusted for monetary inflation, it is still the highest-grossing film in history. It was re-released periodically throughout the 20th century and became ingrained in popular culture. Although the film has been criticized as historical negationism, glorifying slavery and the Lost Cause of the Confederacy myth, it has been credited with triggering changes in how African Americans were depicted cinematically. Gone with the Wind is regarded as one of the greatest films of all time, and in 1989, became one of the twenty-five inaugural films selected for preservation in the United States National Film Registry.",
                             Director = "Victor Fleming",
-                            Duracion = 0,
+                            Duracion = 238,
                             PosterUrl = "https://upload.wikimedia.org/wikipedia/commons/2/27/Poster_-_Gone_With_the_Wind_01.jpg",
                             PuntuacionMedia = 4.2m,
                             Titulo = "Lo Que el Viento se Llevó"
@@ -6259,10 +6259,10 @@ namespace MovieHubAPI.Migrations
                         new
                         {
                             Id = 183,
-                            Anio = 0,
+                            Anio = 1941,
                             Descripcion = "Citizen Kane is a 1941 American drama film directed, produced by, and starring Orson Welles and co-written by Welles and Herman J. Mankiewicz, and was Welles's first feature film. The quasi-biographical film examines the life and legacy of Charles Foster Kane, played by Welles, a composite character based on American media barons William Randolph Hearst and Joseph Pulitzer, and Chicago tycoons Samuel Insull and Harold McCormick, as well as aspects of the screenwriters' own lives. After the Broadway success of Welles's Mercury Theatre and the controversial 1938 radio broadcast \"The War of the Worlds\" on The Mercury Theatre on the Air, Welles was courted by Hollywood. He signed a contract with RKO Pictures in 1939. Although it was unusual for an untried director, he was given freedom to develop his own story, to use his own cast and crew, and to have final cut privilege. Following two abortive attempts to get a project off the ground, he wrote the screenplay for Citizen Kane with Herman J. Mankiewicz. Principal photography took place in 1940, the same year that its innovative trailer was shown, and the film was released in 1941. Upon its release, Hearst prohibited any mention of the film in his newspapers. Although it was a critical success, Citizen Kane failed to recoup its costs at the box office. The film faded from view after its release, but returned to public attention when it was praised by French critics such as André Bazin and re-released in 1956. In 1958, the film was voted number nine on the prestigious Brussels 12 list at the 1958 World Expo. Citizen Kane is frequently cited as the greatest film ever made. For 40 years (five decennial polls: 1962, 1972, 1982, 1992 and 2002), it stood at number one in the British Film Institute's Sight and Sound decennial poll, and it topped the American Film Institute's 100 Years ... 100 Movies list in 1998, as well as its 2007 update. The Library of Congress selected Citizen Kane as an inductee of the 1989 inaugural group of 25 films for preservation in the United States National Film Registry for being \"culturally, historically, or aesthetically significant\". The film was nominated for Academy Awards in nine categories and it won for Best Writing (Original Screenplay) by Mankiewicz and Welles. Citizen Kane is praised for Gregg Toland's cinematography, Robert Wise's editing, Bernard Herrmann's score and its narrative structure, all of which have been considered innovative and precedent-setting.",
                             Director = "Orson Welles",
-                            Duracion = 0,
+                            Duracion = 119,
                             PosterUrl = "https://upload.wikimedia.org/wikipedia/commons/c/c0/Citizen_Kane_poster%2C_1941_%28Style_B%2C_unrestored%29.jpg",
                             PuntuacionMedia = 5m,
                             Titulo = "Ciudadano Kane"
@@ -6281,10 +6281,10 @@ namespace MovieHubAPI.Migrations
                         new
                         {
                             Id = 185,
-                            Anio = 0,
+                            Anio = 1954,
                             Descripcion = "Rear Window is a 1954 American mystery thriller film produced and directed by Alfred Hitchcock and written by John Michael Hayes, based on Cornell Woolrich's 1942 short story \"It Had to Be Murder\". Originally released by Paramount Pictures, the film stars James Stewart, Grace Kelly, Wendell Corey, Thelma Ritter, and Raymond Burr. It was screened at the 1954 Venice Film Festival in competition for the Golden Lion. Rear Window is shot almost entirely from within one room and from the point-of-view outside the window. The film was made with a budget of $1 million ($12 million in 2025), and grossed $27 million during its initial release ($324 million in 2025). Rear Window is considered by many filmgoers, critics, and scholars to be one of Hitchcock's best films, as well as one of the greatest films ever made. It received four Academy Award nominations, and was ranked number 42 on AFI's 100 Years...100 Movies list and number 48 on the 10th-anniversary edition, and in 1997 was added to the United States National Film Registry in the Library of Congress as being \"culturally, historically, or aesthetically significant.\"",
                             Director = "Alfred Hitchcock",
-                            Duracion = 0,
+                            Duracion = 112,
                             PosterUrl = "https://upload.wikimedia.org/wikipedia/commons/3/38/Rear_Window_film_poster.jpg",
                             PuntuacionMedia = 3.5m,
                             Titulo = "La Ventana Indiscreta"
@@ -6303,10 +6303,10 @@ namespace MovieHubAPI.Migrations
                         new
                         {
                             Id = 187,
-                            Anio = 0,
+                            Anio = 1967,
                             Descripcion = "The Graduate is a 1967 American romantic comedy-drama film directed by Mike Nichols, adapted by Buck Henry and Calder Willingham from Charles Webb's 1963 novella. It stars Dustin Hoffman, Anne Bancroft, and Katharine Ross. The film follows Benjamin Braddock (Hoffman), a recent college graduate who is seduced by an older married woman, Mrs. Robinson (Bancroft), but falls for her daughter, Elaine (Ross). The soundtrack was recorded by Simon & Garfunkel, and featured the hit single \"Mrs. Robinson\". Produced independently and distributed domestically by Embassy Pictures, The Graduate was released December 21, 1967. It grossed $104.9 million in the United States and Canada, making it the highest-grossing film of 1967 in North America. Adjusted for inflation (as of 2025), its gross is $997 million, making it the 22nd-highest-grossing film in the United States and Canada. It received seven nominations at the 40th Academy Awards, with Nichols winning for Best Director. In 1996, The Graduate was selected for preservation in the U.S. National Film Registry as \"culturally, historically, or aesthetically significant\". The American Film Institute ranked it the 7th-greatest American film in 1997 and the 17th-greatest in 2007. It is widely regarded as one of the greatest and most influential films ever made.",
                             Director = "Mike Nichols",
-                            Duracion = 0,
+                            Duracion = 106,
                             PosterUrl = "https://upload.wikimedia.org/wikipedia/en/8/8b/Graduateposter67.jpg",
                             PuntuacionMedia = 4.7m,
                             Titulo = "El Graduado"
@@ -6413,10 +6413,10 @@ namespace MovieHubAPI.Migrations
                         new
                         {
                             Id = 197,
-                            Anio = 0,
+                            Anio = 1990,
                             Descripcion = "Goodfellas (stylized as GoodFellas) is a 1990 American biographical gangster film directed by Martin Scorsese, written by Nicholas Pileggi and Scorsese, and produced by Irwin Winkler. It is a film adaptation of Pileggi's 1985 nonfiction book Wiseguy. Starring Robert De Niro, Ray Liotta, Joe Pesci, Lorraine Bracco and Paul Sorvino, the film narrates the rise and fall of Mafia associate Henry Hill and his friends and family from 1955 to 1980. Scorsese initially titled the film Wise Guy and postponed making it; he and Pileggi later changed the title to Goodfellas. To prepare for their roles in the film, De Niro, Pesci and Liotta often spoke with Pileggi, who shared research material remaining from writing the book. According to Pesci, improvisation and ad-libbing came from rehearsals wherein Scorsese gave the actors freedom to do whatever they wanted. The director made transcripts of these sessions, took the lines that he liked most and put them into a revised script, from which the cast worked during principal photography. Goodfellas premiered at the 47th Venice International Film Festival on September 9, 1990, where Scorsese was awarded with the Silver Lion award for Best Director, and was released in the United States on September 18 by Warner Bros.. When released, the film grossed $47 million against a budget of $25 million and received widespread acclaim. The film was nominated for six Academy Awards, including Best Picture and Best Director, with Pesci winning Best Supporting Actor. The film also won five BAFTAs, including Best Film and Best Director, and was named the year's best film by various critics' groups. Widely regarded as one of the greatest films ever made, particularly in the gangster genre, the critical consensus on review aggregator Rotten Tomatoes calls it \"arguably the high point of Martin Scorsese's career\". In 2000, it was deemed \"culturally, historically, or aesthetically significant\" and selected for preservation in the National Film Registry by the United States Library of Congress. Its content and style have been emulated in numerous other pieces of media.",
                             Director = "Martin Scorsese",
-                            Duracion = 0,
+                            Duracion = 146,
                             PosterUrl = "https://upload.wikimedia.org/wikipedia/en/7/7b/Goodfellas.jpg",
                             PuntuacionMedia = 3.9m,
                             Titulo = "Uno de los Nuestros"
@@ -6424,10 +6424,10 @@ namespace MovieHubAPI.Migrations
                         new
                         {
                             Id = 198,
-                            Anio = 0,
+                            Anio = 1999,
                             Descripcion = "The Sixth Sense is a 1999 American psychological thriller film written and directed by M. Night Shyamalan. It stars Bruce Willis as a child psychologist whose patient (Haley Joel Osment) claims he can see and talk to the dead. Released by Buena Vista Pictures through its Hollywood Pictures banner on August 6, 1999, The Sixth Sense was well received by critics and was nominated for six Academy Awards, including Best Picture, Best Director and Best Original Screenplay for Shyamalan, Best Supporting Actor for Osment, and Best Supporting Actress for Toni Collette. The film established Shyamalan as a preeminent filmmaker of thrillers and introduced the cinema public to his traits, most notably his affinity for twist endings. The film was a commercial success, grossing over $672 million worldwide, becoming the second-highest-grossing film of 1999 and Shyamalan's highest-grossing film to date.",
                             Director = "M. Night Shyamalan",
-                            Duracion = 0,
+                            Duracion = 107,
                             PosterUrl = "https://upload.wikimedia.org/wikipedia/en/a/a4/The_Sixth_Sense_poster.png",
                             PuntuacionMedia = 2.6m,
                             Titulo = "El Sexto Sentido"
@@ -6468,10 +6468,10 @@ namespace MovieHubAPI.Migrations
                         new
                         {
                             Id = 202,
-                            Anio = 0,
+                            Anio = 2006,
                             Descripcion = "The Departed is a 2006 crime thriller film, directed by Martin Scorsese and written by William Monahan. A remake of the 2002 Hong Kong film Infernal Affairs, it is also loosely based on real-life people, including the Winter Hill Gang, corrupt FBI agent John Connolly and Irish-American crime boss Whitey Bulger. The film is set primarily in South Boston; Irish Mob boss Frank Costello (Jack Nicholson) plants Colin Sullivan (Matt Damon) as a spy within the Massachusetts State Police; simultaneously, the police assign undercover state trooper Billy Costigan (Leonardo DiCaprio) to infiltrate Costello's mob crew. The ensemble cast also features Mark Wahlberg, Martin Sheen, Ray Winstone, Vera Farmiga, Alec Baldwin, Anthony Anderson and James Badge Dale. The Departed premiered at the Ziegfeld Theatre on September 26, 2006, and was released on October 6 by Warner Bros. Pictures in the United States. A critical and commercial success, the film grossed $291.5 million on a $90 million budget, and receiving acclaim for its direction, performances (particularly of DiCaprio, Nicholson and Wahlberg), screenplay and editing. At the 79th Academy Awards, The Departed won Best Picture, Best Director for Scorsese (his only ever personal Oscar win), Best Adapted Screenplay for Monahan, and Best Editing for Thelma Schoonmaker. It also received six nominations each at the 64th Golden Globe Awards (winning one) and the 60th British Academy Film Awards, and two nominations at the 13th Screen Actors Guild Awards.",
                             Director = "Martin Scorsese",
-                            Duracion = 0,
+                            Duracion = 151,
                             PosterUrl = "https://upload.wikimedia.org/wikipedia/en/5/50/Departed234.jpg",
                             PuntuacionMedia = 4.8m,
                             Titulo = "Infiltrados (película)"
@@ -6490,10 +6490,10 @@ namespace MovieHubAPI.Migrations
                         new
                         {
                             Id = 204,
-                            Anio = 0,
+                            Anio = 2001,
                             Descripcion = "The Lord of the Rings: The Fellowship of the Ring is a 2001 epic fantasy film directed by Peter Jackson from a screenplay by Fran Walsh, Philippa Boyens, and Jackson. It is based on J. R. R. Tolkien's 1954 The Fellowship of the Ring, the first volume of the novel The Lord of the Rings. The film is the first instalment in The Lord of the Rings trilogy. It features an ensemble cast including Elijah Wood, Ian McKellen, Liv Tyler, Viggo Mortensen, Sean Astin, Cate Blanchett, John Rhys-Davies, Billy Boyd, Dominic Monaghan, Orlando Bloom, Christopher Lee, Hugo Weaving, Sean Bean, Ian Holm, and Andy Serkis. Set in Middle-earth, the story tells of the Dark Lord Sauron, who seeks the One Ring, which contains part of his might, to return to power. The Ring has found its way to the young hobbit Frodo Baggins. The fate of Middle-earth hangs in the balance as Frodo and eight companions (who form the eponymous Fellowship of the Ring) begin their perilous journey to Mount Doom in the land of Mordor, the only place where the Ring can be destroyed. The Fellowship of the Ring was financed and distributed by American studio New Line Cinema, but filmed and edited entirely in Jackson's native New Zealand, concurrently with the other two parts of the trilogy. It premiered on 10 December 2001 at the Odeon Leicester Square in London and was released on 19 December in the United States and on 20 December in New Zealand. The film was acclaimed by critics and audiences, who considered it a landmark in filmmaking and an achievement in the fantasy film genre, with praise for the visual effects, performances, direction, screenplay, musical score, and faithfulness to the source material. It grossed $868 million worldwide during its original theatrical run, making it the second-highest-grossing film of 2001 and the fifth-highest-grossing film of all time at the time of its release. Following subsequent reissues, it has grossed $897 million. Like its successors, The Fellowship of the Ring is widely recognised as one of the greatest and most influential films ever made. The film received numerous accolades; at the 74th Academy Awards, it was nominated for thirteen awards, including Best Picture, winning for Best Cinematography, Best Makeup, Best Original Score, and Best Visual Effects. In 2007, the American Film Institute named it one of the 100 greatest American films in history, being both the most recent film and the only film released in the 21st century to make it to the list. In 2021, the film was selected for preservation in the United States National Film Registry by the Library of Congress for being \"culturally, historically, or aesthetically significant\". Two sequels, The Two Towers and The Return of the King, followed in 2002 and 2003, respectively.",
                             Director = "Peter Jackson",
-                            Duracion = 0,
+                            Duracion = 178,
                             PosterUrl = "https://upload.wikimedia.org/wikipedia/en/f/fb/Lord_Rings_Fellowship_Ring.jpg",
                             PuntuacionMedia = 2.9m,
                             Titulo = "El Señor de los Anillos: La Comunidad del Anillo"
@@ -6501,10 +6501,10 @@ namespace MovieHubAPI.Migrations
                         new
                         {
                             Id = 205,
-                            Anio = 0,
+                            Anio = 2002,
                             Descripcion = "The Lord of the Rings: The Two Towers is a 2002 epic fantasy film directed by Peter Jackson from a screenplay by Fran Walsh, Philippa Boyens, Stephen Sinclair, and Jackson, based on 1954's The Two Towers, the second volume of the novel The Lord of the Rings by J. R. R. Tolkien. The sequel to 2001's The Lord of the Rings: The Fellowship of the Ring, the film is the second instalment in The Lord of the Rings trilogy. It features an ensemble cast including Elijah Wood, Ian McKellen, Liv Tyler, Viggo Mortensen, Sean Astin, Cate Blanchett, John Rhys-Davies, Bernard Hill, Christopher Lee, Billy Boyd, Dominic Monaghan, Orlando Bloom, Hugo Weaving, Miranda Otto, David Wenham, Brad Dourif, Karl Urban, and Andy Serkis. Continuing the plot of the previous film, it intercuts three storylines: Frodo and Sam continue their journey toward Mordor to destroy the One Ring, now allied with Gollum, the ring's untrustworthy former bearer. Merry and Pippin escape their orc captors, meet Treebeard the Ent, and help to plan an attack on Isengard, the fortress of Sauron's vassal, the treacherous wizard Saruman. Aragorn, Legolas, and Gimli come to the war-torn nation of Rohan and are reunited with the resurrected Gandalf, before joining king Théoden to fight Saruman's army at the Battle of Helm's Deep. The Two Towers was financed and distributed by American studio New Line Cinema, but filmed and edited entirely in Jackson's native New Zealand, concurrently with the other two parts of the trilogy. It premiered on 5 December 2002 at the Ziegfeld Theatre in New York City and was then released on 18 December in the United States and on 19 December in New Zealand. The film was acclaimed by critics and audiences, who considered it a landmark in filmmaking and an achievement in the fantasy film genre, with praise for the visual effects (particularly Gollum), performances, action sequences, direction, and musical score. It grossed $923 million worldwide during its original theatrical run, making it the highest-grossing film of 2002 and, at the time of its release, the third-highest-grossing film of all time behind Titanic and Harry Potter and the Philosopher's Stone. Following subsequent re-releases, it has grossed $944 million. Like the other films in the trilogy, The Two Towers is widely recognised as one of the greatest and most influential films ever made as well as one of the greatest sequels in cinema history. The film received numerous accolades; at the 75th Academy Awards, it was nominated for six awards, including Best Picture, winning for Best Sound Editing and Best Visual Effects. The final instalment of the trilogy, The Return of the King, was released in 2003.",
                             Director = "Peter Jackson",
-                            Duracion = 0,
+                            Duracion = 179,
                             PosterUrl = "https://upload.wikimedia.org/wikipedia/en/a/a1/Lord_Rings_Two_Towers.jpg",
                             PuntuacionMedia = 3.7m,
                             Titulo = "El Señor de los Anillos: Las Dos Torres"
@@ -6534,10 +6534,10 @@ namespace MovieHubAPI.Migrations
                         new
                         {
                             Id = 208,
-                            Anio = 0,
+                            Anio = 2007,
                             Descripcion = "No Country for Old Men is a 2007 American neo-Western crime thriller film written, directed, produced, and edited by Joel and Ethan Coen, based on Cormac McCarthy's 2005 novel. Starring Tommy Lee Jones, Javier Bardem, and Josh Brolin, the film is set in the desert landscape of 1980 West Texas, United States. The film revisits the themes of fate, conscience, and circumstance that the Coen brothers had explored in the films Blood Simple (1984), Raising Arizona (1987), and Fargo (1996). It follows three main characters: Llewelyn Moss (Brolin), a Vietnam War veteran and welder who stumbles upon a large sum of money in the desert, Anton Chigurh (Bardem), a hitman who is sent to recover the money, and Ed Tom Bell (Jones), a sheriff investigating the crime. The film also stars Kelly Macdonald as Moss's wife, Carla Jean, and Woody Harrelson as Carson Wells, a bounty hunter seeking Moss and the return of the money. No Country for Old Men premiered in competition at the 2007 Cannes Film Festival on May 19. The film became a commercial success, grossing $171 million worldwide against a budget of $25 million. Critics praised the Coens' direction and screenplay and Bardem's performance, and the film was heavily awarded, winning four Academy Awards (including Best Picture), three BAFTAs, and two Golden Globes. The American Film Institute listed it as an AFI Movie of the Year, and the National Board of Review selected it as the best of 2007. To date, it is the last Western film to ever win the Academy Award for Best Picture (the others being Cimarron in 1931, Dances with Wolves in 1990, and Unforgiven in 1992). No Country for Old Men was considered one of the best films of 2007, and many regard it as the Coen brothers' magnum opus. It has since been widely recognized as one of the greatest films of the 2000s and 21st century. The Guardian's John Patterson wrote: \"the Coens' technical abilities, and their feel for a landscape-based Western classicism reminiscent of Anthony Mann and Sam Peckinpah, are matched by few living directors\", and Peter Travers of Rolling Stone said that it is \"a new career peak for the Coen brothers\" and \"as entertaining as hell\". In 2024, the film was selected for preservation in the United States National Film Registry by the Library of Congress as being \"culturally, historically, or aesthetically significant\".",
                             Director = "Joel Coen, Ethan Coen",
-                            Duracion = 0,
+                            Duracion = 122,
                             PosterUrl = "https://upload.wikimedia.org/wikipedia/en/8/8b/No_Country_for_Old_Men_poster.jpg",
                             PuntuacionMedia = 2.6m,
                             Titulo = "No Es País para Viejos"
@@ -6556,10 +6556,10 @@ namespace MovieHubAPI.Migrations
                         new
                         {
                             Id = 210,
-                            Anio = 0,
+                            Anio = 2010,
                             Descripcion = "The King's Speech is a 2010 historical drama film directed by Tom Hooper and written by David Seidler. Colin Firth plays the future King George VI who, to cope with a stammer, sees Lionel Logue, an Australian speech and language therapist played by Geoffrey Rush. The men become friends as they work together, and after his brother abdicates the throne, the new king relies on Logue to help him make his first wartime radio broadcast upon Britain's declaration of war on Germany in 1939. Seidler read about George VI's life after learning to manage a stuttering condition he developed during his youth. He started writing about the relationship between the therapist and his royal patient as early as the 1980s, but at the request of the King's widow, Queen Elizabeth the Queen Mother, postponed work until she died in 2002. He later rewrote his screenplay for the stage to focus on the essential relationship between the two protagonists. Nine weeks before filming began, the filmmakers learned of the existence of notes written by Logue that were being used by his grandson Mark and Peter Conradi as the basis of a book, and were granted permission to incorporate material from the notes and book into the script. Principal photography took place in London and around Britain from November 2009 to January 2010. Hard light was used to give the story a greater resonance and wider-than-normal lenses were employed to recreate the Duke of York's feelings of constriction. A third technique Hooper employed was the off-centre framing of characters. The King's Speech was a major box office and critical success. It was widely praised by film critics for its visual style, screenplay, directing, score, and acting. Other commentators discussed the film's representation of historical detail, especially the reversal of Winston Churchill's opposition to abdication. The film received many awards and nominations, particularly for Colin Firth's performance. At the 83rd Academy Awards, The King's Speech received 12 Oscar nominations, more than any other film in that year, and subsequently won four, including Best Picture and Best Actor for Firth. Censors initially gave it adult ratings due to profanity, though these were later revised downward after criticism by the makers and distributors in the UK and some instances of swearing were muted in the US. On a budget of £8 million, it earned over £250 million internationally.",
                             Director = "Tom Hooper",
-                            Duracion = 0,
+                            Duracion = 118,
                             PosterUrl = "https://upload.wikimedia.org/wikipedia/en/4/4a/The_King%27s_Speech_poster.jpg",
                             PuntuacionMedia = 5m,
                             Titulo = "El Discurso del Rey"
@@ -6666,10 +6666,10 @@ namespace MovieHubAPI.Migrations
                         new
                         {
                             Id = 220,
-                            Anio = 0,
+                            Anio = 2006,
                             Descripcion = "Pan's Labyrinth (Spanish: El laberinto del fauno, lit. 'The Labyrinth of the Faun') is a 2006 dark fantasy film written, directed and co-produced by Guillermo del Toro. The film stars Ivana Baquero, Sergi López, Maribel Verdú, Doug Jones, and Ariadna Gil. The film is an international co-production between Mexico and Spain. The story takes place in Francoist Spain in the summer of 1944. The narrative intertwines this real world with a mythical world centered on an overgrown, abandoned labyrinth and a mysterious faun with whom the protagonist, Ofelia, interacts. Ofelia's stepfather, Captain Vidal, hunts down the Spanish Maquis who resist the Francoist regime, while Ofelia's pregnant mother grows increasingly ill. Ofelia meets several strange and magical creatures who become central to her story, leading her through the trials of the old labyrinth garden. The film employs make-up, animatronics, and CGI effects to bring life to its creatures. Del Toro stated that he considers the story to be a parable, influenced by fairy tales. It addresses and continues themes related to his 2001 film The Devil's Backbone, to which Pan's Labyrinth is a spiritual successor, according to del Toro in his director's DVD commentary. The film is an international co-production film between Spain and Mexico. Pan's Labyrinth premiered on 27 May 2006 at the Cannes Film Festival, where it received a 22-minute-long standing ovation (the longest in the festival's history). The film was theatrically released by Warner Bros. Pictures in Spain on 11 October and in Mexico on 20 October. It garnered widespread critical acclaim, with praise towards its visual and makeup effects, direction, screenplay, cinematography, musical score, set design, and cast performances. It grossed $83 million at the worldwide box office and won numerous awards, including three Academy Awards, three BAFTA Awards including Best Film Not in the English Language, the Ariel Award for Best Picture, and the Hugo Award for Best Dramatic Presentation, Long Form. Pan's Labyrinth has since been considered to be Del Toro's magnum opus, one of the best fantasy films ever made, as well as one of the greatest films of the 2000s and the 21st century. A sequel, titled 3993, was conceived by del Toro but ultimately cancelled. A novelization by del Toro and Cornelia Funke was published in 2019.",
                             Director = "Guillermo del Toro",
-                            Duracion = 0,
+                            Duracion = 118,
                             PosterUrl = "https://upload.wikimedia.org/wikipedia/en/6/67/Pan%27s_Labyrinth.jpg",
                             PuntuacionMedia = 3.2m,
                             Titulo = "El Laberinto del Fauno"
@@ -6699,10 +6699,10 @@ namespace MovieHubAPI.Migrations
                         new
                         {
                             Id = 223,
-                            Anio = 0,
+                            Anio = 2000,
                             Descripcion = "Amores perros is a 2000 Mexican psychological drama film produced and directed by Alejandro González Iñárritu (in his feature directorial debut) and written by Guillermo Arriaga, based on a story by both. Amores perros is the first installment in González Iñárritu's \"Trilogy of Death\", succeeded by 21 Grams and Babel. It makes use of the multi-narrative hyperlink cinema style and features an ensemble cast of Emilio Echevarría, Gael García Bernal, Goya Toledo, Álvaro Guerrero, Vanessa Bauche, Jorge Salinas, Adriana Barraza, and Humberto Busto. The film is constructed as a triptych: it contains three distinct stories connected by a car crash in Mexico City. The stories centre on: a teenager in the slums who gets involved in dogfighting; a model who seriously injures her leg; and a mysterious hitman. The stories are linked in various ways, including the presence of dogs in each of them. The title is a pun in Spanish; the word \"perros\", which literally means \"dogs\", can also be used to refer to misery, so that it roughly means 'bad loves' with canine connotations. The film was released under its Spanish title in the English-speaking world, although it was sometimes translated as Love's a Bitch in marketing. The soundtrack includes songs by Latin American rock bands including Café Tacuba, Control Machete, and Illya Kuryaki and the Valderramas. Amores perros premiered on May 14, 2000 at the 2000 Cannes Film Festival and was released in Mexican theaters on June 16, 2000. Amores perros was a Mexican commercial and critical success and was nominated for the Academy Award for Best Foreign Language Film in 2000 and won the Ariel Award for Best Picture from the Mexican Academy of Film. Amores perros has been considered one of the best Mexican films by many. Filmmaker Denis Villeneuve praised Amores perros as one of the best films of the 21st century. In December 2020, Amores perros was remastered by The Criterion Collection. In May 2024, a 4K remaster was screened in the Cannes Classics section at the 78th Cannes Film Festival. Streaming service Mubi subsequently acquired worldwide rights to the film, re-releasing the remaster in Mexican theaters on October 9, 2025, followed by a streaming release on October 25.",
                             Director = "Alejandro González Iñárritu",
-                            Duracion = 0,
+                            Duracion = 153,
                             PosterUrl = "https://upload.wikimedia.org/wikipedia/en/4/4b/Amores_Perros_poster.jpg",
                             PuntuacionMedia = 3.9m,
                             Titulo = "Amores Perros"
@@ -6732,10 +6732,10 @@ namespace MovieHubAPI.Migrations
                         new
                         {
                             Id = 226,
-                            Anio = 0,
+                            Anio = 2017,
                             Descripcion = "Get Out is a 2017 American psychological horror film written, co-produced, and directed by Jordan Peele in his directorial debut. It stars Daniel Kaluuya, Allison Williams, Lil Rel Howery, LaKeith Stanfield, Bradley Whitford, Caleb Landry Jones, Stephen Root, Catherine Keener, and Betty Gabriel. The plot follows a young Black man (Chris), who uncovers shocking secrets when he meets the family of his white girlfriend (Rose). The film was a commercial success, grossing $259.9 million against a $4.5 million budget, and received universal acclaim for Peele's screenplay and direction, as well as Kaluuya's performance, and was chosen by the National Board of Review, the American Film Institute, and Time magazine as one of the top 10 films of 2017. At the 90th Academy Awards, it was nominated for four awards, winning Best Original Screenplay. Retrospectively, Get Out is considered one of the greatest horror films of the 21st century, and in 2021, its screenplay was named the greatest of the 21st century by the Writers Guild of America West.",
                             Director = "Jordan Peele",
-                            Duracion = 0,
+                            Duracion = 104,
                             PosterUrl = "https://upload.wikimedia.org/wikipedia/en/a/a3/Get_Out_poster.png",
                             PuntuacionMedia = 4m,
                             Titulo = "Huye"
@@ -6743,10 +6743,10 @@ namespace MovieHubAPI.Migrations
                         new
                         {
                             Id = 227,
-                            Anio = 0,
+                            Anio = 2018,
                             Descripcion = "A Quiet Place is a 2018 American post-apocalyptic horror film directed by John Krasinski, from a screenplay co-written by Scott Beck and Bryan Woods and Krasinski based on a story Beck and Woods conceived. It tells the story of a mother (Emily Blunt) and father (Krasinski) who struggle to survive and raise their children (Millicent Simmonds and Noah Jupe) in a post-apocalyptic world inhabited by blind extraterrestrial creatures with an acute sense of hearing. Beck and Woods developed the concept for the story while in college, and began writing the screenplay in January 2016. They told Platinum Dunes producers that they wanted Blunt for the role of the mother. In July 2016, Krasinski read their script for the role of the father. He spoke with Blunt about his ideas for the story, and she suggested he direct the film. Blunt initially did not take the role, but later felt connected to the story after reading the script. The two collaborated on ideas for the film during pre-production. Krasinski was announced as director, co-writer, and co-star with Blunt in March 2017. Filming took place in upstate New York from May to November 2017. A Quiet Place premiered at South by Southwest on March 9, 2018, and was released in the United States on April 6, 2018, by Paramount Pictures. It grossed more than $340 million worldwide and received critical acclaim. It was chosen by the National Board of Review and American Film Institute as one of the top ten films of 2018, and received nominations for the Golden Globe Award for Best Original Score, Academy Award for Best Sound Editing, Writers Guild of America Award for Best Original Screenplay, and Blunt won the Screen Actors Guild Award for Outstanding Performance by a Female Actor in a Supporting Role. It is the first film in the A Quiet Place universe. Its sequel, A Quiet Place Part II, was released in 2020.",
                             Director = "John Krasinski",
-                            Duracion = 0,
+                            Duracion = 90,
                             PosterUrl = "https://upload.wikimedia.org/wikipedia/en/a/a0/A_Quiet_Place_film_poster.png",
                             PuntuacionMedia = 3.8m,
                             Titulo = "Un Lugar en Silencio"
@@ -6831,10 +6831,10 @@ namespace MovieHubAPI.Migrations
                         new
                         {
                             Id = 235,
-                            Anio = 0,
+                            Anio = 1989,
                             Descripcion = "Indiana Jones and the Last Crusade is a 1989 American action-adventure film directed by Steven Spielberg from a screenplay by Jeffrey Boam, based on a story by George Lucas and Menno Meyjes. It is the third installment in the Indiana Jones film series and the narrative sequel to Raiders of the Lost Ark (1981). Harrison Ford reprises his role as the titular character, while Sean Connery co-stars as his father. Other cast members featured include Alison Doody, Denholm Elliott, Julian Glover, River Phoenix and John Rhys-Davies. In the film, set in 1938, Indiana Jones searches for his father, a Holy Grail scholar, who has been kidnapped and held hostage by the Nazis while on a journey to find the Holy Grail. After the criticism that Indiana Jones and the Temple of Doom (1984) received, Spielberg chose to make a more lighthearted film for the next installment, as well as bringing back several elements from Raiders of the Lost Ark. During the five years between Temple of Doom and The Last Crusade, he and executive producer Lucas reviewed several scripts before accepting Jeffrey Boam's. Filming locations included Spain, Italy, West Germany, Jordan, the United Kingdom, and the United States. Indiana Jones and the Last Crusade was released in the United States on May 24, 1989, by Paramount Pictures. The film received positive reviews and was a financial success, earning $474.2 million worldwide, making it the highest-grossing film of 1989. It also won the Academy Award for Best Sound Effects Editing and was nominated for Best Original Score and Best Sound at the 62nd Academy Awards. Although Spielberg and Lucas originally intended for The Last Crusade to be the end of the series, a sequel, Indiana Jones and the Kingdom of the Crystal Skull, followed in May 2008, while a fifth and final film, Indiana Jones and the Dial of Destiny, was released in June 2023.",
                             Director = "Steven Spielberg",
-                            Duracion = 0,
+                            Duracion = 127,
                             PosterUrl = "https://upload.wikimedia.org/wikipedia/en/8/8c/Indiana_Jones_and_the_Last_Crusade.png",
                             PuntuacionMedia = 3.1m,
                             Titulo = "Indiana Jones y la Última Cruzada"
@@ -6864,10 +6864,10 @@ namespace MovieHubAPI.Migrations
                         new
                         {
                             Id = 238,
-                            Anio = 0,
+                            Anio = 2015,
                             Descripcion = "Spotlight (conocida en Hispanoamérica como En primera plana) es una película dramática estadounidense de 2015, ganadora del Óscar a la mejor película, dirigida por Thomas McCarthy y escrita por McCarthy y Josh Singer. El filme cuenta la historia de cómo la unidad de investigación del periódico The Boston Globe, llamada Spotlight —la más antigua en los Estados Unidos— desenmascaró un escándalo en el que la Iglesia católica de Massachusetts ocultó un número importante de abusos sexuales perpetrados por sacerdotes de Boston, y el Globe ganó el Premio Pulitzer en la sección servicio público de 2003. El reparto incluye a Mark Ruffalo, Rachel McAdams, Michael Keaton, Brian d'Arcy James, Liev Schreiber, John Slattery y Stanley Tucci. Estuvo seleccionada para ser vista fuera de concurso en el Festival de Venecia, así como en el Festival de Telluride y en la Sección de Presentaciones Especiales del Festival Internacional de Cine de Toronto. La película tuvo su estreno por Open Road Films el 6 de noviembre de 2015. Fue nominada a seis Premios Óscar, de los cuales solo ganó dos, por mejor película y mejor guion original en la 88° ceremonia de entrega de los Óscar celebrada el 28 de febrero del 2016, convirtiéndola en la sexta película en la historia de los premios en conseguir solo dos estatuillas, incluso mejor película, como en El mayor espectáculo del mundo, más de sesenta años antes.",
                             Director = "Tom McCarthy",
-                            Duracion = 0,
+                            Duracion = 128,
                             PosterUrl = "https://upload.wikimedia.org/wikipedia/en/f/f3/Spotlight_%28film%29_poster.jpg",
                             PuntuacionMedia = 3.1m,
                             Titulo = "Spotlight (película)"
@@ -6908,10 +6908,10 @@ namespace MovieHubAPI.Migrations
                         new
                         {
                             Id = 242,
-                            Anio = 0,
+                            Anio = 2022,
                             Descripcion = "Puss in Boots: The Last Wish is a 2022 American animated adventure comedy film directed by Joel Crawford and written by Paul Fisher and Tommy Swerdlow. Produced by DreamWorks Animation, it is the sequel to Puss in Boots (2011) and the sixth installment in the Shrek film series. As with its predecessor, the film is based on the character introduced in Shrek 2 (2004) and inspired by the fairy tale. Antonio Banderas and Salma Hayek reprise their respective roles as the titular character and Kitty Softpaws, with Harvey Guillén, Florence Pugh, Olivia Colman, Ray Winstone, Samson Kayo, John Mulaney, Wagner Moura, Da'Vine Joy Randolph, and Anthony Mendez joining the cast. Set after the events of Shrek Forever After (2010), the story follows Puss in Boots, who teams up with Kitty Softpaws and a dog named Perrito to find the Last Wish of the fallen Wishing Star to restore eight of his nine lives. They race against other fairy tale characters seeking the same treasure, while a sinister wolf hunts Puss himself. Planning for a sequel to Puss in Boots began in November 2012, but it languished in development hell until it was revived in November 2018. In February 2019, it was announced that the film would be helmed by Bob Persichetti, head of story of the first film and co-director of Spider-Man: Into the Spider-Verse (2018). By March 2021, Crawford had replaced Persichetti as director. The story draws inspiration from Spaghetti Western films, with The Good, the Bad and the Ugly (1966) cited as a particular influence. The film's style was inspired by Spider-Man: Into the Spider-Verse. With new technologies, the team was able to give the film a painterly style to resemble a fairy-tale story, diverging from the visual style of previous installments in the Shrek franchise. Puss in Boots: The Last Wish premiered at Lincoln Center in New York City on November 25, 2022, and was theatrically released in the United States on December 21 by Universal Pictures. It received acclaim from critics and was a commercial success, grossing $484 million on a production budget of $90–110 million, becoming the tenth-highest-grossing film of 2022. It was nominated for Best Animated Feature at the Academy Awards, the Golden Globes, the Critics' Choice Awards, and the British Academy Film Awards.",
                             Director = "Joel Crawford",
-                            Duracion = 0,
+                            Duracion = 102,
                             PosterUrl = "https://upload.wikimedia.org/wikipedia/en/7/78/Puss_in_Boots_The_Last_Wish_poster.jpg",
                             PuntuacionMedia = 4m,
                             Titulo = "El Gato con Botas: El Último Deseo"
