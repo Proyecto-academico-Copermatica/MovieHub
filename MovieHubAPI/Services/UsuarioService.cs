@@ -1,6 +1,7 @@
 using System.Security.Claims;
 using System.Text;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.JsonWebTokens;
 using Microsoft.IdentityModel.Tokens;
 using MovieHubAPI.DTOs.Usuario;
@@ -12,11 +13,13 @@ namespace MovieHubAPI.Services
     {
         private readonly UserManager<UsuarioModel> _userManager;
         private readonly IConfiguration _configuration;
+        private readonly MovieHubDbContext _context;
 
-        public UsuarioService(UserManager<UsuarioModel> userManager, IConfiguration configuration)
+        public UsuarioService(UserManager<UsuarioModel> userManager, IConfiguration configuration, MovieHubDbContext context)
         {
             _userManager = userManager;
             _configuration = configuration;
+            _context = context;
         }
 
         public async Task<AuthResponseDto> RegisterAsync(RegisterDto dto)
@@ -66,9 +69,27 @@ namespace MovieHubAPI.Services
             if (usuario is null) return false;
 
             usuario.UserName = dto.UserName;
-            usuario.Email = dto.Email;
 
             var result = await _userManager.UpdateAsync(usuario);
+            return result.Succeeded;
+        }
+
+        public async Task<bool> DeleteProfileAsync(long userId)
+        {
+            var usuario = await _userManager.FindByIdAsync(userId.ToString());
+            if (usuario is null) return false;
+
+            var favoritos = await _context.Favoritos.Where(f => f.UsuarioId == userId).ToListAsync();
+            if (favoritos.Count != 0)
+                _context.Favoritos.RemoveRange(favoritos);
+
+            var valoraciones = await _context.Valoraciones.Where(v => v.UsuarioId == userId).ToListAsync();
+            if (valoraciones.Count != 0)
+                _context.Valoraciones.RemoveRange(valoraciones);
+
+            await _context.SaveChangesAsync();
+
+            var result = await _userManager.DeleteAsync(usuario);
             return result.Succeeded;
         }
 
