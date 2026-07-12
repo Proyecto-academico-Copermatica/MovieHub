@@ -21,6 +21,15 @@ builder.Services.AddSwaggerGen(c =>
     {
         return apiDesc.TryGetMethodInfo(out var methodInfo) ? methodInfo.Name : null;
     });
+    c.AddSecurityDefinition("Bearer", new Microsoft.OpenApi.OpenApiSecurityScheme
+    {
+        Name = "Authorization",
+        Type = Microsoft.OpenApi.SecuritySchemeType.Http,
+        Scheme = "bearer",
+        BearerFormat = "JWT",
+        In = Microsoft.OpenApi.ParameterLocation.Header,
+        Description = "Pega aquí el token JWT obtenido en POST /api/Usuarios/login"
+    });
 });
 builder.Services.AddCors(options =>
 {
