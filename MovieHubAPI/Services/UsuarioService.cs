@@ -19,7 +19,7 @@ namespace MovieHubAPI.Services
             _configuration = configuration;
         }
 
-        public async Task<AuthResponseDto?> RegisterAsync(RegisterDto dto)
+        public async Task<AuthResponseDto> RegisterAsync(RegisterDto dto)
         {
             var usuario = new UsuarioModel
             {
