@@ -19,14 +19,30 @@ namespace MovieHubAPI.Services
             _configuration = configuration;
         }
 
-        public Task<AuthResponseDto?> RegisterAsync(RegisterDto dto)
+        public async Task<AuthResponseDto?> RegisterAsync(RegisterDto dto)
         {
-            throw new NotImplementedException();
+            var usuario = new UsuarioModel
+            {
+                UserName = dto.UserName,
+                Email = dto.Email,
+                FechaRegistro = DateTime.UtcNow
+            };
+
+            var result = await _userManager.CreateAsync(usuario, dto.Password);
+            if (!result.Succeeded) return null;
+
+            return await GenerateAuthResponseAsync(usuario);
         }
 
-        public Task<AuthResponseDto?> LoginAsync(LoginDto dto)
+        public async Task<AuthResponseDto?> LoginAsync(LoginDto dto)
         {
-            throw new NotImplementedException();
+            var usuario = await _userManager.FindByEmailAsync(dto.Email);
+            if (usuario is null) return null;
+
+            var validPassword = await _userManager.CheckPasswordAsync(usuario, dto.Password);
+            if (!validPassword) return null;
+
+            return await GenerateAuthResponseAsync(usuario);
         }
 
         public Task<UserProfileDto?> GetProfileAsync(long userId)
