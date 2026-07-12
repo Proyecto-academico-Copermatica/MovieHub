@@ -108,7 +108,7 @@ public interface IPeliculaService
 }
 ```
 
-Interfaces existentes: `IPeliculaService`, `IGeneroService`, `IUsuarioService` (esta última pendiente de implementar).
+Interfaces existentes: `IPeliculaService`, `IGeneroService`, `IUsuarioService`.
 
 ---
 
@@ -150,7 +150,7 @@ public class PeliculaService : IPeliculaService
 }
 ```
 
-Servicios existentes: `PeliculaService`, `GeneroService`. `UsuarioService` está pendiente de implementar.
+Servicios existentes: `PeliculaService`, `GeneroService`, `UsuarioService`.
 
 ---
 
@@ -230,7 +230,7 @@ Registra tus servicios:
 ```csharp
 builder.Services.AddScoped<IPeliculaService, PeliculaService>();
 builder.Services.AddScoped<IGeneroService, GeneroService>();
-// IUsuarioService pendiente de registrar
+builder.Services.AddScoped<IUsuarioService, UsuarioService>();
 ```
 
 > ✅ `MappingConfig.Configure()` ya está activo en `Program.cs`. Los mapeos personalizados
