@@ -4283,6 +4283,7 @@ namespace MovieHubAPI.Migrations
                             Descripcion = "Interstellar (conocida como Interestelar en Hispanoamérica) es una película épica de drama y ciencia ficción, de coproducción británico-estadounidense-canadiense, de 2014, dirigida por Christopher Nolan y protagonizada por Matthew McConaughey, Anne Hathaway, Jessica Chastain, Michael Caine y Matt Damon. Ambientada en un futuro distópico donde la humanidad está luchando por sobrevivir, ya que la Tierra se está volviendo inhabitable por el cambio climático que arrasa con todo. La película cuenta la historia de un grupo de astronautas que viajan a través de un agujero de gusano cerca de Saturno en busca de un nuevo hogar para la humanidad. Los hermanos Christopher y Jonathan Nolan escribieron el guion, que tuvo su origen en un borrador que Jonathan desarrolló en 2007. Christopher Nolan produjo la película junto a su esposa Emma Thomas mediante su compañía productora Syncopy, y con Lynda Obst a través de Lynda Obst Productions. El físico teórico Kip Thorne, cuyo trabajo inspiró la película, fue productor ejecutivo y participó como consultor científico. Warner Bros., Paramount Pictures y Legendary Pictures cofinanciaron la película.[cita requerida] Interstellar se estrenó el 26 de octubre de 2014 en Los Ángeles. En Estados Unidos y Canadá el lanzamiento se realizó en el formato tradicional en celuloide (película fotográfica), pero mundialmente el film estuvo disponible sólo con tecnología digital. En los Premios de la Academia de 2014, la película ganó el Óscar a los mejores efectos visuales, y fue nominada por mejor banda sonora, mejor sonido y mejor diseño de producción. Recibió también varios premios y nominaciones, en particular por sus efectos visuales, fotografía, banda sonora y la actuación de Mackenzie Foy.[cita requerida]",
                             Director = "Christopher Nolan",
                             Duracion = 169,
+                            PosterUrl = "https://via.placeholder.com/300x450?text=Interstellar",
                             PuntuacionMedia = 3.2m,
                             Titulo = "Interstellar"
                         },
@@ -4322,10 +4323,10 @@ namespace MovieHubAPI.Migrations
                         new
                         {
                             Id = 7,
-                            Anio = 0,
+                            Anio = 1994,
                             Descripcion = "El término Forrest Gump puede referirse a: Forrest Gump (banda sonora), banda sonora de la película de 1994. Forrest Gump (libro), novela de 1986. Forrest Gump (película), película de 1994 basada en la novela. Forrest Gump (personaje), protagonista de la novela y la película homónimas.",
                             Director = "Robert Zemeckis",
-                            Duracion = 0,
+                            Duracion = 142,
                             PosterUrl = "https://upload.wikimedia.org/wikipedia/en/6/67/Forrest_Gump_poster.jpg",
                             PuntuacionMedia = 4.7m,
                             Titulo = "Forrest Gump"
@@ -4333,9 +4334,10 @@ namespace MovieHubAPI.Migrations
                         new
                         {
                             Id = 8,
-                            Anio = 0,
+                            Anio = 2001,
+                            Descripcion = "Un joven hobbit emprende un viaje para destruir un anillo maligno.",
                             Director = "Peter Jackson",
-                            Duracion = 0,
+                            Duracion = 178,
                             PosterUrl = "https://upload.wikimedia.org/wikipedia/en/f/fb/Lord_Rings_Fellowship_Ring.jpg",
                             PuntuacionMedia = 2.7m,
                             Titulo = "El Señor de los Anillos: La Comunidad del Anillo"
@@ -4354,10 +4356,10 @@ namespace MovieHubAPI.Migrations
                         new
                         {
                             Id = 10,
-                            Anio = 0,
+                            Anio = 1993,
                             Descripcion = "Parque Jurásico puede referirse a: Parque Jurásico (en inglés, Jurassic Park), una novela de ciencia ficción escrita por el estadounidense Michael Crichton y publicada por primera vez en Estados Unidos en 1990; Parque Jurásico, la franquicia de productos derivados de la novela de Crichton (películas, videojuegos, juguetes, camisetas etc.), exitosa sobre todo gracias a una serie de películas. Hasta la fecha las películas han sido las siguientes: Parque Jurásico (Jurassic Park, 1993): la primera película basada en la novela original de 1990; El mundo perdido: Parque Jurásico II (The Lost World: Jurassic Park, 1997): la segunda película de la franquicia; Parque Jurásico III (Jurassic Park III, 2001): la tercera película de la franquicia; Jurassic World (titulada Jurassic World: Mundo Jurásico en Hispanoamérica, 2015): la cuarta película de la franquicia; Jurassic World: El reino caído (Jurassic World: Fallen Kingdom, 2018): la quinta película de la franquicia; Jurassic World: Dominion (2022): la sexta y última película de la franquicia.",
                             Director = "Steven Spielberg",
-                            Duracion = 0,
+                            Duracion = 127,
                             PosterUrl = "https://upload.wikimedia.org/wikipedia/en/e/e7/Jurassic_Park_poster.jpg",
                             PuntuacionMedia = 2.6m,
                             Titulo = "Parque Jurásico"
@@ -4365,9 +4367,10 @@ namespace MovieHubAPI.Migrations
                         new
                         {
                             Id = 11,
-                            Anio = 0,
+                            Anio = 2012,
+                            Descripcion = "Los superhéroes más poderosos de la Tierra se unen para salvar el mundo.",
                             Director = "Joss Whedon",
-                            Duracion = 0,
+                            Duracion = 143,
                             PosterUrl = "https://upload.wikimedia.org/wikipedia/en/8/8a/The_Avengers_%282012_film%29_poster.jpg",
                             PuntuacionMedia = 3m,
                             Titulo = "The Avengers (película)"
@@ -4397,9 +4400,10 @@ namespace MovieHubAPI.Migrations
                         new
                         {
                             Id = 14,
-                            Anio = 0,
-                            Director = ".mw-parser-output .plainlist ol,.mw-parser-output .plainlist ul{line-height:inherit;list-style:none;margin:0;padding:0}.mw-parser-output .plainlist ol li,.mw-parser-output .plainlist ul li{margin-bottom:0}\nRoger Allers\nRob Minkoff",
-                            Duracion = 0,
+                            Anio = 1994,
+                            Descripcion = "Un león joven debe reclamar su trono después de la muerte de su padre.",
+                            Director = "Roger Allers, Rob Minkoff",
+                            Duracion = 88,
                             PosterUrl = "https://upload.wikimedia.org/wikipedia/en/3/3d/The_Lion_King_poster.jpg",
                             PuntuacionMedia = 3m,
                             Titulo = "El Rey León"
@@ -4407,9 +4411,10 @@ namespace MovieHubAPI.Migrations
                         new
                         {
                             Id = 15,
-                            Anio = 0,
+                            Anio = 1985,
+                            Descripcion = "Un adolescente viaja al pasado y debe asegurar la existencia de sus padres.",
                             Director = "Robert Zemeckis",
-                            Duracion = 0,
+                            Duracion = 116,
                             PosterUrl = "https://upload.wikimedia.org/wikipedia/en/d/d2/Back_to_the_Future.jpg",
                             PuntuacionMedia = 4.1m,
                             Titulo = "Regreso al Futuro"
@@ -4417,9 +4422,10 @@ namespace MovieHubAPI.Migrations
                         new
                         {
                             Id = 16,
-                            Anio = 0,
+                            Anio = 1972,
+                            Descripcion = "El patriarca de una familia mafiosa intenta transferir el poder a su hijo.",
                             Director = "Francis Ford Coppola",
-                            Duracion = 0,
+                            Duracion = 175,
                             PosterUrl = "https://upload.wikimedia.org/wikipedia/en/1/1c/Godfather_ver1.jpg",
                             PuntuacionMedia = 3.9m,
                             Titulo = "El Padrino"
@@ -4427,9 +4433,10 @@ namespace MovieHubAPI.Migrations
                         new
                         {
                             Id = 17,
-                            Anio = 0,
+                            Anio = 1994,
+                            Descripcion = "Un banquero es condenado a cadena perpetua y planea su escape.",
                             Director = "Frank Darabont",
-                            Duracion = 0,
+                            Duracion = 142,
                             PosterUrl = "https://upload.wikimedia.org/wikipedia/en/8/81/ShawshankRedemptionMoviePoster.jpg",
                             PuntuacionMedia = 3.1m,
                             Titulo = "Cadena Perpetua"
@@ -4437,9 +4444,10 @@ namespace MovieHubAPI.Migrations
                         new
                         {
                             Id = 18,
-                            Anio = 0,
+                            Anio = 1993,
+                            Descripcion = "Un empresario alemán salva a más de mil judíos del Holocausto.",
                             Director = "Steven Spielberg",
-                            Duracion = 0,
+                            Duracion = 195,
                             PosterUrl = "https://upload.wikimedia.org/wikipedia/en/3/38/Schindler%27s_List_movie.jpg",
                             PuntuacionMedia = 4m,
                             Titulo = "La Lista de Schindler"
@@ -4447,9 +4455,10 @@ namespace MovieHubAPI.Migrations
                         new
                         {
                             Id = 19,
-                            Anio = 0,
-                            Descripcion = "Doce hombres sin piedad puede hacer referencia a: «Doce hombres sin piedad», título por el que se conoce en España a «Twelve Angry Men», dramático estadounidense para televisión escrito por Reginald Rose, dirigido por Franklin Schaffner y emitido por la CBS en 1954 dentro del programa Studio One. Doce hombres sin piedad, título en España de la obra teatral escrita por Reginald Rose en 1955 adaptando el guion escrito por él mismo para el dramático de televisión del año anterior. Doce hombres sin piedad, título en España de la película estadounidense de 1957 12 Angry Men, dirigida por Sydney Lumet y basada en el drama televisivo anterior. «Doce hombres sin piedad», dramático de Televisión Española de 1973 dirigido por Gustavo Pérez Puig, emitido dentro del espacio Estudio Uno y basado en el guion de Reginald Rose para la producción televisiva de 1954.",
-                            Duracion = 0,
+                            Anio = 1957,
+                            Director = "Reginald Rose",
+                            Duracion = 96,
+                            PosterUrl = "https://via.placeholder.com/300x450?text=12+Angry+Men",
                             PuntuacionMedia = 4.5m,
                             Titulo = "Doce hombres sin piedad"
                         },
@@ -4478,25 +4487,30 @@ namespace MovieHubAPI.Migrations
                         new
                         {
                             Id = 22,
-                            Anio = 0,
-                            Duracion = 0,
+                            Anio = 1995,
+                            Director = "David Fincher",
+                            Duracion = 127,
+                            PosterUrl = "https://via.placeholder.com/300x450?text=Seven",
                             PuntuacionMedia = 4.2m,
                             Titulo = "Seven (película)"
                         },
                         new
                         {
                             Id = 23,
-                            Anio = 0,
-                            Duracion = 0,
+                            Anio = 1991,
+                            Director = "Jonathan Demme",
+                            Duracion = 118,
+                            PosterUrl = "https://via.placeholder.com/300x450?text=Silence+Lambs",
                             PuntuacionMedia = 3.4m,
                             Titulo = "El Silencio de los Corderos"
                         },
                         new
                         {
                             Id = 24,
-                            Anio = 0,
+                            Anio = 1998,
+                            Descripcion = "Un grupo de soldados arriesga su vida para salvar a un compañero.",
                             Director = "Steven Spielberg",
-                            Duracion = 0,
+                            Duracion = 169,
                             PosterUrl = "https://upload.wikimedia.org/wikipedia/en/a/ac/Saving_Private_Ryan_poster.jpg",
                             PuntuacionMedia = 2.9m,
                             Titulo = "Salvar al Soldado Ryan"
@@ -4504,9 +4518,10 @@ namespace MovieHubAPI.Migrations
                         new
                         {
                             Id = 25,
-                            Anio = 0,
+                            Anio = 1999,
+                            Descripcion = "Un guardia de prisión descubre que un reo tiene un don milagroso.",
                             Director = "Frank Darabont",
-                            Duracion = 0,
+                            Duracion = 189,
                             PosterUrl = "https://upload.wikimedia.org/wikipedia/en/e/e2/The_Green_Mile_%28movie_poster%29.jpg",
                             PuntuacionMedia = 4.9m,
                             Titulo = "La Milla Verde"
@@ -4514,8 +4529,10 @@ namespace MovieHubAPI.Migrations
                         new
                         {
                             Id = 26,
-                            Anio = 0,
-                            Duracion = 0,
+                            Anio = 2001,
+                            Descripcion = "Una niña perdida en un mundo de espíritus busca liberar a sus padres.",
+                            Director = "Hayao Miyazaki",
+                            Duracion = 125,
                             PosterUrl = "https://upload.wikimedia.org/wikipedia/en/d/db/Spirited_Away_Japanese_poster.png",
                             PuntuacionMedia = 3.3m,
                             Titulo = "El Viaje de Chihiro"
@@ -4534,9 +4551,10 @@ namespace MovieHubAPI.Migrations
                         new
                         {
                             Id = 28,
-                            Anio = 0,
+                            Anio = 1997,
+                            Descripcion = "Un padre judío usa su imaginación para proteger a su hijo en un campo de concentración.",
                             Director = "Roberto Benigni",
-                            Duracion = 0,
+                            Duracion = 116,
                             PosterUrl = "https://upload.wikimedia.org/wikipedia/en/7/7c/Vitaebella.jpg",
                             PuntuacionMedia = 2.7m,
                             Titulo = "La Vida es Bella"
@@ -4544,9 +4562,10 @@ namespace MovieHubAPI.Migrations
                         new
                         {
                             Id = 29,
-                            Anio = 0,
+                            Anio = 2014,
+                            Descripcion = "Un joven baterista aspira a la grandeza bajo un estricto profesor.",
                             Director = "Damien Chazelle",
-                            Duracion = 0,
+                            Duracion = 107,
                             PosterUrl = "https://upload.wikimedia.org/wikipedia/en/0/01/Whiplash_poster.jpg",
                             PuntuacionMedia = 4.6m,
                             Titulo = "Whiplash (película)"
@@ -4554,9 +4573,10 @@ namespace MovieHubAPI.Migrations
                         new
                         {
                             Id = 30,
-                            Anio = 0,
-                            Director = ".mw-parser-output .plainlist ol,.mw-parser-output .plainlist ul{line-height:inherit;list-style:none;margin:0;padding:0}.mw-parser-output .plainlist ol li,.mw-parser-output .plainlist ul li{margin-bottom:0}\nBob Persichetti\nPeter Ramsey\nRodney Rothman",
-                            Duracion = 0,
+                            Anio = 2018,
+                            Descripcion = "Miles Morales se convierte en Spider-Man y debe salvar Nueva York.",
+                            Director = "Bob Persichetti, Peter Ramsey, Rodney Rothman",
+                            Duracion = 117,
                             PosterUrl = "https://upload.wikimedia.org/wikipedia/en/f/fa/Spider-Man_Into_the_Spider-Verse_poster.png",
                             PuntuacionMedia = 4m,
                             Titulo = "Spider-Man: Un Nuevo Universo"
@@ -4575,9 +4595,10 @@ namespace MovieHubAPI.Migrations
                         new
                         {
                             Id = 32,
-                            Anio = 0,
+                            Anio = 2008,
+                            Descripcion = "Un robot solitario aprende el significado del amor y la humanidad.",
                             Director = "Andrew Stanton",
-                            Duracion = 0,
+                            Duracion = 98,
                             PosterUrl = "https://upload.wikimedia.org/wikipedia/en/4/4c/WALL-E_poster.jpg",
                             PuntuacionMedia = 4.3m,
                             Titulo = "WALL-E"
@@ -4585,9 +4606,10 @@ namespace MovieHubAPI.Migrations
                         new
                         {
                             Id = 33,
-                            Anio = 0,
+                            Anio = 1980,
+                            Descripcion = "Un escritor y su familia quedan atrapados en un hotel embrujado.",
                             Director = "Stanley Kubrick",
-                            Duracion = 0,
+                            Duracion = 146,
                             PosterUrl = "https://upload.wikimedia.org/wikipedia/en/1/1d/The_Shining_%281980%29_U.K._release_poster_-_The_tide_of_terror_that_swept_America_IS_HERE.jpg",
                             PuntuacionMedia = 3.8m,
                             Titulo = "El Resplandor"
@@ -4617,9 +4639,10 @@ namespace MovieHubAPI.Migrations
                         new
                         {
                             Id = 36,
-                            Anio = 0,
+                            Anio = 2000,
+                            Descripcion = "Un hombre con pérdida de memoria a corto plazo busca al asesino de su esposa.",
                             Director = "Christopher Nolan",
-                            Duracion = 0,
+                            Duracion = 113,
                             PosterUrl = "https://upload.wikimedia.org/wikipedia/en/c/c7/Memento_poster.jpg",
                             PuntuacionMedia = 3.9m,
                             Titulo = "Memento (película)"
@@ -4660,9 +4683,10 @@ namespace MovieHubAPI.Migrations
                         new
                         {
                             Id = 40,
-                            Anio = 0,
+                            Anio = 1998,
+                            Descripcion = "Un hombre descubre que toda su vida es un programa de televisión.",
                             Director = "Peter Weir",
-                            Duracion = 0,
+                            Duracion = 103,
                             PosterUrl = "https://upload.wikimedia.org/wikipedia/en/c/cd/Trumanshow.jpg",
                             PuntuacionMedia = 3.9m,
                             Titulo = "El Show de Truman"
@@ -4670,9 +4694,10 @@ namespace MovieHubAPI.Migrations
                         new
                         {
                             Id = 41,
-                            Anio = 0,
+                            Anio = 1991,
+                            Descripcion = "Un cyborg viaja al pasado para evitar un futuro apocalíptico.",
                             Director = "James Cameron",
-                            Duracion = 0,
+                            Duracion = 137,
                             PosterUrl = "https://upload.wikimedia.org/wikipedia/en/5/5e/Terminator_2-Judgment_Day.png",
                             PuntuacionMedia = 4.3m,
                             Titulo = "Terminator 2: El Juicio Final"
@@ -5505,11 +5530,11 @@ namespace MovieHubAPI.Migrations
                         new
                         {
                             Id = 117,
-                            Anio = 0,
-                            Descripcion = "Snow White and the Seven Dwarfs is a 1937 American animated musical fantasy film produced by Walt Disney and released by RKO Radio Pictures, based on the 1812 German fairy tale \"Snow White\" by the Brothers Grimm. The film was supervised by David Hand and a team of five sequence directors: Perce Pearce, William Cottrell, Larry Morey, Wilfred Jackson, and Ben Sharpsteen. It is the first animated feature film produced in the United States and the first cel animated feature film. Snow White premiered at the Carthay Circle Theatre in Los Angeles, California, on December 21, 1937, and went into general release in the United States on February 4, 1938. Despite initial doubts from the film industry, it was a critical and commercial success, with international earnings of more than $8 million during its initial release against a $1.5 million production cost, becoming the highest-grossing film of 1938, and briefly holding the record of the highest-grossing sound film of all time. It was also the highest-grossing animated film for 55 years. The popularity of the film has led to its being re-released theatrically many times, until its home video release in the 1990s. Adjusted for inflation, it is one of the top-ten performers at the North American box office and is still the highest-grossing animated film with an adjusted gross of $2,297,000,000. Worldwide, its inflation-adjusted earnings top the animation list. Snow White was nominated for Best Musical Score at the Academy Awards in 1938, and the next year, producer Walt Disney was awarded an honorary Oscar for the film. This award was unique, consisting of one normal-sized, plus seven miniature Oscar statuettes. They were presented to Disney by Shirley Temple. Snow White was a landmark release in the early animation industry, and it is widely regarded as one of the greatest and most influential films ever made, credited with ushering in the golden age of animation. Disney's take on the fairy tale has had a significant cultural impact, resulting in popular theme park attractions, a video game, a Broadway musical, and a 2025 live-action film remake. In 1989, the United States Library of Congress deemed the film \"culturally, historically, or aesthetically significant\" and selected it as one of the first 25 films for preservation in the National Film Registry. The American Film Institute ranked it among the 100 greatest American films, and also named the film as the greatest American animated film of all time in 2008.",
-                            Director = "Supervising DirectorDavid Hand\nSequence Directors.mw-parser-output .plainlist ol,.mw-parser-output .plainlist ul{line-height:inherit;list-style:none;margin:0;padding:0}.mw-parser-output .plainlist ol li,.mw-parser-output .plainlist ul li{margin-bottom:0}\nPerce Pearce\nWilliam Cottrell\nLarry Morey\nWilfred Jackson\nBen Sharpsteen",
-                            Duracion = 0,
-                            PosterUrl = "https://upload.wikimedia.org/wikipedia/commons/5/56/Snow_White_and_the_Seven_Dwarfs_%28Style_B%29_poster.jpg",
+                            Anio = 1937,
+                            Descripcion = "Una princesa huye de su malvada madrastra y encuentra refugio con siete enanitos.",
+                            Director = "David Hand",
+                            Duracion = 83,
+                            PosterUrl = "https://upload.wikimedia.org/wikipedia/commons/5/56/Snow_White_and_the_Seven_Dwarfs_%28Style_A%29.png",
                             PuntuacionMedia = 3.2m,
                             Titulo = "Blancanieves y los Siete Enanitos"
                         },
@@ -5593,12 +5618,11 @@ namespace MovieHubAPI.Migrations
                         new
                         {
                             Id = 125,
-                            Anio = 0,
-                            Descripcion = "Lady and the Tramp is a 1955 American animated musical romantic comedy film produced by Walt Disney Productions and released by Buena Vista Film Distribution. Based on Ward Greene's 1945 Cosmopolitan magazine story \"Happy Dan, the Cynical Dog\", it was directed by Hamilton Luske, Clyde Geronimi, and Wilfred Jackson. The film features the voices of Peggy Lee, Barbara Luddy, Larry Roberts, Bill Thompson, Bill Baucom, Stan Freberg, Verna Felton, Alan Reed, George Givot, Dallas McKennon, and Lee Millar. The film follows Lady, the pampered cocker spaniel, as she grows from puppy to adult, deals with changes in her family, and meets and falls in love with the homeless mutt Tramp. The inspiration for Lady and the Tramp originated in 1925 when Walt Disney presented his wife Lillian with a chow puppy in a hatbox. In 1937, Joe Grant, a storyboard artist, pitched to Disney an original idea as inspired by his English Springer Spaniel. Throughout the 1940s, the project underwent numerous story revisions, but it was shelved due to Disney's production of several package films. Grant left the Disney studios in 1949. In 1952, Disney placed the project back into active development, and the final story was revised by Erdman Penner and Joe Rinaldi. The film's art direction was supervised by Claude Coats, who took inspiration from gingerbread architecture. Peggy Lee and Sonny Burke wrote the film's original songs, while Oliver Wallace composed the instrumental musical score. During production, Disney decided Lady and the Tramp would be the first animated film to be filmed in the CinemaScope widescreen film process. It was also Disney's first animated film to be distributed by their Buena Vista division following their split from RKO Radio Pictures. Lady and the Tramp was released in theaters on June 22, 1955, and achieved box office success. While it initially received mixed reviews from critics, the film's critical reception has grown more favorable over time, and it is now regarded as one of the greatest animated films of all time. The film launched a long-running Disney comic strip featuring Scamp. A direct-to-video sequel, titled Lady and the Tramp II: Scamp's Adventure, was released in 2001. A live-action/CGI hybrid remake premiered in 2019 as a launch title for the Disney+ streaming service. In 2023, Lady and the Tramp was selected for preservation in the United States National Film Registry by the Library of Congress as being \"culturally, historically or aesthetically significant.\"",
-                            Director = ".mw-parser-output .plainlist ol,.mw-parser-output .plainlist ul{line-height:inherit;list-style:none;margin:0;padding:0}.mw-parser-output .plainlist ol li,.mw-parser-output .plainlist ul li{margin-bottom:0}\nHamilton Luske\nClyde Geronimi\nWilfred Jackson",
-                            Duracion = 0,
-                            PosterUrl = "https://upload.wikimedia.org/wikipedia/en/3/39/Lady-and-tramp-1955-poster.jpg",
-                            PuntuacionMedia = 2.5m,
+                            Anio = 1955,
+                            Director = "Hamilton Luske, Clyde Geronimi, Wilfred Jackson",
+                            Duracion = 76,
+                            PosterUrl = "https://upload.wikimedia.org/wikipedia/en/c/c1/Lady_and_the_Tramp_1955_poster.jpg",
+                            PuntuacionMedia = 2.6m,
                             Titulo = "La Dama y el Vagabundo"
                         },
                         new
@@ -5659,57 +5683,52 @@ namespace MovieHubAPI.Migrations
                         new
                         {
                             Id = 131,
-                            Anio = 0,
-                            Descripcion = "La Sirenita (título original en danés: Den lille Havfrue) es un cuento de hadas del escritor y poeta danés Hans Christian Andersen, famoso por sus cuentos para niños. La historia sigue el viaje de una joven sirena que está dispuesta a renunciar a su vida en el mar como sirena para ganar un alma humana. Es el octavo cuento de la colección de Andersen, escrito originalmente como un ballet y fue originalmente publicado el 7 de abril de 1837.",
-                            Director = ".mw-parser-output .plainlist ol,.mw-parser-output .plainlist ul{line-height:inherit;list-style:none;margin:0;padding:0}.mw-parser-output .plainlist ol li,.mw-parser-output .plainlist ul li{margin-bottom:0}\nJohn Musker\nRon Clements",
-                            Duracion = 0,
+                            Anio = 1989,
+                            Director = "John Musker, Ron Clements",
+                            Duracion = 83,
                             PosterUrl = "https://upload.wikimedia.org/wikipedia/en/c/c0/The_Little_Mermaid_%28Official_1989_Film_Poster%29.png",
                             PuntuacionMedia = 3.3m,
-                            Titulo = "La Sirenita (película de 1989)"
+                            Titulo = "La Sirenita (1989)"
                         },
                         new
                         {
                             Id = 132,
-                            Anio = 0,
-                            Descripcion = "La Bella y la Bestia (La Belle et la Bête en francés) es un cuento de hadas tradicional francés. Narración de la que hay múltiples variantes, su origen podría ser una historia de Apuleyo, incluida en su libro El asno de oro (también conocido como Las metamorfosis), titulada «Cupido y Psique». La primera versión publicada fue obra de la escritora francesa Gabrielle-Suzanne Barbot de Villeneuve, en 1740, aunque otras fuentes atribuyen a Gianfrancesco Straparola la recreación de la historia original, en 1550.",
-                            Director = ".mw-parser-output .plainlist ol,.mw-parser-output .plainlist ul{line-height:inherit;list-style:none;margin:0;padding:0}.mw-parser-output .plainlist ol li,.mw-parser-output .plainlist ul li{margin-bottom:0}\nGary Trousdale\nKirk Wise",
-                            Duracion = 0,
+                            Anio = 1991,
+                            Director = "Gary Trousdale, Kirk Wise",
+                            Duracion = 84,
                             PosterUrl = "https://upload.wikimedia.org/wikipedia/en/5/5e/Beauty_and_the_Beast_%281991_film%29_poster.jpg",
                             PuntuacionMedia = 2.6m,
-                            Titulo = "La Bella y la Bestia (película de 1991)"
+                            Titulo = "La Bella y la Bestia (1991)"
                         },
                         new
                         {
                             Id = 133,
-                            Anio = 0,
-                            Descripcion = "Aladdín (o Aladdin) es una película animada producida por Walt Disney Feature Animation y distribuida por Walt Disney Pictures. Es la trigésima primera película en el canon de Walt Disney Animation y se realizó en un período conocido como el Renacimiento de Disney. La película se montó bajo la dirección y producción de John Musker y Ron Clements, los guiones de Musker, Clements, Ted Elliot y Terry Rossio, y con Alan Menken como responsable de la banda sonora.",
-                            Director = ".mw-parser-output .plainlist ol,.mw-parser-output .plainlist ul{line-height:inherit;list-style:none;margin:0;padding:0}.mw-parser-output .plainlist ol li,.mw-parser-output .plainlist ul li{margin-bottom:0}\nJohn Musker\nRon Clements",
-                            Duracion = 0,
-                            PosterUrl = "https://upload.wikimedia.org/wikipedia/en/b/bd/Aladdin_%281992_Disney_film%29_poster.jpg",
-                            PuntuacionMedia = 4.7m,
-                            Titulo = "Aladdín (película de 1992)"
+                            Anio = 1992,
+                            Director = "John Musker, Ron Clements",
+                            Duracion = 90,
+                            PosterUrl = "https://upload.wikimedia.org/wikipedia/en/2/26/Aladdin_%281992_film%29_poster.jpg",
+                            PuntuacionMedia = 3m,
+                            Titulo = "Aladdin (1992)"
                         },
                         new
                         {
                             Id = 134,
-                            Anio = 0,
-                            Descripcion = "Pocahontas (Virginia, 1595-Londres, 21 de marzo de 1617) fue una nativa americana del siglo XVII además de ser la hija mayor del jefe Powhatan, jefe de la confederación algonquina en Virginia. En lengua algonquina su verdadero nombre era Matoaka, pero se le conocía por su mote Traviesa. Su vida ha sido llevada al cine en varias ocasiones: entre ellas, El nuevo mundo (2005) de Terrence Malick, La leyenda de Pocahontas, de Danièle J. Suissa, y en dos películas de Disney, Pocahontas (1995) y la secuela Pocahontas II (1998). En su última etapa y en sus años de vida, Pocahontas fue conocida y rebautizada como Lady Rebecca Rolfe, y de esta forma dejó de llamarse Pocahontas cuando se casó con John Rolfe. Tuvo un hijo con él, llamado Thomas Rolfe. Pocahontas falleció a los 20 o 21 años por causas que se desconocen y fue enterrada en la iglesia de San Jorge de Gravesend, Kent, Inglaterra. La ubicación exacta de su tumba se desconoce dado que la iglesia tuvo que ser reconstruida debido a un incendio. La historia de esta nativa americana se ha idealizado a lo largo de los años y mucho de lo que se cuenta sobre ella es ficticio. Incluso los relatos que John Smith narró sobre ella han sido refutados por los descendientes de esta. En 2023 se descubrió que el célebre actor Edward Norton es descendiente de Pocahontas. El actor recibió la noticia en el programa de historia genealógica \"Finding Your Roots\" de la cadena de televisión pública PBS, presentado por el historiador Henry Louis Gates Jr.",
-                            Director = ".mw-parser-output .plainlist ol,.mw-parser-output .plainlist ul{line-height:inherit;list-style:none;margin:0;padding:0}.mw-parser-output .plainlist ol li,.mw-parser-output .plainlist ul li{margin-bottom:0}\nMike Gabriel\nEric Goldberg",
-                            Duracion = 0,
-                            PosterUrl = "https://upload.wikimedia.org/wikipedia/en/5/57/Pocahontasposter.jpg",
-                            PuntuacionMedia = 4.9m,
-                            Titulo = "Pocahontas (película de 1995)"
+                            Anio = 1995,
+                            Director = "Mike Gabriel, Eric Goldberg",
+                            Duracion = 81,
+                            PosterUrl = "https://upload.wikimedia.org/wikipedia/en/4/47/Pocahontas_%281995_film%29_poster.jpg",
+                            PuntuacionMedia = 3.4m,
+                            Titulo = "Pocahontas (1995)"
                         },
                         new
                         {
                             Id = 135,
-                            Anio = 0,
-                            Descripcion = "The Hunchback of Notre Dame is a 1996 American animated musical drama film loosely based on the 1831 novel by Victor Hugo, and produced by Walt Disney Feature Animation. Directed by Gary Trousdale and Kirk Wise, produced by Don Hahn, and written by Tab Murphy, Irene Mecchi, Jonathan Roberts, and the writing team of Bob Tzudiker and Noni White, the film stars Tom Hulce, Demi Moore, Tony Jay, and Kevin Kline. The film follows Quasimodo (Hulce), the deformed and confined bell-ringer of Notre Dame, and his yearning to explore the outside world and be accepted by society, against the wishes of his cruel, puritanical adoptive father Claude Frollo (Jay), who also wants to exterminate Paris' Romani population. In 1993, David Stainton, then a development executive at Disney Feature Animation, conceived the idea to adapt Victor Hugo's Gothic novel into an animated feature. He subsequently pitched the idea to then-Disney Studios chairman Jeffrey Katzenberg. At Katzenberg's request, Trousdale, Wise, and Hahn joined the project in 1993. Murphy wrote the first draft of the script, and Mecchi and Roberts, who had rewritten the script for The Lion King (1994), were soon brought in. Additional rewrites were provided by Tzudiker and White. That same year, the production team embarked on a research trip to Paris to study the Notre-Dame cathedral and additional locations for the film. The musical score was composed by Alan Menken, with songs written by Menken and lyricist Stephen Schwartz. The Hunchback of Notre Dame premiered at the Louisiana Superdome in New Orleans on June 19, 1996, and was released in the United States on June 21. The film received generally positive reviews and was a commercial success, grossing over $325 million worldwide and becoming the fifth highest-grossing film of 1996. Despite the film's changes made from the original source material and adding comedic elements to ensure a G rating from the MPAA, it remains more mature and darker than any Disney animated films with approach to thematic elements, including themes of genocide, lust, prejudice, sin, and redemption. A stage adaptation of the film was produced by Walt Disney Theatrical in 1999. A direct-to-video sequel, The Hunchback of Notre Dame II, was released in 2002.",
-                            Director = ".mw-parser-output .plainlist ol,.mw-parser-output .plainlist ul{line-height:inherit;list-style:none;margin:0;padding:0}.mw-parser-output .plainlist ol li,.mw-parser-output .plainlist ul li{margin-bottom:0}\nGary Trousdale\nKirk Wise",
-                            Duracion = 0,
-                            PosterUrl = "https://upload.wikimedia.org/wikipedia/en/2/26/The_Hunchback_of_Notre_Dame_1996_poster.jpg",
-                            PuntuacionMedia = 2.7m,
-                            Titulo = "El Jorobado de Notre Dame (película de 1996)"
+                            Anio = 1996,
+                            Director = "Gary Trousdale, Kirk Wise",
+                            Duracion = 91,
+                            PosterUrl = "https://upload.wikimedia.org/wikipedia/en/6/69/The_Hunchback_of_Notre_Dame_%281996_film%29_poster.jpg",
+                            PuntuacionMedia = 3m,
+                            Titulo = "El Jorobado de Notre Dame (1996)"
                         },
                         new
                         {
@@ -5747,12 +5766,11 @@ namespace MovieHubAPI.Migrations
                         new
                         {
                             Id = 139,
-                            Anio = 0,
-                            Descripcion = "The Princess and the Frog is a 2009 American animated musical fantasy comedy film produced by Walt Disney Animation Studios. Inspired in part by the 2002 novel The Frog Princess by E. D. Baker, the story is a modern adaptation of the German folk tale \"The Frog Prince\" as collected by the Brothers Grimm. The film was directed by John Musker and Ron Clements, and written by Clements, Musker and Rob Edwards. It stars the voices of Anika Noni Rose, Bruno Campos, Michael-Leon Wooley, Jim Cummings, Jennifer Cody, John Goodman, Keith David, Peter Bartlett, Jenifer Lewis, Oprah Winfrey, and Terrence Howard. Set in New Orleans during the 1920s, the film tells the story of a hardworking waitress named Tiana (Rose) who dreams of opening her own restaurant. After kissing prince Naveen (Campos), who has been turned into a frog by the evil voodoo witch doctor Facilier (David), Tiana becomes a frog as well and the two must find a way to turn human again before it is too late. The Princess and the Frog began production in July 2006, under the working title The Frog Princess. It marked Disney's brief return to traditional animation, as it was the mainstream animation studio's first traditionally animated film since Home on the Range (2004). Musker and Clements, directors of Disney Animation's The Great Mouse Detective (1986), The Little Mermaid (1989), Aladdin (1992), Hercules (1997), and Treasure Planet (2002) returned to Disney to direct The Princess and the Frog. The studio returned to a Broadway musical-style format frequently used during the Disney Renaissance, and the film features a score and songs composed and conducted by Randy Newman, well known for his musical involvement in Pixar films such as the Toy Story franchise. The Princess and the Frog premiered at the Roy E. Disney Animation Building on the Walt Disney Studios lot in Burbank on November 15, 2009, and first opened in a limited release in New York City and Los Angeles on November 25, followed by a wide release on December 11. The film received largely positive reviews from critics, who praised the return to a traditional hand-drawn animation style, though it was criticized for its depiction of Louisiana Voodoo and alleged historical negationism of its depiction of the Southern United States during the Jim Crow era. Although it underperformed by Disney's standards, it grossed $271 million and received three Oscar nominations: Best Animated Feature and two for Best Original Song.",
-                            Director = ".mw-parser-output .plainlist ol,.mw-parser-output .plainlist ul{line-height:inherit;list-style:none;margin:0;padding:0}.mw-parser-output .plainlist ol li,.mw-parser-output .plainlist ul li{margin-bottom:0}\nJohn Musker\nRon Clements",
-                            Duracion = 0,
-                            PosterUrl = "https://upload.wikimedia.org/wikipedia/en/8/81/The_Princess_and_the_Frog_poster.jpg",
-                            PuntuacionMedia = 4.4m,
+                            Anio = 2009,
+                            Director = "John Musker, Ron Clements",
+                            Duracion = 98,
+                            PosterUrl = "https://upload.wikimedia.org/wikipedia/en/7/75/Princess_and_the_frog_poster.jpg",
+                            PuntuacionMedia = 2.9m,
                             Titulo = "Tiana y el Sapo"
                         },
                         new
@@ -5857,11 +5875,10 @@ namespace MovieHubAPI.Migrations
                         new
                         {
                             Id = 149,
-                            Anio = 0,
-                            Descripcion = "Wish is a 2023 American animated musical fantasy film produced by Walt Disney Animation Studios. It was directed by Chris Buck and Fawn Veerasunthorn and written by Jennifer Lee and Allison Moore, and stars the voices of Ariana DeBose, Chris Pine, Alan Tudyk, Angelique Cabral, Victor Garber, Natasha Rothwell, Harvey Guillén, Evan Peters, Ramy Youssef, and Jon Rudnitsky. The story follows a 17-year-old girl named Asha (DeBose), who lives in the fictional kingdom of Rosas, where she makes a passionate plea to the stars in a moment of need. She meets a living, magic fallen star, and together they face the kingdom’s devious ruler, the sorcerer Magnifico (Pine). Wish is inspired by Disney's centennial, tying together a theme of most Disney films: wishes coming true. The film is noted to be the origin story for the \"wishing star\". The film's art style combines computer animation with the look of traditional animation. Development of Wish began in 2018 but was not publicly disclosed until January 2022, when it was revealed that Lee was writing an original film at Disney Animation. In September 2022, the project was officially announced, with the title revealed alongside the involvement of DeBose and Tudyk. Buck and Veerasunthorn, who had worked with Lee on Frozen (2013) and Frozen II (2019) as co-director and story artist, were confirmed as directors the same month, with Moore later hired to join Lee in writing the screenplay. Julia Michaels and Benjamin Rice wrote the songs, while frequent Disney orchestrator Dave Metzger composed the score. Wish premiered at the El Capitan Theatre in Hollywood, Los Angeles, on November 8, 2023, and was theatrically released in the United States on November 22. The film received mixed reviews and grossed roughly $255 million worldwide on a production budget of $175–200 million. Analysts considered it to be a box-office bomb, as the film lost the studio an estimated $131 million after accounting for income from streaming and home entertainment. On Disney+, it became the third most viewed premiere for a film from Walt Disney Animation Studios. The film was nominated for several awards, including the Golden Globe Award for Best Animated Feature Film.",
-                            Director = ".mw-parser-output .plainlist ol,.mw-parser-output .plainlist ul{line-height:inherit;list-style:none;margin:0;padding:0}.mw-parser-output .plainlist ol li,.mw-parser-output .plainlist ul li{margin-bottom:0}\nChris Buck\nFawn Veerasunthorn",
-                            Duracion = 0,
-                            PosterUrl = "https://upload.wikimedia.org/wikipedia/en/d/de/WishMoviePoster.jpg",
+                            Anio = 2023,
+                            Director = "Chris Buck, Fawn Veerasunthorn",
+                            Duracion = 95,
+                            PosterUrl = "https://upload.wikimedia.org/wikipedia/en/2/2e/Wish_%282023_film%29_poster.png",
                             PuntuacionMedia = 3m,
                             Titulo = "Wish (película)"
                         },
@@ -6165,13 +6182,12 @@ namespace MovieHubAPI.Migrations
                         new
                         {
                             Id = 177,
-                            Anio = 0,
-                            Descripcion = "Elio es una película animada por computadora de ciencia ficción y aventura de 2025 producida por Walt Disney Pictures y Pixar Animation Studios y distribuida por Walt Disney Studios Motion Pictures. Escrita y dirigida por Adrián Molina (en su debut como director de largometraje), producida por Mary Alice Drumm y con la producción ejecutiva de Pete Docter, está protagonizada por Yonas Kibreab, Zoe Saldaña, Jameela Jamil y Brad Garrett. La historia sigue a un niño de once años llamado Elio Solís (Kibreab) que accidentalmente se convierte en el embajador intergaláctico del planeta Tierra después de ser transportado al Communiverse por extraterrestres para hacer contacto. Mientras tanto, la mayor Olga (Zoe), la tía (y tutora) de Elio, dirige un proyecto militar de alto secreto.",
-                            Director = ".mw-parser-output .plainlist ol,.mw-parser-output .plainlist ul{line-height:inherit;list-style:none;margin:0;padding:0}.mw-parser-output .plainlist ol li,.mw-parser-output .plainlist ul li{margin-bottom:0}\nMadeline Sharafian\nDomee Shi\nAdrian Molina&#91;a&#93;",
-                            Duracion = 0,
-                            PosterUrl = "https://upload.wikimedia.org/wikipedia/en/4/4e/Elio_film_poster.jpg",
-                            PuntuacionMedia = 2.7m,
-                            Titulo = "Elio (película)"
+                            Anio = 2025,
+                            Director = "Madeline Sharafian, Domee Shi, Adrian Molina",
+                            Duracion = 102,
+                            PosterUrl = "https://via.placeholder.com/300x450?text=Elio",
+                            PuntuacionMedia = 3m,
+                            Titulo = "Elio"
                         },
                         new
                         {
@@ -6209,9 +6225,10 @@ namespace MovieHubAPI.Migrations
                         new
                         {
                             Id = 181,
-                            Anio = 0,
-                            Descripcion = "El mago de Oz (título original: The Wizard of Oz) es una película musical, fantástica estadounidense, de 1939, producida por Metro-Goldwyn-Mayer (aunque ahora Warner Bros. Discovery posee los derechos de la película), y protagonizada por Judy Garland, Frank Morgan, Ray Bolger, Jack Haley, Bert Lahr, Billie Burke y Margaret Hamilton. En la actualidad, es considerada una película de culto, a pesar de su proyecto inicial como fábula cinematográfica infantil. La película está basada asimismo en la novela infantil El maravilloso mago de Oz, de L. Frank Baum, en la cual una niña estadounidense es arrastrada por un tornado en el estado de Kansas hasta una tierra de fantasía donde habitan brujas buenas y malas, un espantapájaros que habla, un león cobarde, un hombre de hojalata y otros seres extraordinarios. Notable por su uso del Technicolor, la narración fantástica, su partitura musical y los personajes inusuales, con los años se ha convertido en un ícono de la cultura popular estadounidense. Fue nominada a seis premios Óscar en la 12.ª entrega, incluyendo mejor película. Ganó en otras dos categorías, incluyendo mejor canción original, por «Over the Rainbow» y mejor banda sonora, por Herbert Stothart. A pesar de recibir críticas positivas, la película fue un fracaso de taquilla en su estreno inicial. Fue la producción más cara de MGM hasta la fecha y no recuperó completamente la inversión del estudio ni obtuvo ganancias hasta sus reestrenos en 1949. Su lanzamiento para televisión en 1956 por la cadena CBS reintrodujo la película a un público más amplio y, con el paso de los años, su presentación anual se convirtió en una tradición, haciéndola una de las películas más conocidas en la historia del cine. Es uno de lοs pocos filmes considerados Memoria del Mundo por la Unesco (otros son los filmes documentales de los hermanos Lumière, Los olvidados, dirigida por Luis Buñuel, de 1950, y Metrópolis de Fritz Lang, de 1927). En 1989, la película fue considerada «cultural, histórica y estéticamente significativa» por la Biblioteca del Congreso de Estados Unidos y seleccionada para su preservación en el National Film Registry. Está considerada como el tercer mejor musical del cine estadounidense por el American Film Institute.",
-                            Duracion = 0,
+                            Anio = 1939,
+                            Descripcion = "Una niña es transportada a un mundo mágico.",
+                            Director = "Victor Fleming",
+                            Duracion = 102,
                             PosterUrl = "https://upload.wikimedia.org/wikipedia/commons/6/69/Wizard_of_oz_movie_poster.jpg",
                             PuntuacionMedia = 4.3m,
                             Titulo = "El Mago de Oz (película)"
@@ -6241,12 +6258,11 @@ namespace MovieHubAPI.Migrations
                         new
                         {
                             Id = 184,
-                            Anio = 0,
-                            Descripcion = "Singin' in the Rain is a 1952 American musical romantic comedy film directed and choreographed by Gene Kelly and Stanley Donen, starring Kelly, Donald O'Connor and Debbie Reynolds, with Jean Hagen, Millard Mitchell, Douglas Fowley, Rita Moreno and Cyd Charisse in supporting roles. It offers a lighthearted depiction of Hollywood in the late 1920s, with the three stars portraying performers caught up in the transition from silent films to \"talkies\". Arthur Freed conceived the idea of the film based on the back catalogs of songs written by himself and Nacio Herb Brown. Because many of the songs had been written during the transition from silent films to \"talkies\", writers Betty Comden and Adolph Green decided that was when the story should be set. When the story morphed into that of a romantic hero with a vaudevillian background surviving the transition period in Hollywood and falling back onto his old song-and-dance habits, Kelly, who was chosen for the lead along with Donen, responded enthusiastically to it. After a premiere at the Radio City Music Hall, the film was released nationwide on April 11, 1952. Film historians note that Singin' in the Rain was not initially expected to become a classic, as MGM treated it as a routine musical project during production. The film was only a modest hit when it was first released. Today it is frequently cited as the greatest musical film and one of the greatest films ever made. It topped the AFI's Greatest Movie Musicals list, ranked as the fifth-greatest American motion picture of all time in its updated list of the greatest American films in 2007, having ranked as the tenth greatest in the original 1998 list, and Kelly's rendition of \"Singin' in the Rain\" ranked third in their list of the greatest film songs. In 1989, Singin' in the Rain was one of the first 25 films selected by the United States Library of Congress for preservation in the National Film Registry for being \"culturally, historically, or aesthetically significant\". In 2005, the British Film Institute included it in its list of the 50 films to be seen by the age of 14. In 2008, Empire magazine ranked it as the eighth-best film of all time. In Sight & Sound magazine's 2022 list of the greatest films of all time, Singin' in the Rain placed 10th. Previously, it had ranked third in their 1982 list and tenth in their 2002 list.",
-                            Director = ".mw-parser-output .plainlist ol,.mw-parser-output .plainlist ul{line-height:inherit;list-style:none;margin:0;padding:0}.mw-parser-output .plainlist ol li,.mw-parser-output .plainlist ul li{margin-bottom:0}\nGene Kelly\nStanley Donen",
-                            Duracion = 0,
-                            PosterUrl = "https://upload.wikimedia.org/wikipedia/commons/5/5d/Singin%27_in_the_Rain_%281952_poster%29.jpg",
-                            PuntuacionMedia = 2.7m,
+                            Anio = 1952,
+                            Director = "Gene Kelly, Stanley Donen",
+                            Duracion = 103,
+                            PosterUrl = "https://upload.wikimedia.org/wikipedia/en/4/44/Singin%27_in_the_Rain_%281952_poster%29.jpg",
+                            PuntuacionMedia = 4.5m,
                             Titulo = "Cantando Bajo la Lluvia"
                         },
                         new
@@ -6285,9 +6301,10 @@ namespace MovieHubAPI.Migrations
                         new
                         {
                             Id = 188,
-                            Anio = 0,
-                            Descripcion = "A Clockwork Orange or Clockwork Orange may refer to: A Clockwork Orange (novel), a 1962 novel by Anthony Burgess A Clockwork Orange (film), a 1971 film directed by Stanley Kubrick based on the novel A Clockwork Orange (soundtrack), the film's official soundtrack A Clockwork Orange: Wendy Carlos's Complete Original Score, a 1972 album by Wendy Carlos featuring music composed for the film A Clockwork Orange: A Play with Music, a 1987 theatrical adaptation by Anthony Burgess Clockwork Orange (plot), a supposed 1970s operation to discredit British politicians \"Clockwork Orange\", a nickname for the Glasgow Subway in Glasgow, Scotland \"Clockwork Orange\", a nickname in the early 1970s for the Netherlands national football team",
-                            Duracion = 0,
+                            Anio = 1971,
+                            Descripcion = "Un joven se convierte en un violento delincuente.",
+                            Director = "Stanley Kubrick",
+                            Duracion = 136,
                             PosterUrl = "https://upload.wikimedia.org/wikipedia/en/7/73/A_Clockwork_Orange_%281971%29.png",
                             PuntuacionMedia = 3.1m,
                             Titulo = "La Naranja Mecánica"
@@ -6724,10 +6741,9 @@ namespace MovieHubAPI.Migrations
                         new
                         {
                             Id = 228,
-                            Anio = 0,
-                            Descripcion = "The Big Lebowski () is a 1998 neo-noir crime comedy film written, directed, produced and co-edited by Joel and Ethan Coen, and starring Jeff Bridges, John Goodman, Julianne Moore, Steve Buscemi, and John Turturro. It follows the life of Jeffrey \"The Dude\" Lebowski, a Los Angeles slacker and avid bowler who is assaulted as a result of mistaken identity, and becomes embroiled in a kidnapping and ransom scheme focused on a millionaire who shares his name. The film is loosely inspired by the work of Raymond Chandler. Joel Coen said, \"We wanted to do a Chandler kind of story—how it moves episodically and deals with the characters trying to unravel a mystery, as well as having a hopelessly complex plot that's ultimately unimportant.\" The score is by Carter Burwell, a longtime collaborator of the Coen brothers. The Big Lebowski was produced by Working Title Films and distributed by Gramercy Pictures in the United States and Canada and by PolyGram Filmed Entertainment internationally. It received mixed reviews at the time of its release. Reviews have since become largely positive and the film, noted for its eccentric characters, comedic dream sequences, idiosyncratic dialogue, and eclectic soundtrack, has garnered a cult following. In 2014, the film was selected for preservation in the United States National Film Registry by the Library of Congress as \"culturally, historically or aesthetically significant.\"",
-                            Director = "Joel Coen&#91;a&#93;",
-                            Duracion = 0,
+                            Anio = 1998,
+                            Director = "Joel Coen",
+                            Duracion = 117,
                             PosterUrl = "https://upload.wikimedia.org/wikipedia/en/3/35/Biglebowskiposter.jpg",
                             PuntuacionMedia = 4.6m,
                             Titulo = "El Gran Lebowski"
