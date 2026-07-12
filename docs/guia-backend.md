@@ -236,9 +236,14 @@ builder.Services.AddScoped<IUsuarioService, UsuarioService>();
 > ✅ `MappingConfig.Configure()` ya está activo en `Program.cs`. Los mapeos personalizados
 > (`Anio→AnioEstreno`, `PosterUrl→Imagen`, `PeliculaGeneros→List<string>`) se aplican automáticamente.
 
-### Autenticación (futura)
+### Autenticación JWT
 
-El proyecto incluye los paquetes JWT e Identity, pero la autenticación está **comentada** en `Program.cs`:
+El proyecto incluye autenticación JWT con Identity. Actualmente está activo:
+- Sección `Jwt` (Key/Issuer/Audience) en `appsettings.json`
+- `AddIdentityCore<UsuarioModel>` en `Program.cs`
+- Endpoints públicos de registro y login (`/api/Usuarios/register`, `/api/Usuarios/login`)
+
+**Pendiente de activar** (cuando el equipo lo decida):
 
 ```csharp
 // builder.Services.AddAuthentication(...)
@@ -246,7 +251,7 @@ El proyecto incluye los paquetes JWT e Identity, pero la autenticación está **
 // app.UseAuthentication();
 ```
 
-Cuando se active, descomentar esos bloques y configurar `Jwt:Key`, `Jwt:Issuer` y `Jwt:Audience` en `appsettings.json`.
+Los endpoints `/me` (`GET`, `PUT`, `DELETE`) usan `?userId=` temporalmente. Cuando se active `[Authorize]`, se extraerá del JWT y la query param desaparecerá.
 
 ---
 
