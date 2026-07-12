@@ -108,7 +108,7 @@ public interface IPeliculaService
 }
 ```
 
-Interfaces existentes: `IPeliculaService`, `IGeneroService`, `IUsuarioService` (esta última pendiente de implementar).
+Interfaces existentes: `IPeliculaService`, `IGeneroService`, `IUsuarioService`.
 
 ---
 
@@ -150,7 +150,7 @@ public class PeliculaService : IPeliculaService
 }
 ```
 
-Servicios existentes: `PeliculaService`, `GeneroService`. `UsuarioService` está pendiente de implementar.
+Servicios existentes: `PeliculaService`, `GeneroService`, `UsuarioService`.
 
 ---
 
@@ -230,15 +230,20 @@ Registra tus servicios:
 ```csharp
 builder.Services.AddScoped<IPeliculaService, PeliculaService>();
 builder.Services.AddScoped<IGeneroService, GeneroService>();
-// IUsuarioService pendiente de registrar
+builder.Services.AddScoped<IUsuarioService, UsuarioService>();
 ```
 
 > ✅ `MappingConfig.Configure()` ya está activo en `Program.cs`. Los mapeos personalizados
 > (`Anio→AnioEstreno`, `PosterUrl→Imagen`, `PeliculaGeneros→List<string>`) se aplican automáticamente.
 
-### Autenticación (futura)
+### Autenticación JWT
 
-El proyecto incluye los paquetes JWT e Identity, pero la autenticación está **comentada** en `Program.cs`:
+El proyecto incluye autenticación JWT con Identity. Actualmente está activo:
+- Sección `Jwt` (Key/Issuer/Audience) en `appsettings.json`
+- `AddIdentityCore<UsuarioModel>` en `Program.cs`
+- Endpoints públicos de registro y login (`/api/Usuarios/register`, `/api/Usuarios/login`)
+
+**Pendiente de activar** (cuando el equipo lo decida):
 
 ```csharp
 // builder.Services.AddAuthentication(...)
@@ -246,7 +251,7 @@ El proyecto incluye los paquetes JWT e Identity, pero la autenticación está **
 // app.UseAuthentication();
 ```
 
-Cuando se active, descomentar esos bloques y configurar `Jwt:Key`, `Jwt:Issuer` y `Jwt:Audience` en `appsettings.json`.
+Los endpoints `/me` (`GET`, `PUT`, `DELETE`) usan `?userId=` temporalmente. Cuando se active `[Authorize]`, se extraerá del JWT y la query param desaparecerá.
 
 ---
 
@@ -267,6 +272,8 @@ Los validadores se registran automáticamente via `AddValidatorsFromAssemblyCont
 | `Validators/Pelicula/UpdatePeliculaValidator.cs` | `UpdatePeliculaDto` | Mismas reglas que Create |
 | `Validators/Genero/CreateGeneroValidator.cs` | `CreateGeneroDto` | Nombre (NotEmpty, max 50) |
 | `Validators/Genero/UpdateGeneroValidator.cs` | `UpdateGeneroDto` | Mismas reglas que Create |
+| `Validators/Usuario/RegisterValidator.cs` | `RegisterDto` | UserName (NotEmpty, max 50), Email (NotEmpty, EmailAddress, max 100), Password (NotEmpty, min 6, al menos una mayúscula, minúscula y dígito) |
+| `Validators/Usuario/LoginValidator.cs` | `LoginDto` | Email (NotEmpty, EmailAddress), Password (NotEmpty) |
 
 ### Cómo añadir un validador nuevo
 
@@ -333,6 +340,11 @@ Middleware global que captura cualquier excepción no controlada en el pipeline 
 | MappingConfig deja de tener efecto | Alguien borró la línea en `Program.cs` | Asegurar que `MappingConfig.Configure()` está antes de `var app = builder.Build();` |
 | Error de compilación con `DbContext` | Conflicto con `System.Data.Common.DbContext` | Usar el namespace global o alias; nuestro `DbContext` no tiene namespace |
 | El endpoint lanza excepción pero devuelve 500 genérico | El middleware captura errores no controlados | Revisar el log del backend para ver el detalle real |
+| `POST /register` devuelve 400 con `"Passwords must have at least one uppercase"` | La contraseña no cumple las políticas de Identity | Usar al menos 6 caracteres, 1 mayúscula, 1 minúscula y 1 dígito |
+| `POST /register` devuelve 400 con `"Username 'X' is already taken"` | El nombre de usuario ya existe en la BD | Elegir otro nombre de usuario |
+| `POST /login` devuelve 401 | Credenciales inválidas o el usuario no existe | Verificar email y contraseña |
+| Swagger muestra el botón Authorize pero el token no funciona | La autenticación JWT está comentada en Program.cs | El botón Authorize es solo UI; la validación real se activará cuando el equipo descomente `AddAuthentication` |
+| `ArgumentException` con mensaje de Identity en la respuesta | El servicio lanza `ArgumentException` con los errores de Identity | El `ExceptionHandlingMiddleware` lo captura y devuelve 400. En producción el mensaje es genérico. |
 
 ---
 
