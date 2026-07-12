@@ -1,4 +1,5 @@
 using FluentValidation;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using MovieHubAPI.Configurations;
 using MovieHubAPI.Filters;
@@ -19,6 +20,15 @@ builder.Services.AddSwaggerGen(c =>
     c.CustomOperationIds(apiDesc =>
     {
         return apiDesc.TryGetMethodInfo(out var methodInfo) ? methodInfo.Name : null;
+    });
+    c.AddSecurityDefinition("Bearer", new Microsoft.OpenApi.OpenApiSecurityScheme
+    {
+        Name = "Authorization",
+        Type = Microsoft.OpenApi.SecuritySchemeType.Http,
+        Scheme = "bearer",
+        BearerFormat = "JWT",
+        In = Microsoft.OpenApi.ParameterLocation.Header,
+        Description = "Pega aquí el token JWT obtenido en POST /api/Usuarios/login"
     });
 });
 builder.Services.AddCors(options =>
@@ -45,6 +55,7 @@ builder.Services.AddEndpointsApiExplorer();
 
 builder.Services.AddScoped<IPeliculaService, PeliculaService>();
 builder.Services.AddScoped<IGeneroService, GeneroService>();
+builder.Services.AddScoped<IUsuarioService, UsuarioService>();
 builder.Services.AddValidatorsFromAssemblyContaining<Program>();
 
 //Inyectar el contexto de la base de datos
@@ -58,7 +69,17 @@ builder.Services.AddDbContext<MovieHubDbContext>(
                     "MovieHubConnection")));
 
 
-//Inyectar los servicios de la capa de negocio
+//Identity
+builder.Services.AddIdentityCore<UsuarioModel>(options =>
+{
+    options.Password.RequireDigit = true;
+    options.Password.RequiredLength = 6;
+    options.Password.RequireNonAlphanumeric = false;
+    options.Password.RequireUppercase = true;
+    options.Password.RequireLowercase = true;
+})
+.AddRoles<IdentityRole<long>>()
+.AddEntityFrameworkStores<MovieHubDbContext>();
 
 
 // --- JWT Authentication (pendiente de activar) ---
