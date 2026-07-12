@@ -12,7 +12,7 @@ public class PeliculaModel
 
     public string? Descripcion { get; set; }
 
-    [MaxLength(150)]
+    [MaxLength(500)]
     public string? Director { get; set; }
 
     public int Anio { get; set; }
