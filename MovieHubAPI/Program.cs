@@ -46,6 +46,7 @@ builder.Services.AddEndpointsApiExplorer();
 
 builder.Services.AddScoped<IPeliculaService, PeliculaService>();
 builder.Services.AddScoped<IGeneroService, GeneroService>();
+builder.Services.AddScoped<IUsuarioService, UsuarioService>();
 builder.Services.AddValidatorsFromAssemblyContaining<Program>();
 
 //Inyectar el contexto de la base de datos
