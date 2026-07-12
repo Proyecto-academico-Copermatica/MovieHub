@@ -26,7 +26,7 @@ namespace MovieHubAPI.Controllers
             if (result is null)
                 return BadRequest(new { message = "El registro falló. El usuario o email puede ya existir." });
 
-            return CreatedAtAction(nameof(Register), result);
+            return CreatedAtAction(nameof(GetProfile), new { userId = result.UserId }, result);
         }
 
         [HttpPost("login")]
