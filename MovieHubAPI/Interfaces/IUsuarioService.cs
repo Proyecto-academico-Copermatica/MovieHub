@@ -8,5 +8,6 @@ namespace MovieHubAPI.Interfaces
         Task<AuthResponseDto?> LoginAsync(LoginDto dto);
         Task<UserProfileDto?> GetProfileAsync(long userId);
         Task<bool> UpdateProfileAsync(long userId, UpdateProfileDto dto);
+        Task<bool> DeleteProfileAsync(long userId);
     }
 }
