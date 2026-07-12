@@ -23,8 +23,6 @@ namespace MovieHubAPI.Controllers
         public async Task<ActionResult<AuthResponseDto>> Register(RegisterDto dto)
         {
             var result = await _usuarioService.RegisterAsync(dto);
-            if (result is null)
-                return BadRequest(new { message = "El registro falló. El usuario o email puede ya existir." });
 
             return CreatedAtAction(nameof(GetProfile), new { userId = result.UserId }, result);
         }
