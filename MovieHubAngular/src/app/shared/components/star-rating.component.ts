@@ -14,4 +14,8 @@ export class StarRatingComponent {
   readonly readonly = input(false);
   readonly size = input<'small' | 'medium'>('medium');
   readonly rate = output<number>();
+
+  round(value: number): number {
+    return Math.round(value);
+  }
 }

@@ -5,9 +5,10 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatChipsModule } from '@angular/material/chips';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatDialog } from '@angular/material/dialog';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 import { Movie } from '../../models/movie.model';
-import { RatingPercentPipe } from '../../shared/pipes/rating-percent.pipe';
+import { StarRatingComponent } from '../../shared/components/star-rating.component';
 import { TrailerDialogComponent } from './trailer-dialog.component';
 
 @Component({
@@ -15,7 +16,7 @@ import { TrailerDialogComponent } from './trailer-dialog.component';
   standalone: true,
   imports: [
     CommonModule, MatButtonModule, MatIconModule,
-    MatChipsModule, MatTooltipModule, RatingPercentPipe
+    MatChipsModule, MatTooltipModule, StarRatingComponent
   ],
   templateUrl: './movie-detail-page.component.html',
   styleUrl: './movie-detail-page.component.scss'

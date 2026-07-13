@@ -1,5 +1,4 @@
-@let max = 5;
-@let current = Math.round(puntuacion());
+@let current = round(puntuacion());
 <div class="stars" [class.stars--small]="size() === 'small'" [class.stars--readonly]="readonly()" role="radiogroup" aria-label="Valoración">
   @for (star of [1,2,3,4,5]; track star) {
     <button
