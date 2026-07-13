@@ -4,6 +4,6 @@
 
 <main class="rows">
   @for (row of rows(); track trackByRowTitle($index, row)) {
-    <app-movie-row [row]="row" />
+    <app-movie-row [row]="row" (movieClick)="movieClick.emit($event)" />
   }
 </main>
