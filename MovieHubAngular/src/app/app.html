@@ -1,5 +1,4 @@
 <div class="app-shell">
-
   <app-navbar
     [generos]="generos()"
     [activeView]="activeView()"
@@ -12,37 +11,10 @@
 
   <router-outlet />
 
-  <!-- ============ ESTADO: CARGANDO (SKELETON) ============ -->
   @if (loading()) {
-    <div class="skeleton">
-      <div class="skeleton__hero">
-        <div class="skeleton__hero-content">
-          <div class="skeleton__line skeleton__line--eyebrow"></div>
-          <div class="skeleton__line skeleton__line--title"></div>
-          <div class="skeleton__line skeleton__line--meta"></div>
-          <div class="skeleton__line skeleton__line--desc"></div>
-          <div class="skeleton__actions">
-            <div class="skeleton__btn"></div>
-            <div class="skeleton__btn skeleton__btn--secondary"></div>
-          </div>
-        </div>
-      </div>
-      <div class="skeleton__rows">
-        @for (r of [1,2,3,4]; track r) {
-          <div class="skeleton__row">
-            <div class="skeleton__line skeleton__line--row-title"></div>
-            <div class="skeleton__track">
-              @for (c of [1,2,3,4,5,6]; track c) {
-                <div class="skeleton__card"></div>
-              }
-            </div>
-          </div>
-        }
-      </div>
-    </div>
+    <app-skeleton />
   }
 
-  <!-- ============ ESTADO: ERROR ============ -->
   @if (!loading() && error()) {
     <div class="state-screen">
       <mat-icon class="state-screen__icon">error_outline</mat-icon>
@@ -50,83 +22,20 @@
     </div>
   }
 
-  <!-- ============ CONTENIDO ============ -->
   @if (!loading() && !error()) {
-
-    <!-- ============ HERO ============ -->
-    @if (activeView() === 'home' && heroMovie(); as movie) {
-      <section class="hero" [style.--hero-image]="'url(' + movie.imagen + ')'">
-        <div class="hero__scrim"></div>
-        <div class="hero__content">
-          <p class="hero__eyebrow">Destacada esta semana</p>
-          <h1 class="hero__title">{{ movie.titulo }}</h1>
-          <div class="hero__meta">
-            <span class="hero__match">{{ movie.puntuacionMedia | ratingPercent }} para ti</span>
-            <span>{{ movie.anioEstreno }}</span>
-            <span>{{ movie.duracion }} min</span>
-            <mat-chip-set class="hero__chips">
-              @for (genero of movie.generos; track genero) {
-                <mat-chip>{{ genero }}</mat-chip>
-              }
-            </mat-chip-set>
-          </div>
-          <p class="hero__description">{{ movie.descripcion | truncate }}</p>
-          <div class="hero__actions">
-            <button mat-raised-button color="primary" class="hero__btn-play" matTooltip="Reproducir tráiler">
-              <mat-icon>play_arrow</mat-icon>
-              Reproducir
-            </button>
-            <button mat-stroked-button class="hero__btn-info" matTooltip="Ver ficha completa">
-              <mat-icon>info</mat-icon>
-              Más información
-            </button>
-          </div>
-        </div>
-      </section>
+    @if (activeView() === 'home') {
+      <app-home-page [heroMovie]="state.heroMovie()" [rows]="state.rows()" />
     }
 
-    <!-- ============ BANNER DE GÉNERO ============ -->
     @if (activeView() === 'genero'; as genreView) {
       @if (selectedGenero(); as genero) {
-        <section class="genre-banner">
-          <h1 class="genre-banner__title">{{ genero.nombre }}</h1>
-          <p class="genre-banner__subtitle">Películas de {{ genero.nombre }}</p>
-        </section>
+        <app-genero-page [genero]="genero" [rows]="state.filterByGenre(genero.nombre)" />
       }
     }
-
-    <!-- ============ FILAS POR GÉNERO ============ -->
-    <main class="rows">
-      @for (row of rows(); track trackByRowTitle($index, row)) {
-        <section class="row">
-          <h2 class="row__title">{{ row.title }}</h2>
-          <div class="row__track">
-            @for (movie of row.movies; track trackByMovieId($index, movie)) {
-              <mat-card class="card" appearance="outlined" matTooltip="Ver detalles de {{ movie.titulo }}" matTooltipPosition="above">
-                <img mat-card-image class="card__poster" [src]="movie.imagen" [alt]="movie.titulo" loading="lazy">
-                <mat-card-content class="card__overlay">
-                  <p class="card__title">{{ movie.titulo }}</p>
-                  <div class="card__tags">
-                    <span class="card__rating">{{ movie.puntuacionMedia | number: '1.1-1' }}</span>
-                    <mat-chip-set>
-                      <mat-chip>{{ movie.generos[0] }}</mat-chip>
-                    </mat-chip-set>
-                    <span>{{ movie.anioEstreno }}</span>
-                  </div>
-                </mat-card-content>
-              </mat-card>
-            }
-          </div>
-        </section>
-      }
-    </main>
-
   }
 
-  <!-- ============ FOOTER ============ -->
   <mat-divider />
   <footer class="footer">
     <p>MovieHub · proyecto de práctica, no afiliado a ninguna plataforma comercial.</p>
   </footer>
-
 </div>
