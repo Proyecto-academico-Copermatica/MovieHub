@@ -32,10 +32,11 @@ export class FavoritosPageComponent {
   private loadFavoritos(): void {
     this.favoritoService.getAll().subscribe({
       next: (favs) => {
+        console.log('Favoritos cargados:', favs);
         this.favoritos = favs;
       },
-      error: () => {
-        console.error('Error al cargar favoritos');
+      error: (err) => {
+        console.error('Error al cargar favoritos:', err);
       }
     });
   }
