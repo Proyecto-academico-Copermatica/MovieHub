@@ -6,13 +6,6 @@
       <p class="login__subtitle">Accede a tu catálogo personalizado</p>
     </div>
 
-    @if (errorMessage) {
-      <div class="error-banner" role="alert">
-        <mat-icon>error_outline</mat-icon>
-        <span>{{ errorMessage }}</span>
-      </div>
-    }
-
     <form [formGroup]="form" (ngSubmit)="onSubmit()" novalidate class="login__form">
       <mat-form-field appearance="outline" class="auth-field">
         <mat-label>Email</mat-label>
