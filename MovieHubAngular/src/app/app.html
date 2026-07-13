@@ -49,9 +49,7 @@
       <span>Inicio</span>
     </button>
     <button mat-menu-item [matMenuTriggerFor]="menuGenerosMovil">
-      <mat-icon>movie</mat-icon>
       <span>Películas</span>
-      <mat-icon class="menu-arrow">chevron_right</mat-icon>
     </button>
     <mat-menu #menuGenerosMovil="matMenu" class="genre-menu">
       @for (genero of generos(); track trackByGeneroId($index, genero)) {
