@@ -1,0 +1,14 @@
+@let movie = this.movie();
+<mat-card class="card" appearance="outlined" matTooltip="Ver detalles de {{ movie.titulo }}" matTooltipPosition="above">
+  <img mat-card-image class="card__poster" [src]="movie.imagen" [alt]="movie.titulo" loading="lazy">
+  <mat-card-content class="card__overlay">
+    <p class="card__title">{{ movie.titulo }}</p>
+    <div class="card__tags">
+      <span class="card__rating">{{ movie.puntuacionMedia | number: '1.1-1' }}</span>
+      <mat-chip-set>
+        <mat-chip>{{ movie.generos[0] }}</mat-chip>
+      </mat-chip-set>
+      <span>{{ movie.anioEstreno }}</span>
+    </div>
+  </mat-card-content>
+</mat-card>

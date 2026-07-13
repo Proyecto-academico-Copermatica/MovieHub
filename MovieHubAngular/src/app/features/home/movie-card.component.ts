@@ -1,0 +1,18 @@
+import { Component, input } from '@angular/core';
+import { MatCardModule } from '@angular/material/card';
+import { MatChipsModule } from '@angular/material/chips';
+import { MatTooltipModule } from '@angular/material/tooltip';
+import { CommonModule } from '@angular/common';
+
+import { Movie } from '../../models/movie.model';
+
+@Component({
+  selector: 'app-movie-card',
+  standalone: true,
+  imports: [CommonModule, MatCardModule, MatChipsModule, MatTooltipModule],
+  templateUrl: './movie-card.component.html',
+  styleUrl: './movie-card.component.scss'
+})
+export class MovieCardComponent {
+  readonly movie = input.required<Movie>();
+}
