@@ -25,11 +25,13 @@ Actualmente el proyecto sigue esta estructura:
 src/app/
 ├── core/                      # Singleton services, interceptors, layout
 │   ├── interceptors/
-│   │   └── error.interceptor.ts
+│   │   ├── error.interceptor.ts
+│   │   └── auth.interceptor.ts
 │   ├── layout/
 │   │   └── navbar.component.ts
 │   └── services/
-│       └── movie-state.service.ts
+│       ├── movie-state.service.ts
+│       └── auth.service.ts
 ├── shared/                    # Componentes reutilizables, pipes, utilidades
 │   ├── pipes/
 │   │   ├── truncate.pipe.ts
@@ -37,7 +39,7 @@ src/app/
 │   ├── utils/
 │   │   └── track-by.ts
 │   ├── types/
-│   │   └── index.ts
+│   │   └── index.ts           # ActiveView, AuthResponse, LoginDto, RegisterDto
 │   └── constants.ts
 ├── features/                  # Carpetas por funcionalidad
 │   ├── home/
@@ -48,6 +50,9 @@ src/app/
 │   ├── genero/
 │   │   ├── genero-page.component.ts
 │   │   └── genre-banner.component.ts
+│   ├── auth/
+│   │   ├── login-page.component.ts
+│   │   └── register-dialog.component.ts
 │   └── loading/
 │       └── skeleton.component.ts
 ├── services/                  # Servicios HTTP (movie.service, genero.service)
@@ -252,6 +257,9 @@ Componentes que se usan actualmente:
 | `<mat-icon>` | Iconos (search, play_arrow, account_circle, home, etc.) |
 | `<mat-divider>` | Separadores en footer y menú hamburguesa |
 | `<mat-button>` / `<mat-icon-button>` / `<mat-raised-button>` / `<mat-stroked-button>` | Botones de navegación y acciones |
+| `<mat-dialog>` | Modal de registro de usuario (RegisterDialogComponent) |
+| `<mat-snack-bar>` | Notificaciones toast en login y registro exitosos/fallidos |
+| `<mat-form-field>` + `<mat-input>` | Campos de formulario con validación en login y registro |
 
 ---
 
