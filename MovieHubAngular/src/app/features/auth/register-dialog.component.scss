@@ -20,13 +20,15 @@
 
 .auth-field {
   width: 100%;
-  margin-bottom: 0.75rem;
-  --mat-form-field-container-height: 64px;
+  margin-bottom: 0.5rem;
+}
+
+::ng-deep .auth-field .mat-mdc-text-field-wrapper {
+  overflow: visible;
 }
 
 [mat-dialog-content] {
-  min-height: 340px;
-  padding-top: 8px;
+  min-height: 320px;
 }
 
 [mat-dialog-title] {
