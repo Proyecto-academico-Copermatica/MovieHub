@@ -23,6 +23,10 @@
   margin-bottom: 0.25rem;
 }
 
+[mat-dialog-content] {
+  min-height: 240px;
+}
+
 [mat-dialog-title] {
   font-family: var(--mh-font-display);
   font-size: 1.6rem;
