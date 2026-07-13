@@ -1,0 +1,26 @@
+<div class="skeleton">
+  <div class="skeleton__hero">
+    <div class="skeleton__hero-content">
+      <div class="skeleton__line skeleton__line--eyebrow"></div>
+      <div class="skeleton__line skeleton__line--title"></div>
+      <div class="skeleton__line skeleton__line--meta"></div>
+      <div class="skeleton__line skeleton__line--desc"></div>
+      <div class="skeleton__actions">
+        <div class="skeleton__btn"></div>
+        <div class="skeleton__btn skeleton__btn--secondary"></div>
+      </div>
+    </div>
+  </div>
+  <div class="skeleton__rows">
+    @for (r of [1,2,3,4]; track r) {
+      <div class="skeleton__row">
+        <div class="skeleton__line skeleton__line--row-title"></div>
+        <div class="skeleton__track">
+          @for (c of [1,2,3,4,5,6]; track c) {
+            <div class="skeleton__card"></div>
+          }
+        </div>
+      </div>
+    }
+  </div>
+</div>
