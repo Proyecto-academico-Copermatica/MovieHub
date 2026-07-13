@@ -20,11 +20,13 @@
 
 .auth-field {
   width: 100%;
-  margin-bottom: 0.25rem;
+  margin-bottom: 0.5rem;
 }
 
 [mat-dialog-content] {
-  min-height: 240px;
+  min-height: 320px;
+  padding-top: 8px;
+  overflow: visible;
 }
 
 [mat-dialog-title] {
