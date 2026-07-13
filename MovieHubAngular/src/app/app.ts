@@ -1,31 +1,34 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit, signal, ChangeDetectionStrategy, inject } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { MatToolbarModule } from '@angular/material/toolbar';
-import { MatIconModule } from '@angular/material/icon';
-import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
-import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatChipsModule } from '@angular/material/chips';
 import { MatDividerModule } from '@angular/material/divider';
-import { MatMenuModule } from '@angular/material/menu';
+import { MatIconModule } from '@angular/material/icon';
+import { MatTooltipModule } from '@angular/material/tooltip';
+
+import { TruncatePipe } from './shared/pipes/truncate.pipe';
+import { RatingPercentPipe } from './shared/pipes/rating-percent.pipe';
 
 import { Movie, MovieRow } from './models/movie.model';
 import { Genero } from './models/genero.model';
+import { ActiveView } from './shared/types';
 import { MovieService } from './services/movie.service';
 import { GeneroService } from './services/genero.service';
-
-const MOVIES_PER_ROW = 20;
-
-export type ActiveView = 'home' | 'genero';
+import { NavbarComponent } from './core/layout/navbar.component';
+import {
+  trackByMovieId,
+  trackByRowTitle
+} from './shared/utils/track-by';
+import { MOVIES_PER_ROW } from './shared/constants';
 
 @Component({
   selector: 'app-root',
   imports: [
-    RouterOutlet, CommonModule,
-    MatToolbarModule, MatIconModule, MatButtonModule,
-    MatCardModule, MatTooltipModule,
-    MatChipsModule, MatDividerModule, MatMenuModule
+    RouterOutlet, CommonModule, NavbarComponent,
+    MatCardModule, MatChipsModule, MatDividerModule,
+    MatIconModule, MatTooltipModule,
+    TruncatePipe, RatingPercentPipe
   ],
   templateUrl: './app.html',
   styleUrl: './app.scss',
@@ -43,6 +46,9 @@ export class App implements OnInit {
   protected readonly selectedGenero = signal<Genero | null>(null);
   protected readonly activeView = signal<ActiveView>('home');
   protected readonly peliculasExpanded = signal(false);
+
+  protected readonly trackByMovieId = trackByMovieId;
+  protected readonly trackByRowTitle = trackByRowTitle;
 
   private allMovies: Movie[] = [];
 
@@ -93,24 +99,6 @@ export class App implements OnInit {
 
   togglePeliculas(): void {
     this.peliculasExpanded.update((v) => !v);
-  }
-
-  truncateSynopsis(text: string | null): string {
-    if (!text) return '';
-    const cleaned = text.replace(/\s+/g, ' ').trim();
-    return cleaned.length > 200 ? cleaned.slice(0, 197) + '...' : cleaned;
-  }
-
-  trackByGeneroId(_index: number, genero: Genero): number {
-    return genero.id;
-  }
-
-  trackByMovieId(_index: number, movie: Movie): number {
-    return movie.id;
-  }
-
-  trackByRowTitle(_index: number, row: MovieRow): string {
-    return row.title;
   }
 
   private pickHeroMovie(movies: Movie[]): Movie | null {

@@ -1,80 +1,14 @@
 <div class="app-shell">
 
-  <!-- ============ NAVBAR (MAT-TOOLBAR) ============ -->
-  <mat-toolbar class="navbar navbar--solid">
-    <div class="navbar__left">
-      <span class="navbar__logo">MOVIE<span class="navbar__logo--accent">HUB</span></span>
-      <nav class="navbar__links">
-        <a mat-button class="navbar__link"
-           [class.navbar__link--active]="activeView() === 'home'"
-           (click)="goHome()">
-          Inicio
-        </a>
-        <button mat-button
-                class="navbar__link"
-                [class.navbar__link--active]="activeView() === 'genero'"
-                [matMenuTriggerFor]="menuPeliculas">
-          Películas
-          <mat-icon class="navbar__chevron">expand_more</mat-icon>
-        </button>
-        <mat-menu #menuPeliculas="matMenu" class="genre-menu">
-          @for (genero of generos(); track trackByGeneroId($index, genero)) {
-            <button mat-menu-item (click)="selectGenero(genero)">
-              <span>{{ genero.nombre }}</span>
-            </button>
-          }
-        </mat-menu>
-        <a mat-button class="navbar__link">Mi lista</a>
-      </nav>
-    </div>
-    <div class="navbar__right">
-      <button mat-icon-button class="navbar__hamburger"
-              [matMenuTriggerFor]="menuHamburguesa"
-              aria-label="Menú de navegación">
-        <mat-icon>menu</mat-icon>
-      </button>
-      <button mat-icon-button aria-label="Buscar" matTooltip="Buscar películas">
-        <mat-icon>search</mat-icon>
-      </button>
-      <button mat-icon-button aria-label="Perfil" class="navbar__avatar" matTooltip="Mi perfil">
-        <mat-icon>account_circle</mat-icon>
-      </button>
-    </div>
-  </mat-toolbar>
-
-  <!-- ============ MENÚ HAMBURGUESA (móvil) ============ -->
-  <mat-menu #menuHamburguesa="matMenu" class="hamburger-menu">
-    <button mat-menu-item (click)="goHome()">
-      <mat-icon>home</mat-icon>
-      <span>Inicio</span>
-    </button>
-
-    <mat-divider class="hamburger__divider" />
-
-    <button mat-menu-item class="hamburger__trigger"
-            [class.hamburger__trigger--expanded]="peliculasExpanded()"
-            (click)="togglePeliculas(); $event.stopPropagation()">
-      <mat-icon>movie</mat-icon>
-      <span>Películas</span>
-      <mat-icon class="hamburger__chevron">expand_more</mat-icon>
-    </button>
-    @if (peliculasExpanded()) {
-      <div class="hamburger__sub">
-        @for (genero of generos(); track trackByGeneroId($index, genero)) {
-          <button mat-menu-item class="hamburger__genre" (click)="selectGenero(genero)">
-            <span>{{ genero.nombre }}</span>
-          </button>
-        }
-      </div>
-    }
-
-    <mat-divider class="hamburger__divider" />
-
-    <button mat-menu-item>
-      <mat-icon>favorite_border</mat-icon>
-      <span>Mi lista</span>
-    </button>
-  </mat-menu>
+  <app-navbar
+    [generos]="generos()"
+    [activeView]="activeView()"
+    [peliculasExpanded]="peliculasExpanded()"
+    [selectedGenero]="selectedGenero()"
+    (homeClick)="goHome()"
+    (selectGenero)="selectGenero($event)"
+    (togglePeliculas)="togglePeliculas()"
+  />
 
   <router-outlet />
 
@@ -127,7 +61,7 @@
           <p class="hero__eyebrow">Destacada esta semana</p>
           <h1 class="hero__title">{{ movie.titulo }}</h1>
           <div class="hero__meta">
-            <span class="hero__match">{{ (movie.puntuacionMedia / 5 * 100) | number: '1.0-0' }}% para ti</span>
+            <span class="hero__match">{{ movie.puntuacionMedia | ratingPercent }} para ti</span>
             <span>{{ movie.anioEstreno }}</span>
             <span>{{ movie.duracion }} min</span>
             <mat-chip-set class="hero__chips">
@@ -136,7 +70,7 @@
               }
             </mat-chip-set>
           </div>
-          <p class="hero__description">{{ truncateSynopsis(movie.descripcion) }}</p>
+          <p class="hero__description">{{ movie.descripcion | truncate }}</p>
           <div class="hero__actions">
             <button mat-raised-button color="primary" class="hero__btn-play" matTooltip="Reproducir tráiler">
               <mat-icon>play_arrow</mat-icon>
