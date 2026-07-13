@@ -23,8 +23,16 @@
   margin-bottom: 0.5rem;
 }
 
-::ng-deep .auth-field .mat-mdc-text-field-wrapper {
-  overflow: visible;
+::ng-deep .auth-field {
+  .mat-mdc-text-field-wrapper {
+    overflow: visible;
+  }
+  .mdc-notched-outline__notch {
+    border-right: none;
+  }
+  .mdc-floating-label--float-above {
+    transform: translateY(-98%) scale(0.75);
+  }
 }
 
 [mat-dialog-content] {
