@@ -1,0 +1,45 @@
+<section class="login">
+  <div class="login__card">
+    <div class="login__header">
+      <span class="login__logo">MOVIE<span class="login__logo--accent">HUB</span></span>
+      <h1 class="login__title">Iniciar sesión</h1>
+      <p class="login__subtitle">Accede a tu catálogo personalizado</p>
+    </div>
+
+    <form [formGroup]="form" (ngSubmit)="onSubmit()" novalidate class="login__form">
+      <mat-form-field appearance="outline" class="auth-field">
+        <mat-label>Email</mat-label>
+        <input matInput formControlName="email" type="email" autocomplete="email" placeholder="correo@ejemplo.com" />
+        <mat-icon matIconPrefix>email</mat-icon>
+        @if (email.invalid && email.touched) {
+          <mat-error>Introduce un email válido.</mat-error>
+        }
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="auth-field">
+        <mat-label>Contraseña</mat-label>
+        <input matInput formControlName="password" [type]="hidePassword ? 'password' : 'text'" autocomplete="current-password" placeholder="Tu contraseña" />
+        <mat-icon matIconPrefix>lock</mat-icon>
+        <button mat-icon-button matIconSuffix type="button" (click)="hidePassword = !hidePassword" [attr.aria-label]="hidePassword ? 'Mostrar contraseña' : 'Ocultar contraseña'">
+          <mat-icon>{{ hidePassword ? 'visibility_off' : 'visibility' }}</mat-icon>
+        </button>
+        @if (password.invalid && password.touched) {
+          <mat-error>La contraseña es obligatoria.</mat-error>
+        }
+      </mat-form-field>
+
+      <button mat-raised-button color="primary" class="login__submit" type="submit" [disabled]="form.invalid || submitting">
+        @if (submitting) {
+          <span>Iniciando sesión…</span>
+        } @else {
+          <span>Iniciar sesión</span>
+        }
+      </button>
+    </form>
+
+    <p class="login__register">
+      ¿No tienes cuenta?
+      <button mat-button color="primary" type="button" (click)="openRegister()">Crear cuenta</button>
+    </p>
+  </div>
+</section>
