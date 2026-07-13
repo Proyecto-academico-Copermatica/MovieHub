@@ -6,6 +6,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatCardModule } from '@angular/material/card';
+import { MatTooltipModule } from '@angular/material/tooltip';
 
 import { Movie, MovieRow } from './models/movie.model';
 import { MovieService } from './services/movie.service';
@@ -16,7 +17,7 @@ const MOVIES_PER_ROW = 20;
   selector: 'app-root',
   imports: [
     RouterOutlet, CommonModule,
-    MatToolbarModule, MatIconModule, MatButtonModule, MatProgressSpinnerModule, MatCardModule
+    MatToolbarModule, MatIconModule, MatButtonModule, MatProgressSpinnerModule, MatCardModule, MatTooltipModule
   ],
   templateUrl: './app.html',
   styleUrl: './app.scss'

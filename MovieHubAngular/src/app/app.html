@@ -11,10 +11,10 @@
       </nav>
     </div>
     <div class="navbar__right">
-      <button mat-icon-button aria-label="Buscar">
+      <button mat-icon-button aria-label="Buscar" matTooltip="Buscar películas">
         <mat-icon>search</mat-icon>
       </button>
-      <button mat-icon-button aria-label="Perfil" class="navbar__avatar">
+      <button mat-icon-button aria-label="Perfil" class="navbar__avatar" matTooltip="Mi perfil">
         <mat-icon>account_circle</mat-icon>
       </button>
     </div>
@@ -22,11 +22,33 @@
 
   <router-outlet />
 
-  <!-- ============ ESTADO: CARGANDO ============ -->
+  <!-- ============ ESTADO: CARGANDO (SKELETON) ============ -->
   @if (loading()) {
-    <div class="state-screen">
-      <mat-progress-spinner mode="indeterminate" diameter="48" />
-      <p>Cargando catálogo…</p>
+    <div class="skeleton">
+      <div class="skeleton__hero">
+        <div class="skeleton__hero-content">
+          <div class="skeleton__line skeleton__line--eyebrow"></div>
+          <div class="skeleton__line skeleton__line--title"></div>
+          <div class="skeleton__line skeleton__line--meta"></div>
+          <div class="skeleton__line skeleton__line--desc"></div>
+          <div class="skeleton__actions">
+            <div class="skeleton__btn"></div>
+            <div class="skeleton__btn skeleton__btn--secondary"></div>
+          </div>
+        </div>
+      </div>
+      <div class="skeleton__rows">
+        @for (r of [1,2,3,4]; track r) {
+          <div class="skeleton__row">
+            <div class="skeleton__line skeleton__line--row-title"></div>
+            <div class="skeleton__track">
+              @for (c of [1,2,3,4,5,6]; track c) {
+                <div class="skeleton__card"></div>
+              }
+            </div>
+          </div>
+        }
+      </div>
     </div>
   }
 
@@ -56,11 +78,11 @@
           </div>
           <p class="hero__description">{{ movie.descripcion }}</p>
           <div class="hero__actions">
-            <button mat-raised-button color="primary" class="hero__btn-play">
+            <button mat-raised-button color="primary" class="hero__btn-play" matTooltip="Reproducir tráiler">
               <mat-icon>play_arrow</mat-icon>
               Reproducir
             </button>
-            <button mat-stroked-button class="hero__btn-info">
+            <button mat-stroked-button class="hero__btn-info" matTooltip="Ver ficha completa">
               <mat-icon>info</mat-icon>
               Más información
             </button>
@@ -76,7 +98,7 @@
           <h2 class="row__title">{{ row.title }}</h2>
           <div class="row__track">
             @for (movie of row.movies; track movie.id) {
-              <mat-card class="card" appearance="outlined">
+              <mat-card class="card" appearance="outlined" matTooltip="Ver detalles de {{ movie.titulo }}" matTooltipPosition="above">
                 <img mat-card-image class="card__poster" [src]="movie.imagen" [alt]="movie.titulo" loading="lazy">
                 <mat-card-content class="card__overlay">
                   <p class="card__title">{{ movie.titulo }}</p>
