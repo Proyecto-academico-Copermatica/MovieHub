@@ -29,7 +29,7 @@
       <img class="detail__poster" [src]="movie.imagen" [alt]="movie.titulo" loading="eager" />
       <div class="detail__rating-section">
         <p class="detail__rating-label">Tu valoración</p>
-        <app-star-rating [puntuacion]="0" size="medium" />
+        <app-star-rating [puntuacion]="userRating()" size="medium" (rate)="rateMovie($event)" />
       </div>
     </div>
     <div class="detail__info-col">
