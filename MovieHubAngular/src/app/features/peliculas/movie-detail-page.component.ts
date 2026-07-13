@@ -53,13 +53,35 @@ export class MovieDetailPageComponent {
   }
 
   rateMovie(puntuacion: number): void {
+    const ratingId = this.currentRatingId();
+    const currentRating = this.userRating();
+
+    // Misma puntuación → eliminar valoración
+    if (ratingId && puntuacion === currentRating) {
+      this.valoracionService.delete(ratingId).subscribe({
+        next: () => {
+          this.currentRatingId.set(null);
+          this.userRating.set(0);
+        },
+        error: (err: HttpErrorResponse) => {
+          if (err.error?.message) {
+            this.snackBar.open(err.error.message, 'Cerrar', { duration: 4000 });
+          }
+        }
+      });
+      return;
+    }
+
     this.userRating.set(puntuacion);
 
-    const obs = this.currentRatingId()
-      ? this.valoracionService.update(this.currentRatingId()!, puntuacion)
+    const obs = ratingId
+      ? this.valoracionService.update(ratingId, puntuacion)
       : this.valoracionService.create({ peliculaId: this.movie().id, puntuacion });
 
     obs.subscribe({
+      next: (res) => {
+        if (!ratingId && res) this.currentRatingId.set((res as any).id ?? null);
+      },
       error: (err: HttpErrorResponse) => {
         this.userRating.set(0);
         if (err.error?.message) {
