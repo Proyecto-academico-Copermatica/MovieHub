@@ -28,6 +28,11 @@
       </nav>
     </div>
     <div class="navbar__right">
+      <button mat-icon-button class="navbar__hamburger"
+              [matMenuTriggerFor]="menuHamburguesa"
+              aria-label="Menú de navegación">
+        <mat-icon>menu</mat-icon>
+      </button>
       <button mat-icon-button aria-label="Buscar" matTooltip="Buscar películas">
         <mat-icon>search</mat-icon>
       </button>
@@ -36,6 +41,30 @@
       </button>
     </div>
   </mat-toolbar>
+
+  <!-- ============ MENÚ HAMBURGUESA (móvil) ============ -->
+  <mat-menu #menuHamburguesa="matMenu" class="hamburger-menu">
+    <button mat-menu-item (click)="goHome()">
+      <mat-icon>home</mat-icon>
+      <span>Inicio</span>
+    </button>
+    <button mat-menu-item [matMenuTriggerFor]="menuGenerosMovil">
+      <mat-icon>movie</mat-icon>
+      <span>Películas</span>
+      <mat-icon class="menu-arrow">chevron_right</mat-icon>
+    </button>
+    <mat-menu #menuGenerosMovil="matMenu" class="genre-menu">
+      @for (genero of generos(); track trackByGeneroId($index, genero)) {
+        <button mat-menu-item (click)="selectGenero(genero)">
+          <span>{{ genero.nombre }}</span>
+        </button>
+      }
+    </mat-menu>
+    <button mat-menu-item>
+      <mat-icon>favorite_border</mat-icon>
+      <span>Mi lista</span>
+    </button>
+  </mat-menu>
 
   <router-outlet />
 
