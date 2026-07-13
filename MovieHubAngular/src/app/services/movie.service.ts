@@ -21,6 +21,10 @@ export class MovieService {
     });
   }
 
+  getById(id: number): Observable<Movie> {
+    return this.http.get<Movie>(`${this.baseUrl}/${id}`);
+  }
+
   getCatalogMovies(): Observable<Movie[]> {
     const firstPage$ = this.getPage(1, MAX_PAGE_SIZE);
 
