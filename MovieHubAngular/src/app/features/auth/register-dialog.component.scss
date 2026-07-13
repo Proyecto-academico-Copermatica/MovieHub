@@ -42,6 +42,12 @@
   gap: 0.5rem;
 }
 
+// Oculta el ojo nativo del navegador en campos password (duplicado con el de Material)
+input[type="password"]::-ms-reveal,
+input[type="password"]::-ms-clear {
+  display: none;
+}
+
 // ==========================================
 // SOLUCIÓN AL RECORTE DEL INPUT (Angular MDC)
 // ==========================================
