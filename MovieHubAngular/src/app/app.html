@@ -28,10 +28,6 @@
     }
 
     @if (!loading() && !error()) {
-      @if (activeView() === 'favoritos') {
-        <app-favoritos-page />
-      }
-
       @if (activeView() === 'detalle'; as detailView) {
         @if (selectedMovie(); as movie) {
           <app-movie-detail-page [movie]="movie" (back)="onBackFromDetail()" />
@@ -53,10 +49,10 @@
           <app-genero-page [genero]="genero" [rows]="state.filterByGenre(genero.nombre)" />
         }
       }
+    }
 
-      @if (activeView() === 'favoritos') {
-        <app-favoritos-page />
-      }
+    @if (activeView() === 'favoritos') {
+      <app-favoritos-page />
     }
 
     <mat-divider />
