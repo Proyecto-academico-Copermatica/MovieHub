@@ -110,7 +110,7 @@ public interface IPeliculaService
 }
 ```
 
-Interfaces existentes: `IPeliculaService`, `IGeneroService`, `IUsuarioService`.
+Interfaces existentes: `IPeliculaService`, `IGeneroService`, `IUsuarioService`, `IValoracionService`, `IFavoritoService`.
 
 ---
 
@@ -152,7 +152,7 @@ public class PeliculaService : IPeliculaService
 }
 ```
 
-Servicios existentes: `PeliculaService`, `GeneroService`, `UsuarioService`.
+Servicios existentes: `PeliculaService`, `GeneroService`, `UsuarioService`, `ValoracionService`, `FavoritoService`.
 
 ---
 

@@ -38,48 +38,48 @@ Si haces las dos capas a la vez y algo falla, no sabrás si el error está en ba
 
 ## Funcionalidades concretas del proyecto
 
-### Valoraciones (1-5 estrellas) — **Pendiente de implementar**
+### Valoraciones (1-5 estrellas) — **Backend implementado** 🟢
 
 **Modelo existente:** `ValoracionModel` con campos `UsuarioId`, `PeliculaId`, `Puntuacion` (1-5) y `Fecha`.
 
-**Backend (por hacer):**
+**Backend (implementado):**
 
 ```csharp
-// DTOs (por crear)
+// DTOs
 public record CreateValoracionDto(int PeliculaId, int Puntuacion);
-public record ValoracionDto(int Id, string UsuarioEmail, int Puntuacion);
+public record ValoracionDto(int Id, string UsuarioEmail, int Puntuacion, DateTime Fecha);
 
-// Endpoints (por crear en un nuevo ValoracionesController)
-POST   /api/valoraciones           // crear valoración (requiere auth)
+// Endpoints en ValoracionesController (requieren auth)
+POST   /api/valoraciones           // crear valoración
 PUT    /api/valoraciones/{id}      // modificar valoración
 DELETE /api/valoraciones/{id}      // eliminar valoración
-GET    /api/peliculas/{id}/valoraciones  // obtener valoraciones de una película
+GET    /api/valoraciones/pelicula/{peliculaId}  // obtener valoraciones de una película
 ```
 
-> La `PuntuacionMedia` de la película se recalcula automáticamente tras cada valoración. Haz un `UPDATE` en el servicio después de insertar/modificar/eliminar.
+> La `PuntuacionMedia` de la película se recalcula automáticamente tras cada valoración.
 
-**Frontend (por hacer):**
+**Frontend (pendiente):**
 
 ```
 Componente estrella-valoracion (reutilizable)
-  → PeliculaService obtiene valoraciones
+  → Servicio consume endpoints de valoraciones
   → Al hacer clic en estrella → POST /api/valoraciones
   → Se refresca puntuacionMedia
 ```
 
-### Favoritos — **Pendiente de implementar**
+### Favoritos — **Backend implementado** 🟢
 
 **Modelo existente:** `FavoritoModel` con clave compuesta `(UsuarioId, PeliculaId)`.
 
-**Backend (por hacer):**
+**Backend (implementado):**
 
 ```csharp
+GET    /api/favoritos                    // listar favoritos del usuario (requiere auth)
 POST   /api/favoritos/{peliculaId}       // añadir a favoritos (requiere auth)
-DELETE /api/favoritos/{peliculaId}       // quitar de favoritos
-GET    /api/favoritos                    // listar favoritos del usuario
+DELETE /api/favoritos/{peliculaId}       // quitar de favoritos (requiere auth)
 ```
 
-**Frontend (por hacer):**
+**Frontend (pendiente):**
 
 ```
 Botón corazón en ficha de película
@@ -88,7 +88,7 @@ Botón corazón en ficha de película
   → Listado en /favoritos
 ```
 
-### Búsqueda por título + filtros
+### Búsqueda por título + filtros — **Backend implementado** 🟢
 
 **Backend:**
 
@@ -109,20 +109,20 @@ Componente buscador (shared/)
   → Muestra resultados en el listado
 ```
 
-### Rankings y estadísticas — **Pendiente de implementar**
+### Rankings y estadísticas — **Backend implementado** 🟢
 
-**Backend (por hacer):**
+**Backend (implementado):**
 
 ```csharp
 GET /api/peliculas/mejor-valoradas   → top 10 por puntuacionMedia
 GET /api/peliculas/mas-recientes     → ordenadas por anioEstreno DESC
-GET /api/estadisticas                → total películas, media global
+GET /api/peliculas/estadisticas      → total películas, media global, total géneros, total valoraciones
 ```
 
-**Frontend (por hacer):**
+**Frontend (pendiente):**
 
 ```
-Página principal con secciones:
+Secciones en página principal:
   → "Mejor valoradas" (grid de cards)
   → "Más recientes" (grid de cards)
   → Panel de estadísticas
