@@ -4,10 +4,9 @@ import { Observable, forkJoin, map, switchMap } from 'rxjs';
 
 import { Movie, PaginatedResponse } from '../models/movie.model';
 
-// El backend limita pageSize a 50 por petición, así que para traer
-// el catálogo completo (250 títulos) hacemos varias llamadas y las unimos.
 const API_BASE_URL = 'https://localhost:7154/api/Peliculas';
 const MAX_PAGE_SIZE = 50;
+const CATALOG_PAGES = 2;
 
 @Injectable({
   providedIn: 'root'
@@ -15,40 +14,35 @@ const MAX_PAGE_SIZE = 50;
 export class MovieService {
   constructor(private http: HttpClient) {}
 
-  /** Trae una única página tal cual la devuelve la API. */
   getPage(page: number, pageSize: number = MAX_PAGE_SIZE): Observable<PaginatedResponse<Movie>> {
     return this.http.get<PaginatedResponse<Movie>>(API_BASE_URL, {
       params: { page, pageSize }
     });
   }
 
-  /**
-   * Trae TODO el catálogo paginando por debajo.
-   * 1) Pide la primera página para saber cuántas páginas hay en total.
-   * 2) Lanza en paralelo el resto de páginas (forkJoin).
-   * 3) Concatena todos los "items" en un único array de Movie.
-   */
-  getAllMovies(pageSize: number = MAX_PAGE_SIZE): Observable<Movie[]> {
-    return this.getPage(1, pageSize).pipe(
-      switchMap((first) => {
-        const remainingPages = Array.from(
-          { length: first.totalPages - 1 },
-          (_, i) => i + 2 // páginas 2, 3, 4...
-        );
+  getCatalogMovies(): Observable<Movie[]> {
+    const firstPage$ = this.getPage(1, MAX_PAGE_SIZE);
 
-        if (remainingPages.length === 0) {
+    return firstPage$.pipe(
+      switchMap((first) => {
+        const totalPages = Math.min(first.totalPages, CATALOG_PAGES);
+
+        if (totalPages <= 1) {
           return new Observable<Movie[]>((subscriber) => {
             subscriber.next(first.items);
             subscriber.complete();
           });
         }
 
-        const restRequests = remainingPages.map((page) => this.getPage(page, pageSize));
+        const restRequests = Array.from(
+          { length: totalPages - 1 },
+          (_, i) => this.getPage(i + 2, MAX_PAGE_SIZE)
+        );
 
         return forkJoin(restRequests).pipe(
           map((rest) => [
             ...first.items,
-            ...rest.flatMap((response) => response.items)
+            ...rest.flatMap((r) => r.items)
           ])
         );
       })

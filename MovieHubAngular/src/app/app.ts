@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, OnInit, signal, HostListener } from '@angular/core';
+import { Component, OnInit, signal, HostListener, ChangeDetectionStrategy } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
@@ -17,10 +17,12 @@ const MOVIES_PER_ROW = 20;
   selector: 'app-root',
   imports: [
     RouterOutlet, CommonModule,
-    MatToolbarModule, MatIconModule, MatButtonModule, MatProgressSpinnerModule, MatCardModule, MatTooltipModule
+    MatToolbarModule, MatIconModule, MatButtonModule,
+    MatProgressSpinnerModule, MatCardModule, MatTooltipModule
   ],
   templateUrl: './app.html',
-  styleUrl: './app.scss'
+  styleUrl: './app.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class App implements OnInit {
   protected readonly loading = signal(true);
@@ -37,27 +39,32 @@ export class App implements OnInit {
   }
 
   ngOnInit(): void {
-    this.movieService.getAllMovies().subscribe({
+    this.movieService.getCatalogMovies().subscribe({
       next: (movies) => {
         this.heroMovie.set(this.pickHeroMovie(movies));
         this.rows.set(this.buildRowsByGenre(movies));
         this.loading.set(false);
       },
-      error: (err) => {
-        console.error('Error cargando películas', err);
+      error: () => {
         this.error.set('No se ha podido conectar con la API de MovieHub. Comprueba que el backend esté arrancado.');
         this.loading.set(false);
       }
     });
   }
 
-  /** La mejor valorada hace de portada del hero. */
+  trackByMovieId(_index: number, movie: Movie): number {
+    return movie.id;
+  }
+
+  trackByRowTitle(_index: number, row: MovieRow): string {
+    return row.title;
+  }
+
   private pickHeroMovie(movies: Movie[]): Movie | null {
     if (movies.length === 0) return null;
     return [...movies].sort((a, b) => b.puntuacionMedia - a.puntuacionMedia)[0];
   }
 
-  /** Agrupa las películas por género y arma las filas estilo Netflix. */
   private buildRowsByGenre(movies: Movie[]): MovieRow[] {
     const generosUnicos = Array.from(new Set(movies.flatMap((m) => m.generos)));
 

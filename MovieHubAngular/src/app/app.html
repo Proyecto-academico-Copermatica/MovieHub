@@ -93,11 +93,11 @@
 
     <!-- ============ FILAS POR GÉNERO ============ -->
     <main class="rows">
-      @for (row of rows(); track row.title) {
+      @for (row of rows(); track trackByRowTitle($index, row)) {
         <section class="row">
           <h2 class="row__title">{{ row.title }}</h2>
           <div class="row__track">
-            @for (movie of row.movies; track movie.id) {
+            @for (movie of row.movies; track trackByMovieId($index, movie)) {
               <mat-card class="card" appearance="outlined" matTooltip="Ver detalles de {{ movie.titulo }}" matTooltipPosition="above">
                 <img mat-card-image class="card__poster" [src]="movie.imagen" [alt]="movie.titulo" loading="lazy">
                 <mat-card-content class="card__overlay">
