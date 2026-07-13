@@ -38,6 +38,8 @@
           [heroMovie]="state.heroMovie()"
           [rows]="state.rows()"
           (movieClick)="showMovieDetail($event)"
+          (trailerClick)="openTrailerDialog()"
+          (infoClick)="goToDetail(state.heroMovie())"
         />
       }
 

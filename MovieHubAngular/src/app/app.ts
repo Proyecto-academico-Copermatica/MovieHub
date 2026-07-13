@@ -19,6 +19,7 @@ import { MovieDetailPageComponent } from './features/peliculas/movie-detail-page
 import { Movie, MovieRow } from './models/movie.model';
 import { Genero } from './models/genero.model';
 import { ActiveView } from './shared/types';
+import { TrailerDialogComponent } from './features/peliculas/trailer-dialog.component';
 
 @Component({
   selector: 'app-root',
@@ -91,6 +92,17 @@ export class App implements OnInit {
   showMovieDetail(movie: Movie): void {
     this.selectedMovie.set(movie);
     this.activeView.set('detalle');
+  }
+
+  goToDetail(movie: Movie | null): void {
+    if (movie) this.showMovieDetail(movie);
+  }
+
+  openTrailerDialog(): void {
+    this.dialog.open(TrailerDialogComponent, {
+      width: '480px',
+      disableClose: true
+    });
   }
 
   onBackFromDetail(): void {
