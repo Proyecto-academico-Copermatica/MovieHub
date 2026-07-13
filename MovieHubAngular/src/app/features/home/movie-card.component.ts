@@ -1,4 +1,4 @@
-import { Component, input } from '@angular/core';
+import { Component, input, output } from '@angular/core';
 import { MatCardModule } from '@angular/material/card';
 import { MatChipsModule } from '@angular/material/chips';
 import { CommonModule } from '@angular/common';
@@ -14,4 +14,5 @@ import { Movie } from '../../models/movie.model';
 })
 export class MovieCardComponent {
   readonly movie = input.required<Movie>();
+  readonly movieClick = output<Movie>();
 }

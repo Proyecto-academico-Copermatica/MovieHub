@@ -1,4 +1,4 @@
-import { Component, input } from '@angular/core';
+import { Component, input, output } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { Movie, MovieRow } from '../../models/movie.model';
@@ -15,6 +15,9 @@ import { MovieRowComponent } from './movie-row.component';
 export class HomePageComponent {
   readonly heroMovie = input.required<Movie | null>();
   readonly rows = input.required<MovieRow[]>();
+  readonly movieClick = output<Movie>();
+  readonly trailerClick = output<void>();
+  readonly infoClick = output<void>();
 
   protected readonly trackByRowTitle = trackByRowTitle;
 }

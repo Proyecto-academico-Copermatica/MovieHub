@@ -19,6 +19,8 @@ Plataforma web para gestionar un catálogo de películas: exploración, valoraci
 - **Arquitectura frontend:** Componentes standalone con lazy loading (`core/`, `shared/`, `features/`), `ChangeDetectionStrategy.OnPush`, señales, pipes puros, interceptor HTTP global
 - **Auth JWT:** Autenticación activa con `AddAuthentication` + `AddJwtBearer`. Endpoints protegidos con `[Authorize]` (excepto register/login). Token vía `POST /api/Usuarios/login` y botón Authorize en Swagger
 - **Auth Frontend:** LoginPageComponent, RegisterDialogComponent (modal con validaciones por campo), AuthService con localStorage, AuthInterceptor con Bearer token, snack-bar de notificaciones, navbar con estado de sesión
+- **Detalle de película:** MovieDetailPageComponent con hero, póster, director, descripción completa y botones de acción
+- **TrailerDialog:** Modal para pegar URL de tráiler y abrir en nueva pestaña — integrado en hero y detalle
 
 ### Pendiente
 - **Tests:** Proyecto de tests no creado (backend xUnit + frontend Vitest)
@@ -57,7 +59,7 @@ MovieHub/
 │   └── app/
 │           ├── core/     # Interceptors, layout, servicios singleton (auth, movie-state)
 │           ├── shared/   # Pipes, utilidades, constantes, tipos
-│           └── features/ # home/, genero/, auth/, loading/
+│           └── features/ # home/, genero/, auth/, peliculas/, loading/
 ├── docs/                 # Guías por rol
 ├── .github/workflows/    # CI SonarCloud
 ├── README.md

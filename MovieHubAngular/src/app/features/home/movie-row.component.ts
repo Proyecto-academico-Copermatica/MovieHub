@@ -1,7 +1,7 @@
-import { Component, input } from '@angular/core';
+import { Component, input, output } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { MovieRow } from '../../models/movie.model';
+import { Movie, MovieRow } from '../../models/movie.model';
 import { trackByMovieId } from '../../shared/utils/track-by';
 import { MovieCardComponent } from './movie-card.component';
 
@@ -14,6 +14,7 @@ import { MovieCardComponent } from './movie-card.component';
 })
 export class MovieRowComponent {
   readonly row = input.required<MovieRow>();
+  readonly movieClick = output<Movie>();
 
   protected readonly trackByMovieId = trackByMovieId;
 }

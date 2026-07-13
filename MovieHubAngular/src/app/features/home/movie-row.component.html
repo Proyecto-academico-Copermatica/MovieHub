@@ -3,7 +3,7 @@
   <h2 class="row__title">{{ row.title }}</h2>
   <div class="row__track">
     @for (movie of row.movies; track trackByMovieId($index, movie)) {
-      <app-movie-card [movie]="movie" />
+      <app-movie-card [movie]="movie" (movieClick)="movieClick.emit($event)" />
     }
   </div>
 </section>

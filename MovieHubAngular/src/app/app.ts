@@ -14,16 +14,20 @@ import { HomePageComponent } from './features/home/home-page.component';
 import { GeneroPageComponent } from './features/genero/genero-page.component';
 import { LoginPageComponent } from './features/auth/login-page.component';
 import { RegisterDialogComponent } from './features/auth/register-dialog.component';
+import { MovieDetailPageComponent } from './features/peliculas/movie-detail-page.component';
 
+import { Movie, MovieRow } from './models/movie.model';
 import { Genero } from './models/genero.model';
 import { ActiveView } from './shared/types';
+import { TrailerDialogComponent } from './features/peliculas/trailer-dialog.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
   imports: [
     CommonModule, NavbarComponent,
-    SkeletonComponent, HomePageComponent, GeneroPageComponent, LoginPageComponent,
+    SkeletonComponent, HomePageComponent, GeneroPageComponent,
+    LoginPageComponent, MovieDetailPageComponent,
     MatIconModule, MatDividerModule
   ],
   templateUrl: './app.html',
@@ -43,6 +47,7 @@ export class App implements OnInit {
   protected readonly activeView = signal<ActiveView>('home');
   protected readonly peliculasExpanded = signal(false);
   protected readonly showLogin = signal(false);
+  protected readonly selectedMovie = signal<Movie | null>(null);
 
   protected readonly state = this.movieState;
   protected readonly authService = this.auth;
@@ -84,6 +89,26 @@ export class App implements OnInit {
     });
   }
 
+  showMovieDetail(movie: Movie): void {
+    this.selectedMovie.set(movie);
+    this.activeView.set('detalle');
+  }
+
+  goToDetail(movie: Movie | null): void {
+    if (movie) this.showMovieDetail(movie);
+  }
+
+  openTrailerDialog(): void {
+    this.dialog.open(TrailerDialogComponent, {
+      width: '480px',
+      disableClose: true
+    });
+  }
+
+  onBackFromDetail(): void {
+    this.goHome();
+  }
+
   private loadGeneros(): void {
     this.generoService.getAll().subscribe({
       next: (g) => this.generos.set(g),
@@ -112,6 +137,7 @@ export class App implements OnInit {
 
   goHome(): void {
     this.selectedGenero.set(null);
+    this.selectedMovie.set(null);
     this.activeView.set('home');
     this.peliculasExpanded.set(false);
   }
