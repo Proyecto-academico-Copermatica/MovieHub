@@ -33,11 +33,14 @@ export class MovieDetailPageComponent {
   readonly movie = input.required<Movie>();
   readonly back = output<void>();
   readonly userRating = signal(0);
+  readonly currentRatingId = signal<number | null>(null);
 
   constructor() {
     effect(() => {
       const m = this.movie();
       if (!m?.id) return;
+      this.currentRatingId.set(null);
+      this.userRating.set(0);
       this.loadUserRating(m.id);
     });
   }
@@ -51,10 +54,12 @@ export class MovieDetailPageComponent {
 
   rateMovie(puntuacion: number): void {
     this.userRating.set(puntuacion);
-    this.valoracionService.create({
-      peliculaId: this.movie().id,
-      puntuacion
-    }).subscribe({
+
+    const obs = this.currentRatingId()
+      ? this.valoracionService.update(this.currentRatingId()!, puntuacion)
+      : this.valoracionService.create({ peliculaId: this.movie().id, puntuacion });
+
+    obs.subscribe({
       error: (err: HttpErrorResponse) => {
         this.userRating.set(0);
         if (err.error?.message) {
@@ -71,7 +76,10 @@ export class MovieDetailPageComponent {
     this.valoracionService.getByPelicula(peliculaId).subscribe({
       next: (ratings) => {
         const found = ratings.find((r) => r.usuarioEmail === userEmail);
-        if (found) this.userRating.set(found.puntuacion);
+        if (found) {
+          this.userRating.set(found.puntuacion);
+          this.currentRatingId.set(found.id);
+        }
       }
     });
   }
