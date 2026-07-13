@@ -154,6 +154,9 @@ public class PeliculaService : IPeliculaService
 
 Servicios existentes: `PeliculaService`, `GeneroService`, `UsuarioService`, `ValoracionService`, `FavoritoService`.
 
+> **ValoracionService:** CRUD con recálculo automático de `PuntuacionMedia` en `PeliculaModel` tras cada operación.
+> **FavoritoService:** Añadir, quitar y listar favoritos por usuario.
+
 ---
 
 ## Paso 5: Controlador (`Controllers/`)
