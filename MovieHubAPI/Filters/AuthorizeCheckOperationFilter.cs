@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.OpenApi;
 using Swashbuckle.AspNetCore.SwaggerGen;
+using System.Collections.Generic;
 
 namespace MovieHubAPI.Filters;
 
@@ -16,13 +17,11 @@ public class AuthorizeCheckOperationFilter : IOperationFilter
 
         if (hasAuthorize)
         {
-            operation.Security =
-            [
-                new OpenApiSecurityRequirement
-                {
-                    { new OpenApiSecuritySchemeReference("Bearer"), new List<string>() }
-                }
-            ];
+            var requirement = new OpenApiSecurityRequirement
+            {
+                [new OpenApiSecuritySchemeReference("Bearer")] = new List<string>()
+            };
+            operation.Security = [requirement];
         }
     }
 }
