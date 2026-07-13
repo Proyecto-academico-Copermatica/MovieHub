@@ -17,10 +17,9 @@ Plataforma web para gestionar un catálogo de películas: exploración, valoraci
 - **Angular Material:** Tema M3 custom oscuro con paleta roja Netflix, componentes: mat-toolbar, mat-card, mat-menu, mat-chip, mat-icon, mat-divider
 - **Environment:** Archivos `environment.ts` / `environment.prod.ts` con `apiUrlBase` centralizado y `fileReplacements`
 - **Arquitectura frontend:** Componentes standalone con lazy loading (`core/`, `shared/`, `features/`), `ChangeDetectionStrategy.OnPush`, señales, pipes puros, interceptor HTTP global
-- **Auth JWT:** Paquetes instalados en backend y endpoints `/register`, `/login`, `/me` operativos (pendiente activar `[Authorize]`)
+- **Auth JWT:** Autenticación activa con `AddAuthentication` + `AddJwtBearer`. Endpoints protegidos con `[Authorize]` (excepto register/login). Token vía `POST /api/Usuarios/login` y botón Authorize en Swagger
 
 ### Pendiente
-- **Autenticación JWT:** Activar `AddAuthentication` / `AddJwtBearer` en `Program.cs` + protección con `[Authorize]`
 - **Tests:** Proyecto de tests no creado (backend xUnit + frontend Vitest)
 - **Funcionalidades extra:** Valoraciones, Favoritos, Estadísticas, Búsqueda/Filtros — pendientes de implementar
 
@@ -41,7 +40,7 @@ MovieHub permite:
 - **Frontend:** Angular 22 (standalone), Angular Material M3, SCSS, Vitest
 - **Backend:** ASP.NET Core Web API (.NET 10), Entity Framework Core 10, Mapster, FluentValidation
 - **Base de datos:** SQL Server, Identity (ASP.NET Core Identity)
-- **Autenticación:** JWT (pendiente de activar `[Authorize]`)
+- **Autenticación:** JWT Bearer (activo con `[Authorize]` en endpoints)
 - **Documentación API:** Swagger / Swashbuckle
 - **CI/CD:** Git, GitHub, SonarCloud (análisis de código), GitHub Actions
 
@@ -50,6 +49,7 @@ MovieHub permite:
 ```
 MovieHub/
 ├── MovieHubAPI/          # Backend - ASP.NET Core Web API
+│   └── Filters/          # AuthorizeCheckOperationFilter, ValidationFilter
 ├── MovieHubAngular/      # Frontend - Angular (core/, shared/, features/)
 │   └── src/
 │       ├── environments/ # environment.ts + .prod.ts
