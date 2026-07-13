@@ -33,9 +33,25 @@
     <button mat-icon-button aria-label="Buscar" matTooltip="Buscar películas">
       <mat-icon>search</mat-icon>
     </button>
-    <button mat-icon-button aria-label="Perfil" class="navbar__avatar" matTooltip="Mi perfil">
-      <mat-icon>account_circle</mat-icon>
-    </button>
+    @if (authService.isLoggedIn(); as logged) {
+      <button mat-icon-button [matMenuTriggerFor]="menuUsuario" class="navbar__avatar" matTooltip="Mi perfil">
+        <mat-icon>account_circle</mat-icon>
+      </button>
+      <mat-menu #menuUsuario="matMenu" class="hamburger-menu">
+        <span mat-menu-item disabled class="navbar__user-info">
+          <mat-icon>person</mat-icon>
+          <span>{{ authService.currentUser()?.userName }}</span>
+        </span>
+        <mat-divider class="hamburger__divider" />
+        <button mat-menu-item (click)="authService.logout(); homeClick.emit()">
+          <mat-icon>logout</mat-icon>
+          <span>Cerrar sesión</span>
+        </button>
+      </mat-menu>
+    } @else {
+      <button mat-button class="navbar__link" (click)="loginClick.emit()">Iniciar sesión</button>
+      <button mat-raised-button color="primary" (click)="registerClick.emit()" class="navbar__register-btn">Registrarse</button>
+    }
   </div>
 </mat-toolbar>
 

@@ -84,6 +84,26 @@
   &__hamburger {
     display: none;
   }
+
+  &__register-btn {
+    font-weight: 700 !important;
+    font-size: 0.82rem !important;
+    padding: 0.25rem 0.75rem !important;
+  }
+
+  &__user-info {
+    opacity: 1 !important;
+    font-size: 0.85rem !important;
+    min-height: 40px !important;
+    cursor: default;
+
+    .mat-icon {
+      font-size: 1.15rem;
+      width: 1.15rem;
+      height: 1.15rem;
+      color: var(--mh-text-muted);
+    }
+  }
 }
 
 @media (max-width: 768px) {
