@@ -1,12 +1,14 @@
-import { Component, input, output } from '@angular/core';
+import { Component, inject, input, output } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatChipsModule } from '@angular/material/chips';
 import { MatTooltipModule } from '@angular/material/tooltip';
+import { MatDialog } from '@angular/material/dialog';
 
 import { Movie } from '../../models/movie.model';
 import { RatingPercentPipe } from '../../shared/pipes/rating-percent.pipe';
+import { TrailerDialogComponent } from './trailer-dialog.component';
 
 @Component({
   selector: 'app-movie-detail-page',
@@ -19,6 +21,15 @@ import { RatingPercentPipe } from '../../shared/pipes/rating-percent.pipe';
   styleUrl: './movie-detail-page.component.scss'
 })
 export class MovieDetailPageComponent {
+  private readonly dialog = inject(MatDialog);
+
   readonly movie = input.required<Movie>();
   readonly back = output<void>();
+
+  openTrailer(): void {
+    this.dialog.open(TrailerDialogComponent, {
+      width: '480px',
+      disableClose: true
+    });
+  }
 }

@@ -34,7 +34,7 @@
       </p>
       <p class="detail__description">{{ movie.descripcion }}</p>
       <div class="detail__actions">
-        <button mat-raised-button color="primary" matTooltip="Reproducir tráiler">
+        <button mat-raised-button color="primary" (click)="openTrailer()" matTooltip="Añadir enlace al tráiler">
           <mat-icon>play_arrow</mat-icon>
           Reproducir
         </button>
