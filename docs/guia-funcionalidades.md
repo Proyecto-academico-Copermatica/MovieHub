@@ -10,7 +10,7 @@ Rol asignado: **[@Anua472](https://github.com/Anua472)** — rama `feature/featu
 
 Tus features tocan **Angular y ASP.NET a la vez**: valoraciones, favoritos, filtros, búsquedas, rankings y estadísticas. Eres el puente entre backend y frontend.
 
-> 🔐 **Autenticación disponible** — El backend ya expone endpoints de auth (`POST /api/Usuarios/register`, `POST /api/Usuarios/login`, `GET /api/Usuarios/me`). El `userId` necesario para favoritos y valoraciones se obtiene del response del login (`AuthResponseDto.UserId`). Consulta a @dawcarlosp para más detalles.
+> 🔐 **Autenticación disponible** — El backend tiene JWT activo. Endpoints públicos: `POST /api/Usuarios/register` y `POST /api/Usuarios/login`. El resto requiere token Bearer. El `userId` se obtiene del response del login (`AuthResponseDto.UserId`). Consulta a @dawcarlosp para más detalles.
 
 ---
 
@@ -145,7 +145,7 @@ Página principal con secciones:
 | Error | Causa | Solución |
 |---|---|---|---|
 | El frontend manda datos que el backend no entiende | DTO desincronizado entre Angular y ASP.NET | Copia exacta de campos y tipos |
-| 401 Unauthorized | El endpoint requiere auth y no envías token | La autenticación JWT está comentada en `Program.cs` — activarla o dejar endpoints públicos |
+| 401 Unauthorized | El endpoint requiere auth y no envías token | La autenticación JWT ya está activa — obtén un token en `POST /api/Usuarios/login` y pégalo en Swagger → Authorize |
 | CORS bloquea la petición | El backend no tiene configurado el origen | Ya está configurado para `http://localhost:4200`. Si cambias puerto, actualiza `Program.cs`. |
 | La puntuación media no se actualiza | OLVIDASTE recalcularla en el servicio | Después de cada valoración, recalcula y guarda |
 

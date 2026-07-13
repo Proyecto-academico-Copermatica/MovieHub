@@ -240,20 +240,24 @@ builder.Services.AddScoped<IUsuarioService, UsuarioService>();
 
 ### Autenticación JWT
 
-El proyecto incluye autenticación JWT con Identity. Actualmente está activo:
+El proyecto incluye autenticación JWT con Identity. Actualmente **está activo**:
+
 - Sección `Jwt` (Key/Issuer/Audience) en `appsettings.json`
 - `AddIdentityCore<UsuarioModel>` en `Program.cs`
-- Endpoints públicos de registro y login (`/api/Usuarios/register`, `/api/Usuarios/login`)
+- `AddAuthentication()` + `AddJwtBearer()` activados en `Program.cs`
+- `UseAuthentication()` en el pipeline middleware
+- Endpoints públicos de registro y login (`POST /api/Usuarios/register`, `POST /api/Usuarios/login`)
+- Endpoints `/me`, Películas y Géneros protegidos con `[Authorize]`
+- Botón **Authorize** funcional en Swagger UI
 
-**Pendiente de activar** (cuando el equipo lo decida):
+**Cómo usarlo en Swagger:**
 
-```csharp
-// builder.Services.AddAuthentication(...)
-// builder.Services.AddAuthorization(...)
-// app.UseAuthentication();
-```
+1. `POST /api/Usuarios/register` → crear usuario
+2. `POST /api/Usuarios/login` → copiar token JWT del response
+3. Click **Authorize** → pegar `Bearer {token}` → Authorize
+4. Probar cualquier endpoint protegido → 200 OK
 
-Los endpoints `/me` (`GET`, `PUT`, `DELETE`) usan `?userId=` temporalmente. Cuando se active `[Authorize]`, se extraerá del JWT y la query param desaparecerá.
+> Los endpoints `/me` ya no usan `?userId=` — el `userId` se extrae automáticamente del JWT mediante `ClaimTypes.NameIdentifier`.
 
 ---
 
@@ -342,10 +346,11 @@ Middleware global que captura cualquier excepción no controlada en el pipeline 
 | MappingConfig deja de tener efecto | Alguien borró la línea en `Program.cs` | Asegurar que `MappingConfig.Configure()` está antes de `var app = builder.Build();` |
 | Error de compilación con `DbContext` | Conflicto con `System.Data.Common.DbContext` | Usar el namespace global o alias; nuestro `DbContext` no tiene namespace |
 | El endpoint lanza excepción pero devuelve 500 genérico | El middleware captura errores no controlados | Revisar el log del backend para ver el detalle real |
+| 401 Unauthorized | No enviaste el token JWT en el header Authorization | Pega tu token en Swagger → Authorize → `Bearer {token}` |
 | `POST /register` devuelve 400 con `"Passwords must have at least one uppercase"` | La contraseña no cumple las políticas de Identity | Usar al menos 6 caracteres, 1 mayúscula, 1 minúscula y 1 dígito |
 | `POST /register` devuelve 400 con `"Username 'X' is already taken"` | El nombre de usuario ya existe en la BD | Elegir otro nombre de usuario |
 | `POST /login` devuelve 401 | Credenciales inválidas o el usuario no existe | Verificar email y contraseña |
-| Swagger muestra el botón Authorize pero el token no funciona | La autenticación JWT está comentada en Program.cs | El botón Authorize es solo UI; la validación real se activará cuando el equipo descomente `AddAuthentication` |
+| Swagger muestra el botón Authorize pero el token no funciona | El token expiró (4 min) o no se pegó en formato correcto | Asegúrate de pegar `Bearer {token}` exactamente, o genera uno nuevo en `/login` |
 | `ArgumentException` con mensaje de Identity en la respuesta | El servicio lanza `ArgumentException` con los errores de Identity | El `ExceptionHandlingMiddleware` lo captura y devuelve 400. En producción el mensaje es genérico. |
 
 ---
