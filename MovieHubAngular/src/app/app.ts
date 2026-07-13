@@ -107,6 +107,8 @@ export class App implements OnInit {
   }
 
   onBackFromDetail(): void {
+    this.loading.set(true);
+    this.loadMovies();
     this.goHome();
   }
 
