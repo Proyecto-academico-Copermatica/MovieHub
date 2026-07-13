@@ -12,7 +12,7 @@
     <div class="detail__hero-content">
       <h1 class="detail__title">{{ movie.titulo }}</h1>
       <div class="detail__meta">
-        <span class="detail__rating">{{ movie.puntuacionMedia | ratingPercent }}</span>
+        <app-star-rating [puntuacion]="movie.puntuacionMedia" [readonly]="true" size="small" />
         <span>{{ movie.anioEstreno }}</span>
         <span>{{ movie.duracion }} min</span>
       </div>
@@ -27,6 +27,10 @@
   <div class="detail__body">
     <div class="detail__poster-col">
       <img class="detail__poster" [src]="movie.imagen" [alt]="movie.titulo" loading="eager" />
+      <div class="detail__rating-section">
+        <p class="detail__rating-label">Tu valoración</p>
+        <app-star-rating [puntuacion]="userRating()" size="medium" (rate)="rateMovie($event)" />
+      </div>
     </div>
     <div class="detail__info-col">
       <p class="detail__director">

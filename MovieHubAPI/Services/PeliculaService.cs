@@ -12,11 +12,24 @@ namespace MovieHubAPI.Services
 
         public PeliculaService(MovieHubDbContext context) => _context = context;
 
-        public async Task<PaginadosDto<PeliculaDto>> GetAllPaginadoAsync(int page, int pageSize)
+        public async Task<PaginadosDto<PeliculaDto>> GetAllPaginadoAsync(int page, int pageSize, string? titulo, int? generoId, string? orden)
         {
             var query = _context.Peliculas
                 .Include(p => p.PeliculaGeneros).ThenInclude(pg => pg.Genero)
                 .AsQueryable();
+
+            if (!string.IsNullOrWhiteSpace(titulo))
+                query = query.Where(p => p.Titulo.Contains(titulo));
+
+            if (generoId.HasValue)
+                query = query.Where(p => p.PeliculaGeneros.Any(pg => pg.GeneroId == generoId.Value));
+
+            query = orden switch
+            {
+                "puntuacion" => query.OrderByDescending(p => p.PuntuacionMedia),
+                "anio" => query.OrderByDescending(p => p.Anio),
+                _ => query.OrderBy(p => p.Titulo)
+            };
 
             var totalCount = await query.CountAsync();
 
@@ -103,6 +116,43 @@ namespace MovieHubAPI.Services
             _context.Peliculas.Remove(pelicula);
             await _context.SaveChangesAsync();
             return true;
+        }
+
+        public async Task<List<PeliculaDto>> GetMejorValoradasAsync()
+        {
+            return await _context.Peliculas
+                .Include(p => p.PeliculaGeneros).ThenInclude(pg => pg.Genero)
+                .Where(p => p.PuntuacionMedia > 0)
+                .OrderByDescending(p => p.PuntuacionMedia)
+                .Take(10)
+                .ProjectToType<PeliculaDto>()
+                .ToListAsync();
+        }
+
+        public async Task<List<PeliculaDto>> GetMasRecientesAsync()
+        {
+            return await _context.Peliculas
+                .Include(p => p.PeliculaGeneros).ThenInclude(pg => pg.Genero)
+                .OrderByDescending(p => p.Anio)
+                .Take(10)
+                .ProjectToType<PeliculaDto>()
+                .ToListAsync();
+        }
+
+        public async Task<EstadisticasDto> GetEstadisticasAsync()
+        {
+            var totalPeliculas = await _context.Peliculas.CountAsync();
+            var totalGeneros = await _context.Generos.CountAsync();
+            var totalValoraciones = await _context.Valoraciones.CountAsync();
+            var mediaGlobal = await _context.Valoraciones
+                .AverageAsync(v => (double?)v.Puntuacion) ?? 0;
+
+            return new EstadisticasDto(
+                totalPeliculas,
+                Math.Round(mediaGlobal, 1),
+                totalGeneros,
+                totalValoraciones
+            );
         }
     }
 }

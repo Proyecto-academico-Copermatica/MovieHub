@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, OnInit, inject, signal } from '@angular/core';
+import { Component, OnInit, inject, signal, effect } from '@angular/core';
 import { MatIconModule } from '@angular/material/icon';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatDialog } from '@angular/material/dialog';
@@ -52,17 +52,19 @@ export class App implements OnInit {
   protected readonly state = this.movieState;
   protected readonly authService = this.auth;
 
+  constructor() {
+    effect(() => {
+      this.showLogin.set(this.auth.currentUser() === null);
+    });
+  }
+
   ngOnInit(): void {
-    if (!this.auth.isLoggedIn()) {
-      this.showLogin.set(true);
-      return;
-    }
+    if (!this.auth.isLoggedIn()) return;
     this.loadGeneros();
     this.loadMovies();
   }
 
   onLoggedIn(): void {
-    this.showLogin.set(false);
     this.error.set(null);
     this.loading.set(true);
     this.goHome();
@@ -76,7 +78,6 @@ export class App implements OnInit {
 
   onLogoutClick(): void {
     this.auth.logout();
-    this.showLogin.set(true);
   }
 
   onRegisterClick(): void {
@@ -106,6 +107,8 @@ export class App implements OnInit {
   }
 
   onBackFromDetail(): void {
+    this.loading.set(true);
+    this.loadMovies();
     this.goHome();
   }
 

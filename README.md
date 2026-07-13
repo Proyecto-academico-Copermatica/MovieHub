@@ -15,9 +15,15 @@ Plataforma web para gestionar un catálogo de películas: exploración, valoraci
 - **CORS:** Permitido para `http://localhost:4200`
 - **Frontend:** UI Netflix-style completa con catálogo agrupado por género, héroe con Ken Burns, skeleton loading, diseño responsive
 - **Angular Material:** Tema M3 custom oscuro con paleta roja Netflix, componentes: mat-toolbar, mat-card, mat-menu, mat-chip, mat-icon, mat-divider, mat-dialog, mat-snack-bar, mat-form-field
+- **StarRatingComponent:** Componente reutilizable de valoración 1-5 estrellas integrado en detalle de película
 - **Environment:** Archivos `environment.ts` / `environment.prod.ts` con `apiUrlBase` centralizado y `fileReplacements`
 - **Arquitectura frontend:** Componentes standalone con lazy loading (`core/`, `shared/`, `features/`), `ChangeDetectionStrategy.OnPush`, señales, pipes puros, interceptor HTTP global
 - **Auth JWT:** Autenticación activa con `AddAuthentication` + `AddJwtBearer`. Endpoints protegidos con `[Authorize]` (excepto register/login). Token vía `POST /api/Usuarios/login` y botón Authorize en Swagger
+- **Valoraciones (1-5):** CRUD completo con recálculo automático de puntuación media por película. Endpoints protegidos. Endpoint público para consultar valoraciones de una película
+- **Favoritos:** Añadir, quitar y listar películas favoritas por usuario. Endpoints protegidos
+- **Búsqueda + Filtros:** Endpoint `GET /api/peliculas` con params `?titulo=`, `?generoId=`, `?orden=` (puntuacion, anio)
+- **Rankings:** Endpoints `GET /api/peliculas/mejor-valoradas` (top 10) y `GET /api/peliculas/mas-recientes` (top 10)
+- **Estadísticas:** Endpoint `GET /api/peliculas/estadisticas` con total películas, media global, total géneros, total valoraciones
 - **Auth Frontend:** LoginPageComponent, RegisterDialogComponent (modal con validaciones por campo), AuthService con localStorage, AuthInterceptor con Bearer token, snack-bar de notificaciones, navbar con estado de sesión
 - **Detalle de película:** MovieDetailPageComponent con hero, póster, director, descripción completa y botones de acción
 - **TrailerDialog:** Modal para pegar URL de tráiler y abrir en nueva pestaña — integrado en hero y detalle

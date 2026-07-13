@@ -31,8 +31,12 @@ src/app/
 │   │   └── navbar.component.ts
 │   └── services/
 │       ├── movie-state.service.ts
-│       └── auth.service.ts
+│       ├── auth.service.ts
+│       ├── valoracion.service.ts
+│       └── favorito.service.ts
 ├── shared/                    # Componentes reutilizables, pipes, utilidades
+│   ├── components/
+│   │   └── star-rating.component.ts  # Valoración 1-5 estrellas
 │   ├── pipes/
 │   │   ├── truncate.pipe.ts
 │   │   └── rating-percent.pipe.ts
