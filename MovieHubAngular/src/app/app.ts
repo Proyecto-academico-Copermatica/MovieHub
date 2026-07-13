@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, OnInit, signal, HostListener, ChangeDetectionStrategy } from '@angular/core';
+import { Component, OnInit, signal, ChangeDetectionStrategy } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
@@ -31,14 +31,7 @@ export class App implements OnInit {
   protected readonly error = signal<string | null>(null);
   protected readonly heroMovie = signal<Movie | null>(null);
   protected readonly rows = signal<MovieRow[]>([]);
-  protected readonly scrolled = signal(false);
-
   constructor(private movieService: MovieService) {}
-
-  @HostListener('window:scroll')
-  onScroll(): void {
-    this.scrolled.set(window.scrollY > 50);
-  }
 
   ngOnInit(): void {
     this.movieService.getCatalogMovies().subscribe({
@@ -52,6 +45,12 @@ export class App implements OnInit {
         this.loading.set(false);
       }
     });
+  }
+
+  truncateSynopsis(text: string | null): string {
+    if (!text) return '';
+    const cleaned = text.replace(/\s+/g, ' ').trim();
+    return cleaned.length > 200 ? cleaned.slice(0, 197) + '...' : cleaned;
   }
 
   trackByMovieId(_index: number, movie: Movie): number {
