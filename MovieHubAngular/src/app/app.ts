@@ -6,6 +6,7 @@ import { MatDialog } from '@angular/material/dialog';
 
 import { MovieStateService } from './core/services/movie-state.service';
 import { AuthService } from './core/services/auth.service';
+import { FavoritoStateService } from './core/services/favorito-state.service';
 import { GeneroService } from './services/genero.service';
 import { MovieService } from './services/movie.service';
 import { NavbarComponent } from './core/layout/navbar.component';
@@ -36,6 +37,7 @@ import { TrailerDialogComponent } from './features/peliculas/trailer-dialog.comp
 export class App implements OnInit {
   private readonly movieState = inject(MovieStateService);
   private readonly auth = inject(AuthService);
+  private readonly favoritoState = inject(FavoritoStateService);
   private readonly movieService = inject(MovieService);
   private readonly generoService = inject(GeneroService);
   private readonly dialog = inject(MatDialog);
@@ -60,6 +62,7 @@ export class App implements OnInit {
 
   ngOnInit(): void {
     if (!this.auth.isLoggedIn()) return;
+    this.favoritoState.loadFavoritos();
     this.loadGeneros();
     this.loadMovies();
   }
@@ -68,6 +71,7 @@ export class App implements OnInit {
     this.error.set(null);
     this.loading.set(true);
     this.goHome();
+    this.favoritoState.loadFavoritos();
     this.loadGeneros();
     this.loadMovies();
   }
