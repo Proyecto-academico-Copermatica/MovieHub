@@ -2,25 +2,7 @@ import { Injectable, inject, signal } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable, tap } from 'rxjs';
 import { environment } from '../../../environments/environment';
-
-export interface AuthResponse {
-  token: string;
-  expiration: string;
-  userId: number;
-  userName: string;
-  email: string;
-}
-
-export interface LoginDto {
-  email: string;
-  password: string;
-}
-
-export interface RegisterDto {
-  userName: string;
-  email: string;
-  password: string;
-}
+import { AuthResponse, LoginDto, RegisterDto } from '../../shared/types';
 
 @Injectable({ providedIn: 'root' })
 export class AuthService {
