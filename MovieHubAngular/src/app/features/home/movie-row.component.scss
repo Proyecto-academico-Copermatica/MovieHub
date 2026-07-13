@@ -1,0 +1,39 @@
+.row {
+  &__title {
+    font-family: var(--mh-font-display);
+    font-size: 1.5rem;
+    letter-spacing: 0.02em;
+    padding: 0 3rem;
+    margin-bottom: 0.5rem;
+  }
+
+  &__track {
+    display: flex;
+    gap: 0.5rem;
+    padding: 0.5rem 3rem 1.5rem;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .row {
+    &__track {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0.5rem;
+      overflow: visible;
+      scrollbar-width: none;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
+  }
+}

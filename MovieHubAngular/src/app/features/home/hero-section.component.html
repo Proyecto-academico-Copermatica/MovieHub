@@ -1,0 +1,29 @@
+@let movie = this.movie();
+<section class="hero" [style.--hero-image]="'url(' + movie.imagen + ')'">
+  <div class="hero__scrim"></div>
+  <div class="hero__content">
+    <p class="hero__eyebrow">Destacada esta semana</p>
+    <h1 class="hero__title">{{ movie.titulo }}</h1>
+    <div class="hero__meta">
+      <span class="hero__match">{{ movie.puntuacionMedia | ratingPercent }} para ti</span>
+      <span>{{ movie.anioEstreno }}</span>
+      <span>{{ movie.duracion }} min</span>
+      <mat-chip-set class="hero__chips">
+        @for (genero of movie.generos; track genero) {
+          <mat-chip>{{ genero }}</mat-chip>
+        }
+      </mat-chip-set>
+    </div>
+    <p class="hero__description">{{ movie.descripcion | truncate }}</p>
+    <div class="hero__actions">
+      <button mat-raised-button color="primary" class="hero__btn-play" matTooltip="Reproducir tráiler">
+        <mat-icon>play_arrow</mat-icon>
+        Reproducir
+      </button>
+      <button mat-stroked-button class="hero__btn-info" matTooltip="Ver ficha completa">
+        <mat-icon>info</mat-icon>
+        Más información
+      </button>
+    </div>
+  </div>
+</section>
