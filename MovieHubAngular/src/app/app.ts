@@ -1,6 +1,11 @@
 import { CommonModule } from '@angular/common';
-import { Component, OnInit, signal } from '@angular/core';
+import { Component, OnInit, signal, HostListener } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MatCardModule } from '@angular/material/card';
 
 import { Movie, MovieRow } from './models/movie.model';
 import { MovieService } from './services/movie.service';
@@ -9,19 +14,26 @@ const MOVIES_PER_ROW = 20;
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, CommonModule],
+  imports: [
+    RouterOutlet, CommonModule,
+    MatToolbarModule, MatIconModule, MatButtonModule, MatProgressSpinnerModule, MatCardModule
+  ],
   templateUrl: './app.html',
   styleUrl: './app.scss'
 })
 export class App implements OnInit {
-  protected readonly title = signal('MovieHubAngular');
-
   protected readonly loading = signal(true);
   protected readonly error = signal<string | null>(null);
   protected readonly heroMovie = signal<Movie | null>(null);
   protected readonly rows = signal<MovieRow[]>([]);
+  protected readonly scrolled = signal(false);
 
   constructor(private movieService: MovieService) {}
+
+  @HostListener('window:scroll')
+  onScroll(): void {
+    this.scrolled.set(window.scrollY > 50);
+  }
 
   ngOnInit(): void {
     this.movieService.getAllMovies().subscribe({

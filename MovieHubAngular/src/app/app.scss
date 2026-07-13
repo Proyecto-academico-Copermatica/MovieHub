@@ -1,27 +1,27 @@
-// ==========================================================================
-// MovieHub — Estilos del shell (App)
-// ==========================================================================
-
 .app-shell {
   min-height: 100vh;
   background: var(--mh-bg);
   padding-bottom: 3rem;
 }
 
-// ---------- NAVBAR ----------
+// ========== NAVBAR (MAT-TOOLBAR) ==========
 .navbar {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   z-index: 100;
-  height: var(--mh-nav-height);
+  height: var(--mh-nav-height) !important;
   display: flex;
   align-items: center;
-  justify-content: space-between;
   padding: 0 3rem;
-  background: linear-gradient(to bottom, rgba(11, 11, 13, 0.9) 10%, transparent 100%);
-  transition: background var(--mh-transition);
+  background: transparent;
+  transition: background var(--mh-transition), box-shadow var(--mh-transition);
+
+  &--solid {
+    background: rgba(20, 20, 20, 0.98);
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.4);
+  }
 
   &__left {
     display: flex;
@@ -31,7 +31,7 @@
 
   &__logo {
     font-family: var(--mh-font-display);
-    font-size: 1.6rem;
+    font-size: 1.8rem;
     letter-spacing: 0.04em;
     color: var(--mh-text);
 
@@ -42,7 +42,7 @@
 
   &__links {
     display: flex;
-    gap: 1.5rem;
+    gap: 0.25rem;
 
     @media (max-width: 720px) {
       display: none;
@@ -50,17 +50,18 @@
   }
 
   &__link {
-    font-size: 0.92rem;
+    color: var(--mh-text-muted) !important;
+    font-size: 0.85rem;
     font-weight: 500;
-    color: var(--mh-text-muted);
+    letter-spacing: 0.01em;
     transition: color var(--mh-transition);
 
     &:hover {
-      color: var(--mh-text);
+      color: var(--mh-text) !important;
     }
 
     &--active {
-      color: var(--mh-text);
+      color: var(--mh-text) !important;
       font-weight: 700;
     }
   }
@@ -68,38 +69,20 @@
   &__right {
     display: flex;
     align-items: center;
-    gap: 1.25rem;
-  }
-
-  &__icon-btn {
-    background: transparent;
-    color: var(--mh-text);
-    display: flex;
-    padding: 0.4rem;
-    border-radius: var(--mh-radius);
-    opacity: 0.9;
-    transition: opacity var(--mh-transition);
-
-    &:hover {
-      opacity: 1;
-    }
+    gap: 0.5rem;
+    margin-left: auto;
   }
 
   &__avatar {
-    width: 32px;
-    height: 32px;
-    border-radius: 6px;
-    background: var(--mh-red);
-    color: var(--mh-text);
-    font-size: 0.75rem;
-    font-weight: 700;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    ::ng-deep .mat-icon {
+      font-size: 28px;
+      width: 28px;
+      height: 28px;
+    }
   }
 }
 
-// ---------- ESTADOS DE CARGA / ERROR ----------
+// ========== ESTADOS DE CARGA / ERROR ==========
 .state-screen {
   min-height: 70vh;
   display: flex;
@@ -111,28 +94,22 @@
   color: var(--mh-text-muted);
   text-align: center;
 
+  &__icon {
+    font-size: 2.5rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    color: var(--mh-red);
+  }
+
   &__error {
     max-width: 420px;
     color: var(--mh-text);
+    font-size: 1.05rem;
+    line-height: 1.5;
   }
 }
 
-.spinner {
-  width: 42px;
-  height: 42px;
-  border-radius: 50%;
-  border: 3px solid var(--mh-border);
-  border-top-color: var(--mh-red);
-  animation: mh-spin 800ms linear infinite;
-}
-
-@keyframes mh-spin {
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-// ---------- HERO ----------
+// ========== HERO ==========
 .hero {
   position: relative;
   height: 88vh;
@@ -140,151 +117,150 @@
   display: flex;
   align-items: flex-end;
   background-image:
-    linear-gradient(to right, rgba(11, 11, 13, 0.75) 0%, rgba(11, 11, 13, 0.15) 60%),
+    linear-gradient(to right, rgba(20, 20, 20, 0.85) 0%, rgba(20, 20, 20, 0.3) 50%, transparent 75%),
+    linear-gradient(to top, rgba(20, 20, 20, 1) 0%, transparent 40%),
     var(--hero-image);
   background-size: cover;
-  background-position: center 25%;
+  background-position: center 20%;
+  animation: hero-zoom 8s ease-out forwards;
 
   &__scrim {
     position: absolute;
     inset: 0;
-    background: linear-gradient(to top, var(--mh-bg) 2%, transparent 40%);
+    background: linear-gradient(to top, var(--mh-bg) 3%, transparent 35%);
   }
 
   &__content {
     position: relative;
     z-index: 1;
-    max-width: 640px;
-    padding: 0 3rem 4.5rem;
+    max-width: 660px;
+    padding: 0 3rem 5rem;
+    animation: hero-fade-in 1s ease-out;
   }
 
   &__eyebrow {
     color: var(--mh-red);
     font-weight: 700;
     font-size: 0.85rem;
-    letter-spacing: 0.08em;
+    letter-spacing: 0.1em;
     text-transform: uppercase;
-    margin-bottom: 0.75rem;
+    margin-bottom: 0.5rem;
   }
 
   &__title {
     font-family: var(--mh-font-display);
-    font-size: clamp(2.75rem, 6vw, 5rem);
-    line-height: 0.95;
+    font-size: clamp(3rem, 7vw, 5.5rem);
+    line-height: 0.92;
     letter-spacing: 0.01em;
-    margin-bottom: 1rem;
+    margin-bottom: 0.75rem;
+    animation: hero-slide-up 0.8s ease-out 0.2s both;
   }
 
   &__meta {
     display: flex;
     align-items: center;
-    gap: 0.9rem;
+    flex-wrap: wrap;
+    gap: 0.75rem;
     color: var(--mh-text-muted);
     font-size: 0.9rem;
     font-weight: 600;
-    margin-bottom: 1.1rem;
+    margin-bottom: 1rem;
+    animation: hero-slide-up 0.8s ease-out 0.3s both;
   }
 
   &__match {
     color: #46d369;
   }
 
-  &__age {
-    border: 1px solid var(--mh-text-dim);
-    padding: 0.05rem 0.4rem;
-    border-radius: 3px;
-    font-size: 0.78rem;
-    color: var(--mh-text-muted);
-  }
-
   &__description {
     color: var(--mh-text);
-    font-size: 1.02rem;
-    line-height: 1.5;
-    margin-bottom: 1.75rem;
-    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+    animation: hero-slide-up 0.8s ease-out 0.4s both;
   }
 
   &__actions {
     display: flex;
-    gap: 0.9rem;
+    gap: 0.75rem;
+    animation: hero-slide-up 0.8s ease-out 0.5s both;
+  }
+
+  &__btn-play {
+    font-weight: 700 !important;
+    padding: 0.5rem 1.75rem !important;
+  }
+
+  &__btn-info {
+    color: var(--mh-text) !important;
+    border-color: rgba(255, 255, 255, 0.4) !important;
+    padding: 0.5rem 1.5rem !important;
   }
 }
 
-// ---------- BOTONES ----------
-.btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.55rem;
-  padding: 0.7rem 1.5rem;
-  border-radius: var(--mh-radius);
-  font-size: 1rem;
-  font-weight: 700;
-  transition: background var(--mh-transition), opacity var(--mh-transition);
-
-  &--primary {
-    background: var(--mh-text);
-    color: #0b0b0d;
-
-    &:hover {
-      background: rgba(255, 255, 255, 0.8);
-    }
-  }
-
-  &--secondary {
-    background: rgba(109, 109, 110, 0.55);
-    color: var(--mh-text);
-
-    &:hover {
-      background: rgba(109, 109, 110, 0.35);
-    }
-  }
+@keyframes hero-zoom {
+  0% { background-size: 100%; }
+  100% { background-size: 110%; }
 }
 
-// ---------- FILAS DE CONTENIDO ----------
+@keyframes hero-fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes hero-slide-up {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+// ========== FILAS DE CONTENIDO ==========
 .rows {
-  padding: 2.5rem 0 0;
+  padding: 1.5rem 0 0;
   display: flex;
   flex-direction: column;
-  gap: 2.75rem;
+  gap: 2.5rem;
 }
 
 .row {
   &__title {
-    font-size: 1.3rem;
-    font-weight: 700;
+    font-family: var(--mh-font-display);
+    font-size: 1.5rem;
+    letter-spacing: 0.02em;
     padding: 0 3rem;
-    margin-bottom: 0.9rem;
+    margin-bottom: 0.5rem;
   }
 
   &__track {
     display: flex;
-    gap: 0.6rem;
+    gap: 0.5rem;
     padding: 0.5rem 3rem 1.5rem;
     overflow-x: auto;
     scroll-behavior: smooth;
-    scrollbar-width: thin;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
   }
 }
 
-// ---------- TARJETA DE PELÍCULA ----------
-// Elemento "firma": al pasar el ratón la tarjeta crece por encima de sus
-// vecinas y revela una capa con nota, género y año — el gesto que hace
-// reconocible a este tipo de catálogo.
+// ========== TARJETA (MAT-CARD) ==========
 .card {
-  position: relative;
   flex: 0 0 auto;
-  width: 190px;
-  border-radius: var(--mh-radius);
-  overflow: hidden;
-  background: var(--mh-surface);
+  width: 200px;
+  border-radius: var(--mh-radius) !important;
+  background: var(--mh-surface) !important;
   cursor: pointer;
-  transition: transform var(--mh-transition), box-shadow var(--mh-transition), z-index 0s;
+  transition: transform 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+              box-shadow 0.35s ease;
+  overflow: hidden;
+  border: none !important;
 
   &:hover {
-    transform: scale(1.12);
+    transform: scale(1.15);
     z-index: 5;
-    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.55);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
 
     .card__overlay {
       opacity: 1;
@@ -296,31 +272,37 @@
     width: 100%;
     aspect-ratio: 2 / 3;
     object-fit: cover;
+    display: block;
   }
 
   &__overlay {
-    position: absolute;
+    position: absolute !important;
     left: 0;
     right: 0;
     bottom: 0;
-    padding: 0.75rem;
+    padding: 0.75rem 0.75rem 0.6rem !important;
     background: linear-gradient(to top, rgba(0, 0, 0, 0.95) 30%, transparent 100%);
     opacity: 0;
     transform: translateY(8px);
     transition: opacity var(--mh-transition), transform var(--mh-transition);
+    border: none !important;
   }
 
   &__title {
     font-size: 0.85rem;
     font-weight: 700;
-    margin-bottom: 0.35rem;
+    margin: 0 0 0.3rem;
+    color: var(--mh-text);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
   &__tags {
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    font-size: 0.7rem;
+    font-size: 0.68rem;
     color: var(--mh-text-muted);
   }
 
@@ -328,45 +310,17 @@
     color: #46d369;
     font-weight: 700;
   }
-
-  &--empty {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 0.4rem;
-    aspect-ratio: 2 / 3;
-    border: 1.5px dashed var(--mh-border);
-    color: var(--mh-text-dim);
-
-    &:hover {
-      transform: none;
-      box-shadow: none;
-      border-color: var(--mh-text-muted);
-    }
-  }
-
-  &__empty-icon {
-    font-size: 1.8rem;
-    line-height: 1;
-  }
-
-  &__empty-text {
-    font-size: 0.75rem;
-    text-align: center;
-    padding: 0 0.5rem;
-  }
 }
 
-// ---------- FOOTER ----------
+// ========== FOOTER ==========
 .footer {
-  padding: 2rem 3rem 0;
+  padding: 3rem 3rem 0;
   color: var(--mh-text-dim);
   font-size: 0.8rem;
   text-align: center;
 }
 
-// ---------- RESPONSIVE ----------
+// ========== RESPONSIVE ==========
 @media (max-width: 720px) {
   .navbar,
   .hero__content,
@@ -378,10 +332,11 @@
   }
 
   .card {
-    width: 130px;
+    width: 140px;
   }
 
   .hero {
     height: 70vh;
+    min-height: 420px;
   }
 }
