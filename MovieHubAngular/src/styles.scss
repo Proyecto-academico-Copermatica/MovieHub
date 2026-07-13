@@ -103,6 +103,39 @@ body {
   .mat-icon {
     margin-right: 0;
   }
+
+  // Cabecera "Películas" (no clickeable)
+  .hamburger__header {
+    opacity: 1 !important;
+    font-size: 0.75rem !important;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    min-height: 36px !important;
+    padding-top: 0.25rem;
+    color: var(--mh-text-muted) !important;
+    cursor: default;
+
+    .mat-icon {
+      font-size: 1.1rem;
+      width: 1.1rem;
+      height: 1.1rem;
+      color: var(--mh-text-dim);
+    }
+  }
+
+  // Items de género (ligeramente indentados)
+  .hamburger__genre {
+    padding-left: 1rem !important;
+    font-size: 0.85rem !important;
+    min-height: 38px !important;
+  }
+
+  // Divisores entre secciones
+  .hamburger__divider {
+    --mat-menu-divider-color: var(--mh-border);
+    margin: 0.25rem 0.75rem;
+  }
 }
 
 // Menú de géneros en navbar y submenú del hamburguesa (panel global)

@@ -48,16 +48,21 @@
       <mat-icon>home</mat-icon>
       <span>Inicio</span>
     </button>
-    <button mat-menu-item [matMenuTriggerFor]="menuGenerosMovil">
+
+    <mat-divider class="hamburger__divider" />
+
+    <span mat-menu-item disabled class="hamburger__header">
+      <mat-icon>movie</mat-icon>
       <span>Películas</span>
-    </button>
-    <mat-menu #menuGenerosMovil="matMenu" class="genre-menu">
-      @for (genero of generos(); track trackByGeneroId($index, genero)) {
-        <button mat-menu-item (click)="selectGenero(genero)">
-          <span>{{ genero.nombre }}</span>
-        </button>
-      }
-    </mat-menu>
+    </span>
+    @for (genero of generos(); track trackByGeneroId($index, genero)) {
+      <button mat-menu-item class="hamburger__genre" (click)="selectGenero(genero)">
+        <span>{{ genero.nombre }}</span>
+      </button>
+    }
+
+    <mat-divider class="hamburger__divider" />
+
     <button mat-menu-item>
       <mat-icon>favorite_border</mat-icon>
       <span>Mi lista</span>
