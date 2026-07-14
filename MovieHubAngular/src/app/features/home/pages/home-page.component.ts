@@ -12,7 +12,7 @@ import { trackByRowTitle } from '../../../shared/utils/track-by';
 import { HeroSectionComponent } from '../components/hero-section.component';
 import { MovieRowComponent } from '../components/movie-row.component';
 import { TrailerDialogComponent } from '../../peliculas/components/trailer-dialog.component';
-import { SkeletonComponent } from '../../loading/skeleton.component';
+import { SkeletonComponent } from '../../ui/skeleton.component';
 
 @Component({
   selector: 'app-home-page',
