@@ -228,6 +228,39 @@ public class PeliculaServiceTests
     }
 
     [Fact]
+    public async Task DeleteAsync_CuandoExiste_RetornaTrue()
+    {
+        _context.Peliculas.Add(new PeliculaModel { Titulo = "Test", Anio = 2020 });
+        await _context.SaveChangesAsync();
+
+        var result = await _service.DeleteAsync(1);
+
+        Assert.True(result);
+        Assert.Equal(0, await _context.Peliculas.CountAsync());
+    }
+
+    [Fact]
+    public async Task DeleteAsync_CuandoNoExiste_RetornaFalse()
+    {
+        var result = await _service.DeleteAsync(999);
+
+        Assert.False(result);
+    }
+
+    [Fact]
+    public async Task DeleteAsync_EliminaPeliculaCorrectamente()
+    {
+        _context.Peliculas.Add(new PeliculaModel { Titulo = "Test", Anio = 2020 });
+        _context.Peliculas.Add(new PeliculaModel { Titulo = "Otra", Anio = 2021 });
+        await _context.SaveChangesAsync();
+
+        await _service.DeleteAsync(1);
+
+        Assert.Single(await _context.Peliculas.ToListAsync());
+        Assert.Equal("Otra", (await _context.Peliculas.FirstAsync()).Titulo);
+    }
+
+    [Fact]
     public async Task GetAllPaginadoAsync_PaginaDos_RetornaSegundoLote()
     {
         for (int i = 0; i < 25; i++)
