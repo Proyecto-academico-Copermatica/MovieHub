@@ -1,5 +1,6 @@
 import { Component, inject, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { Router } from '@angular/router';
 import { MatIconModule } from '@angular/material/icon';
 import { MatCardModule } from '@angular/material/card';
 
@@ -11,19 +12,28 @@ import { FavoritoButtonComponent } from '../../shared/components/favorito-button
   selector: 'app-favoritos-page',
   standalone: true,
   imports: [
-    CommonModule, MatIconModule, MatCardModule,
-    StarRatingComponent, FavoritoButtonComponent
+    CommonModule,
+    MatIconModule,
+    MatCardModule,
+    StarRatingComponent,
+    FavoritoButtonComponent,
   ],
   templateUrl: './favoritos-page.component.html',
-  styleUrl: './favoritos-page.component.scss'
+  styleUrl: './favoritos-page.component.scss',
 })
 export class FavoritosPageComponent {
   private readonly favoritoService = inject(FavoritoService);
+  private readonly router = inject(Router);
+
   readonly favoritos = signal<Favorito[]>([]);
 
   constructor() {
     this.favoritoService.getAll().subscribe({
-      next: (favs) => this.favoritos.set(favs ?? [])
+      next: (favs) => this.favoritos.set(favs ?? []),
     });
+  }
+
+  goToPelicula(peliculaId: number): void {
+    this.router.navigate(['/pelicula', peliculaId]);
   }
 }
