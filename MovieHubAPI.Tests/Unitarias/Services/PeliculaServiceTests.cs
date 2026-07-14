@@ -178,6 +178,56 @@ public class PeliculaServiceTests
     }
 
     [Fact]
+    public async Task UpdateAsync_CuandoExiste_ActualizaCampos()
+    {
+        var pelicula = new PeliculaModel { Titulo = "Original", Anio = 2020, Duracion = 90, Director = "Dir" };
+        _context.Peliculas.Add(pelicula);
+        await _context.SaveChangesAsync();
+
+        var dto = new UpdatePeliculaDto("Modificada", "Nueva desc", 120, 2024, "Nuevo Dir", null, new List<int>());
+
+        var result = await _service.UpdateAsync(pelicula.Id, dto);
+
+        Assert.NotNull(result);
+        Assert.Equal("Modificada", result.Titulo);
+        Assert.Equal(2024, result.AnioEstreno);
+        Assert.Equal(120, result.Duracion);
+        Assert.Equal("Nuevo Dir", result.Director);
+    }
+
+    [Fact]
+    public async Task UpdateAsync_CuandoNoExiste_RetornaNull()
+    {
+        var dto = new UpdatePeliculaDto("Test", "", 90, 2020, "Dir", null, new List<int>());
+
+        var result = await _service.UpdateAsync(999, dto);
+
+        Assert.Null(result);
+    }
+
+    [Fact]
+    public async Task UpdateAsync_ActualizaGeneros()
+    {
+        var generoViejo = new GeneroModel { Nombre = "Viejo" };
+        var generoNuevo = new GeneroModel { Nombre = "Nuevo" };
+        _context.Generos.AddRange(generoViejo, generoNuevo);
+        await _context.SaveChangesAsync();
+
+        var pelicula = new PeliculaModel { Titulo = "Test", Anio = 2020 };
+        pelicula.PeliculaGeneros.Add(new PeliculaGeneroModel { GeneroId = generoViejo.Id });
+        _context.Peliculas.Add(pelicula);
+        await _context.SaveChangesAsync();
+
+        var dto = new UpdatePeliculaDto("Test", "", 90, 2020, "Dir", null, new List<int> { generoNuevo.Id });
+
+        var result = await _service.UpdateAsync(pelicula.Id, dto);
+
+        Assert.Single(result.Generos);
+        Assert.Contains("Nuevo", result.Generos);
+        Assert.DoesNotContain("Viejo", result.Generos);
+    }
+
+    [Fact]
     public async Task GetAllPaginadoAsync_PaginaDos_RetornaSegundoLote()
     {
         for (int i = 0; i < 25; i++)
