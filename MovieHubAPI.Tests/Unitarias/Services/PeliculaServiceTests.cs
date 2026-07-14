@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using MovieHubAPI.Configurations;
 using MovieHubAPI.DTOs.Pelicula;
 using MovieHubAPI.Services;
+using MovieHubAPI.DTOs;
 
 namespace MovieHubAPI.Tests.Unitarias.Services;
 
@@ -93,6 +94,45 @@ public class PeliculaServiceTests
         Assert.Equal("Alta", result.Items[0].Titulo);
         Assert.Equal("Media", result.Items[1].Titulo);
         Assert.Equal("Baja", result.Items[2].Titulo);
+    }
+
+    [Fact]
+    public async Task GetByIdAsync_CuandoExiste_RetornaPelicula()
+    {
+        var pelicula = new PeliculaModel { Titulo = "Test", Anio = 2020 };
+        _context.Peliculas.Add(pelicula);
+        await _context.SaveChangesAsync();
+
+        var result = await _service.GetByIdAsync(pelicula.Id);
+
+        Assert.NotNull(result);
+        Assert.Equal("Test", result.Titulo);
+    }
+
+    [Fact]
+    public async Task GetByIdAsync_CuandoNoExiste_RetornaNull()
+    {
+        var result = await _service.GetByIdAsync(999);
+
+        Assert.Null(result);
+    }
+
+    [Fact]
+    public async Task GetByIdAsync_CuandoExiste_IncluyeGeneros()
+    {
+        var genero = new GeneroModel { Nombre = "Acción" };
+        _context.Generos.Add(genero);
+        await _context.SaveChangesAsync();
+
+        var pelicula = new PeliculaModel { Titulo = "Test", Anio = 2020 };
+        pelicula.PeliculaGeneros.Add(new PeliculaGeneroModel { GeneroId = genero.Id });
+        _context.Peliculas.Add(pelicula);
+        await _context.SaveChangesAsync();
+
+        var result = await _service.GetByIdAsync(pelicula.Id);
+
+        Assert.NotNull(result);
+        Assert.Contains("Acción", result.Generos);
     }
 
     [Fact]
