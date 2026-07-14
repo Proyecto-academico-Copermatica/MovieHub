@@ -10,8 +10,8 @@ import { MatDialog } from '@angular/material/dialog';
 import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
 import { HttpErrorResponse } from '@angular/common/http';
 
-import { AuthService } from '../../core/services/auth.service';
-import { RegisterDialogComponent } from './register-dialog.component';
+import { AuthService } from '../../../core/services/auth.service';
+import { RegisterDialogComponent } from '../components/register-dialog.component';
 
 @Component({
   selector: 'app-login-page',

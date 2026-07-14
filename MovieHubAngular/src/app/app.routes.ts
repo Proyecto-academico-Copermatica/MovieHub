@@ -8,7 +8,7 @@ export const routes: Routes = [
     path: 'login',
     canActivate: [guestGuard],
     loadComponent: () =>
-      import('./features/auth/login-page.component').then((c) => c.LoginPageComponent),
+      import('./features/auth/pages/login-page.component').then((c) => c.LoginPageComponent),
   },
   {
     path: '',
@@ -19,24 +19,24 @@ export const routes: Routes = [
       {
         path: 'inicio',
         loadComponent: () =>
-          import('./features/home/home-page.component').then((c) => c.HomePageComponent),
+          import('./features/home/pages/home-page.component').then((c) => c.HomePageComponent),
       },
       {
         path: 'genero/:nombre',
         loadComponent: () =>
-          import('./features/genero/genero-page.component').then((c) => c.GeneroPageComponent),
+          import('./features/genero/pages/genero-page.component').then((c) => c.GeneroPageComponent),
       },
       {
         path: 'pelicula/:id',
         loadComponent: () =>
-          import('./features/peliculas/movie-detail-page.component').then(
+          import('./features/peliculas/pages/movie-detail-page.component').then(
             (c) => c.MovieDetailPageComponent,
           ),
       },
       {
         path: 'favoritos',
         loadComponent: () =>
-          import('./features/peliculas/favoritos-page.component').then(
+          import('./features/peliculas/pages/favoritos-page.component').then(
             (c) => c.FavoritosPageComponent,
           ),
       },

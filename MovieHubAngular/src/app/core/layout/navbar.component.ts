@@ -14,7 +14,7 @@ import { Genero } from '../../models/genero.model';
 import { trackByGeneroId } from '../../shared/utils/track-by';
 import { AuthService } from '../services/auth.service';
 import { GeneroService } from '../services/genero.service';
-import { RegisterDialogComponent } from '../../features/auth/register-dialog.component';
+import { RegisterDialogComponent } from '../../features/auth/components/register-dialog.component';
 
 @Component({
   selector: 'app-navbar',

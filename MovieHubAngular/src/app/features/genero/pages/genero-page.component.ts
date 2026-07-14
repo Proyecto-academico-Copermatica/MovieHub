@@ -1,10 +1,10 @@
 import { Component, inject, input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { MovieStateService } from '../../core/services/movie-state.service';
-import { trackByRowTitle } from '../../shared/utils/track-by';
-import { GenreBannerComponent } from './genre-banner.component';
-import { MovieRowComponent } from '../home/movie-row.component';
+import { MovieStateService } from '../../../core/services/movie-state.service';
+import { trackByRowTitle } from '../../../shared/utils/track-by';
+import { GenreBannerComponent } from '../components/genre-banner.component';
+import { MovieRowComponent } from '../../home/components/movie-row.component';
 
 @Component({
   selector: 'app-genero-page',

@@ -9,13 +9,13 @@ import { MatDialog } from '@angular/material/dialog';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { HttpErrorResponse } from '@angular/common/http';
 
-import { Movie } from '../../models/movie.model';
-import { StarRatingComponent } from '../../shared/components/star-rating.component';
-import { FavoritoButtonComponent } from '../../shared/components/favorito-button.component';
-import { MovieService } from '../../core/services/movie.service';
-import { ValoracionService } from '../../core/services/valoracion.service';
-import { AuthService } from '../../core/services/auth.service';
-import { TrailerDialogComponent } from './trailer-dialog.component';
+import { Movie } from '../../../models/movie.model';
+import { StarRatingComponent } from '../../../shared/components/star-rating.component';
+import { FavoritoButtonComponent } from '../../../shared/components/favorito-button.component';
+import { MovieService } from '../../../core/services/movie.service';
+import { ValoracionService } from '../../../core/services/valoracion.service';
+import { AuthService } from '../../../core/services/auth.service';
+import { TrailerDialogComponent } from '../components/trailer-dialog.component';
 
 @Component({
   selector: 'app-movie-detail-page',

@@ -4,9 +4,9 @@ import { Router } from '@angular/router';
 import { MatIconModule } from '@angular/material/icon';
 import { MatCardModule } from '@angular/material/card';
 
-import { FavoritoService, Favorito } from '../../core/services/favorito.service';
-import { StarRatingComponent } from '../../shared/components/star-rating.component';
-import { FavoritoButtonComponent } from '../../shared/components/favorito-button.component';
+import { FavoritoService, Favorito } from '../../../core/services/favorito.service';
+import { StarRatingComponent } from '../../../shared/components/star-rating.component';
+import { FavoritoButtonComponent } from '../../../shared/components/favorito-button.component';
 
 @Component({
   selector: 'app-favoritos-page',

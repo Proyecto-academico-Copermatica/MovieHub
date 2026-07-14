@@ -4,15 +4,15 @@ import { Router } from '@angular/router';
 import { MatDialog } from '@angular/material/dialog';
 import { MatIconModule } from '@angular/material/icon';
 
-import { Movie, MovieRow } from '../../models/movie.model';
-import { MovieStateService } from '../../core/services/movie-state.service';
-import { MovieService } from '../../core/services/movie.service';
-import { FavoritoStateService } from '../../core/services/favorito-state.service';
-import { trackByRowTitle } from '../../shared/utils/track-by';
-import { HeroSectionComponent } from './hero-section.component';
-import { MovieRowComponent } from './movie-row.component';
-import { TrailerDialogComponent } from '../peliculas/trailer-dialog.component';
-import { SkeletonComponent } from '../loading/skeleton.component';
+import { Movie, MovieRow } from '../../../models/movie.model';
+import { MovieStateService } from '../../../core/services/movie-state.service';
+import { MovieService } from '../../../core/services/movie.service';
+import { FavoritoStateService } from '../../../core/services/favorito-state.service';
+import { trackByRowTitle } from '../../../shared/utils/track-by';
+import { HeroSectionComponent } from '../components/hero-section.component';
+import { MovieRowComponent } from '../components/movie-row.component';
+import { TrailerDialogComponent } from '../../peliculas/components/trailer-dialog.component';
+import { SkeletonComponent } from '../../loading/skeleton.component';
 
 @Component({
   selector: 'app-home-page',
