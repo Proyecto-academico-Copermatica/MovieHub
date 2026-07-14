@@ -261,6 +261,65 @@ public class PeliculaServiceTests
     }
 
     [Fact]
+    public async Task GetMejorValoradasAsync_RetornaTop10PorPuntuacion()
+    {
+        for (int i = 0; i < 15; i++)
+            _context.Peliculas.Add(new PeliculaModel { Titulo = $"Peli {i}", PuntuacionMedia = i, Anio = 2020 });
+
+        await _context.SaveChangesAsync();
+
+        var result = await _service.GetMejorValoradasAsync();
+
+        Assert.Equal(10, result.Count);
+        Assert.All(result, p => Assert.True(p.PuntuacionMedia > 0));
+    }
+
+    [Fact]
+    public async Task GetMejorValoradasAsync_SinPeliculasValoradas_RetornaListaVacia()
+    {
+        for (int i = 0; i < 5; i++)
+            _context.Peliculas.Add(new PeliculaModel { Titulo = $"Peli {i}", PuntuacionMedia = 0, Anio = 2020 });
+
+        await _context.SaveChangesAsync();
+
+        var result = await _service.GetMejorValoradasAsync();
+
+        Assert.Empty(result);
+    }
+
+    [Fact]
+    public async Task GetMasRecientesAsync_RetornaTop10PorAnio()
+    {
+        for (int i = 0; i < 15; i++)
+            _context.Peliculas.Add(new PeliculaModel { Titulo = $"Peli {i}", Anio = 2000 + i });
+
+        await _context.SaveChangesAsync();
+
+        var result = await _service.GetMasRecientesAsync();
+
+        Assert.Equal(10, result.Count);
+        Assert.Equal(2014, result[0].AnioEstreno);
+    }
+
+    [Fact]
+    public async Task GetEstadisticasAsync_RetornaDatosCorrectos()
+    {
+        var genero = new GeneroModel { Nombre = "Test" };
+        _context.Generos.Add(genero);
+        _context.Peliculas.Add(new PeliculaModel { Titulo = "Peli 1", Anio = 2020 });
+        _context.Peliculas.Add(new PeliculaModel { Titulo = "Peli 2", Anio = 2021 });
+        _context.Valoraciones.Add(new ValoracionModel { UsuarioId = 1, PeliculaId = 1, Puntuacion = 4 });
+        await _context.SaveChangesAsync();
+
+        var result = await _service.GetEstadisticasAsync();
+
+        Assert.Equal(2, result.TotalPeliculas);
+        Assert.Equal(1, result.TotalGeneros);
+        Assert.Equal(1, result.TotalValoraciones);
+        Assert.Equal(4.0, result.PuntuacionMediaGlobal);
+    }
+
+    [Fact]
     public async Task GetAllPaginadoAsync_PaginaDos_RetornaSegundoLote()
     {
         for (int i = 0; i < 25; i++)
