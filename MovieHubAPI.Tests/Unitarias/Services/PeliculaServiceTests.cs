@@ -136,6 +136,48 @@ public class PeliculaServiceTests
     }
 
     [Fact]
+    public async Task CreateAsync_ConDatosValidos_RetornaPeliculaCreada()
+    {
+        var dto = new CreatePeliculaDto("Nueva Peli", "Descripción", 120, 2024, "Director", null, new List<int>());
+
+        var result = await _service.CreateAsync(dto);
+
+        Assert.NotNull(result);
+        Assert.Equal("Nueva Peli", result.Titulo);
+        Assert.Equal(2024, result.AnioEstreno);
+        Assert.Equal(120, result.Duracion);
+        Assert.Equal("Director", result.Director);
+        Assert.Equal(1, await _context.Peliculas.CountAsync());
+    }
+
+    [Fact]
+    public async Task CreateAsync_ConGeneros_AsociaGeneros()
+    {
+        var genero = new GeneroModel { Nombre = "Acción" };
+        _context.Generos.Add(genero);
+        await _context.SaveChangesAsync();
+
+        var dto = new CreatePeliculaDto("Test", "", 90, 2020, "Dir", null, new List<int> { genero.Id });
+
+        var result = await _service.CreateAsync(dto);
+
+        Assert.Single(result.Generos);
+        Assert.Contains("Acción", result.Generos);
+    }
+
+    [Fact]
+    public async Task CreateAsync_GuardaPeliculaEnBD()
+    {
+        var dto = new CreatePeliculaDto("Test", "", 90, 2020, "Dir", null, new List<int>());
+
+        await _service.CreateAsync(dto);
+
+        var guardada = await _context.Peliculas.FirstOrDefaultAsync(p => p.Titulo == "Test");
+        Assert.NotNull(guardada);
+        Assert.Equal(2020, guardada.Anio);
+    }
+
+    [Fact]
     public async Task GetAllPaginadoAsync_PaginaDos_RetornaSegundoLote()
     {
         for (int i = 0; i < 25; i++)
