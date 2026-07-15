@@ -26,4 +26,10 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="10.2.3" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Compile Remove="MovieHubAPI.Tests\**\*.cs" />
+    <EmbeddedResource Remove="MovieHubAPI.Tests\**\*" />
+    <None Remove="MovieHubAPI.Tests\**\*" />
+  </ItemGroup>
+
 </Project>
