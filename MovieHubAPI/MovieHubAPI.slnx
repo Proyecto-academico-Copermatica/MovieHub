@@ -1,4 +1,4 @@
 <Solution>
   <Project Path="MovieHubAPI.csproj" />
-  <Project Path="MovieHubAPI.Tests\MovieHubAPI.Tests.csproj" />
+  <Project Path="MovieHubAPI.Tests/MovieHubAPI.Tests.csproj" />
 </Solution>
