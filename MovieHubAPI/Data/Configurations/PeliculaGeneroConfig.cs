@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
+using MovieHubAPI.Models;
 
 namespace MovieHubAPI.Data.Configurations
 {

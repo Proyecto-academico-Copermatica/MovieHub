@@ -1,8 +1,11 @@
-﻿public class PeliculaGeneroModel
+﻿namespace MovieHubAPI.Models
 {
-    public int PeliculaId { get; set; }
-    public PeliculaModel Pelicula { get; set; } = null!;
+    public class PeliculaGeneroModel
+    {
+        public int PeliculaId { get; set; }
+        public PeliculaModel Pelicula { get; set; } = null!;
 
-    public int GeneroId { get; set; }
-    public GeneroModel Genero { get; set; } = null!;
+        public int GeneroId { get; set; }
+        public GeneroModel Genero { get; set; } = null!;
+    }
 }

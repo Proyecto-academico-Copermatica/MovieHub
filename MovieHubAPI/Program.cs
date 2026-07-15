@@ -2,11 +2,13 @@ using FluentValidation;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using MovieHubAPI.Configurations;
+using MovieHubAPI.Data;
 using MovieHubAPI.Filters;
 using MovieHubAPI.Interfaces;
 using MovieHubAPI.Middleware;
 using MovieHubAPI.Services;
 using Swashbuckle.AspNetCore.SwaggerGen;
+using MovieHubAPI.Models;
 // using Microsoft.AspNetCore.Authentication.JwtBearer;
 // using Microsoft.IdentityModel.Tokens;
 // using System.Text;
@@ -107,7 +109,7 @@ builder.Services.AddIdentityCore<UsuarioModel>(options =>
 
 
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
-builder.Services.AddOpenApi();
+
 MappingConfig.Configure();
 
 var app = builder.Build();

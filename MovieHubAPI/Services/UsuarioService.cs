@@ -6,7 +6,8 @@ using Microsoft.IdentityModel.JsonWebTokens;
 using Microsoft.IdentityModel.Tokens;
 using MovieHubAPI.DTOs.Usuario;
 using MovieHubAPI.Interfaces;
-
+using MovieHubAPI.Models;
+using MovieHubAPI.Data;
 namespace MovieHubAPI.Services
 {
     public class UsuarioService : IUsuarioService

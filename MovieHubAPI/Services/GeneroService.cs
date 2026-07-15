@@ -1,7 +1,14 @@
 ﻿using Mapster;
+using Microsoft.EntityFrameworkCore;
+using MovieHubAPI.Data;
 using MovieHubAPI.DTOs.Genero;
 using MovieHubAPI.Interfaces;
-using Microsoft.EntityFrameworkCore;
+using MovieHubAPI.Models;
+
+
+
+
+
 namespace MovieHubAPI.Services
 {
     public class GeneroService : IGeneroService

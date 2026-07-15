@@ -1,18 +1,20 @@
 ﻿using System.ComponentModel.DataAnnotations;
-
-public class ValoracionModel
+namespace MovieHubAPI.Models
 {
-    [Key]
-    public int Id { get; set; }
+public class ValoracionModel
+    {
+        [Key]
+        public int Id { get; set; }
 
-    public long UsuarioId { get; set; }
-    public UsuarioModel Usuario { get; set; } = null!;
+        public long UsuarioId { get; set; }
+        public UsuarioModel Usuario { get; set; } = null!;
 
-    public int PeliculaId { get; set; }
-    public PeliculaModel Pelicula { get; set; } = null!;
+        public int PeliculaId { get; set; }
+        public PeliculaModel Pelicula { get; set; } = null!;
 
-    [Range(1, 5)]
-    public int Puntuacion { get; set; }
+        [Range(1, 5)]
+        public double Puntuacion { get; set;  }
 
-    public DateTime Fecha { get; set; } = DateTime.UtcNow;
+        public DateTime Fecha { get; set; } = DateTime.UtcNow;
+    }
 }

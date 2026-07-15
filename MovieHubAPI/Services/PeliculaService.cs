@@ -1,8 +1,12 @@
 ﻿using Mapster;
 using Microsoft.EntityFrameworkCore;
+using MovieHubAPI.Data;
 using MovieHubAPI.DTOs;
 using MovieHubAPI.DTOs.Pelicula;
+using MovieHubAPI.DTOs.Valoraciones;
 using MovieHubAPI.Interfaces;
+using MovieHubAPI.Models;
+
 
 namespace MovieHubAPI.Services
 {
@@ -103,6 +107,67 @@ namespace MovieHubAPI.Services
             _context.Peliculas.Remove(pelicula);
             await _context.SaveChangesAsync();
             return true;
+        }
+         public async Task RecalcularYGuardarValoracionAsync(long usuarioId, int peliculaId, double puntuacion)
+        {
+
+            // 1. Validar si la película existe
+            var pelicula = await _context.Peliculas.FindAsync(peliculaId);
+            if (pelicula == null)
+            {
+                throw new KeyNotFoundException($"La película con ID {peliculaId} no existe.");
+            }
+
+            // 2. Validar si el usuario existe (Ajusta '_context.Usuarios' al nombre real de tu tabla de usuarios)
+            // var usuarioExiste = await _context.Usuarios.AnyAsync(u => u.Id == usuarioId);
+            // if (!usuarioExiste)
+            // {
+            //     throw new KeyNotFoundException($"El usuario con ID {usuarioId} no existe.");
+            // }
+
+            // 1. Verificar si ya existe una valoración de este usuario para esta película
+            var valoracionExistente = await _context.Valoraciones
+        .FirstOrDefaultAsync(v => v.PeliculaId == peliculaId && v.UsuarioId == usuarioId);
+
+        if (valoracionExistente == null)
+        {
+            var nuevaValoracion = new ValoracionModel
+            {
+                UsuarioId = usuarioId,
+                PeliculaId = peliculaId,
+                Puntuacion = puntuacion,
+                Fecha = DateTime.UtcNow
+                // Deja que Entity Framework maneje las propiedades de navegación automáticamente por los IDs
+            };
+            _context.Valoraciones.Add(nuevaValoracion);
+        }
+        else
+        {
+            valoracionExistente.Puntuacion = puntuacion;
+            valoracionExistente.Fecha = DateTime.UtcNow;
+            _context.Valoraciones.Update(valoracionExistente);
+        }
+            // Guardar cambios iniciales para que el promedio incluya el nuevo dato
+            await _context.SaveChangesAsync();
+
+            //  Calcular el promedio actual de la película
+            var promedio = await _context.Valoraciones
+            .Where(v => v.PeliculaId == peliculaId)
+            .AverageAsync(v => (double?)v.Puntuacion) ?? 0.0;
+
+            // 5. Actualizar la película (ya la buscamos arriba, está en memoria)
+            pelicula.PuntuacionMedia = Math.Round(promedio, 2);
+            _context.Peliculas.Update(pelicula);
+            
+            await _context.SaveChangesAsync();
+        }
+         public async Task<List<GuardarValoracionDto>> ListarValoracionesPeliculaAsync(int peliculaId)
+        {
+            var valoraciones = await _context.Valoraciones
+                .Where(v => v.PeliculaId == peliculaId)
+                .ToListAsync();
+
+            return valoraciones.Adapt<List<GuardarValoracionDto>>();
         }
     }
 }

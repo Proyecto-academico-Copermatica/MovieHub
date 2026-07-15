@@ -1,6 +1,11 @@
 ﻿using Microsoft.AspNetCore.Identity;
-using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
+using MovieHubAPI.Models;
+
+
+namespace MovieHubAPI.Data;
+
 
 public class MovieHubDbContext : IdentityDbContext<UsuarioModel, IdentityRole<long>, long>
 {

@@ -1,5 +1,7 @@
 ﻿using MovieHubAPI.DTOs;
 using MovieHubAPI.DTOs.Pelicula;
+using MovieHubAPI.DTOs.Valoraciones;
+
 
 namespace MovieHubAPI.Interfaces
 {
@@ -10,5 +12,8 @@ namespace MovieHubAPI.Interfaces
         Task<PeliculaDto> CreateAsync(CreatePeliculaDto dto);
         Task<PeliculaDto?> UpdateAsync(int id, UpdatePeliculaDto dto);
         Task<bool> DeleteAsync(int id);
+        Task RecalcularYGuardarValoracionAsync(long usuarioId, int peliculaId, double puntuacion);
+        Task<List<GuardarValoracionDto>> ListarValoracionesPeliculaAsync(int peliculaId);
     }
-}
+    }
+
