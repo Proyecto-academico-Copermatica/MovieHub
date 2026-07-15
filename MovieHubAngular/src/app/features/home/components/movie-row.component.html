@@ -1,9 +1,27 @@
 @let row = this.row();
 <section class="row">
   <h2 class="row__title">{{ row.title }}</h2>
-  <div class="row__track" #track>
-    @for (movie of row.movies; track trackByMovieId($index, movie)) {
-      <app-movie-card [movie]="movie" (movieClick)="movieClick.emit($event)" />
-    }
+  <div class="row__wrapper">
+    <div class="row__track" #track>
+      @for (movie of row.movies; track trackByMovieId($index, movie)) {
+        <app-movie-card [movie]="movie" (movieClick)="movieClick.emit($event)" />
+      }
+    </div>
+    <button
+      class="row__arrow row__arrow--left"
+      [class.row__arrow--hidden]="!canScrollLeft()"
+      (click)="scrollLeft()"
+      aria-label="Anterior"
+    >
+      <mat-icon>chevron_left</mat-icon>
+    </button>
+    <button
+      class="row__arrow row__arrow--right"
+      [class.row__arrow--hidden]="!canScrollRight()"
+      (click)="scrollRight()"
+      aria-label="Siguiente"
+    >
+      <mat-icon>chevron_right</mat-icon>
+    </button>
   </div>
 </section>
