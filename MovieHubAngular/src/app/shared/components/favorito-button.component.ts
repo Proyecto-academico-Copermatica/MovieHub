@@ -19,7 +19,8 @@ export class FavoritoButtonComponent {
 
   readonly peliculaId = input.required<number>();
 
-  toggle(): void {
+  toggle(event: MouseEvent): void {
+    event.stopPropagation();
     this.favoritoState.toggle(this.peliculaId()).subscribe({
       error: () => this.snackBar.open('Error al actualizar favoritos.', 'Cerrar', { duration: 4000 })
     });
