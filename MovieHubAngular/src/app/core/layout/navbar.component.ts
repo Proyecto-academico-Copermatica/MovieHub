@@ -15,6 +15,7 @@ import { trackByGeneroId } from '../../shared/utils/track-by';
 import { AuthService } from '../services/auth.service';
 import { GeneroService } from '../services/genero.service';
 import { RegisterDialogComponent } from '../../features/auth/components/register-dialog.component';
+import { ConfirmDialogComponent } from '../../shared/components/confirm-dialog.component';
 
 @Component({
   selector: 'app-navbar',
@@ -55,6 +56,13 @@ export class NavbarComponent implements OnInit {
 
   togglePeliculas(): void {
     this.peliculasExpanded.update((v) => !v);
+  }
+
+  logout(): void {
+    const ref = this.dialog.open(ConfirmDialogComponent, { width: '380px' });
+    ref.afterClosed().subscribe((confirmed) => {
+      if (confirmed) this.auth.logout();
+    });
   }
 
   openRegister(): void {
