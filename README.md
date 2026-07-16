@@ -39,14 +39,13 @@ Plataforma web para gestionar un catálogo de películas: exploración, valoraci
 - **Favoritos:** Añadir/quitar con botón corazón en cards y detalle. Página "Mi lista" con grid de favoritas. Estado global via FavoritoStateService con update optimista
 - **Detalle de película:** MovieDetailPageComponent con hero, póster, director, descripción completa, valoración y botones de acción. Carga vía `movieService.getById()` usando el ID del route param
 - **TrailerDialog:** Modal para pegar URL de tráiler y abrir en nueva pestaña — integrado en hero y detalle
-- **Búsqueda + Filtros:** Endpoint `GET /api/peliculas` con params `?titulo=`, `?generoId=`, `?orden=` (puntuacion, anio)
+- **Búsqueda + Filtros:** Endpoint `GET /api/peliculas` con params `?titulo=`, `?generoId=`, `?orden=` (puntuacion, anio). Endpoint específico `GET /api/peliculas/buscar` con params `?q=`, `?generoId=`, `?anioMin=`, `?anioMax=`, `?orden=`. Frontend con `BuscarPageComponent` y ruta `/buscar`
 - **Rankings:** Endpoints `GET /api/peliculas/mejor-valoradas` (top 10) y `GET /api/peliculas/mas-recientes` (top 10)
 - **Estadísticas:** Endpoint `GET /api/peliculas/estadisticas` con total películas, media global, total géneros, total valoraciones
 
-### Pendiente
-- **Tests:** Proyecto de tests no creado (backend xUnit + frontend Vitest)
-
-> Hasta que la pipeline y los tests estén operativos, cada Pull Request debe probarse manualmente antes de fusionar.
+### Tests
+- **Backend (xUnit + Moq):** 61 tests (unitarios de servicios/validadores + integración de controladores)
+- **Frontend (Vitest):** Tests de `AuthService` (login, register, logout, token, persistencia)
 
 ## Descripción
 
@@ -221,11 +220,20 @@ Disponible en `http://localhost:4200`.
 
 ## Tests
 
-*(Pendiente de implementación — ver "Estado actual del proyecto".)*
+- **Backend (xUnit + Moq):** Proyecto `MovieHubAPI.Tests` con 61 tests distribuidos en:
+  - `Unitarias/Services/` — tests de servicios (Pelicula, Genero, Favorito, Valoracion)
+  - `Unitarias/Validators/` — tests de validadores (CreatePelicula, CreateGenero)
+  - `Integracion/` — tests de integración (PeliculasController)
+- **Frontend (Vitest):** Tests de `AuthService` (login, register, logout, token, persistencia)
 
-El proyecto de tests está por crear. Se usarán:
-- **Backend:** xUnit + Moq
-- **Frontend:** Vitest (integrados en Angular CLI)
+Ejecución:
+```bash
+# Backend
+dotnet test MovieHubAPI/MovieHubAPI.Tests
+
+# Frontend
+cd MovieHubAngular && npx vitest run
+```
 
 ## Flujo de trabajo con Git
 
