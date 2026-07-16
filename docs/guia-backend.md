@@ -219,6 +219,12 @@ public class PeliculasController : ControllerBase
 }
 ```
 
+> Además del CRUD básico, el `PeliculasController` real incluye endpoints adicionales:
+> - `GET /api/peliculas/buscar?q=&generoId=&anioMin=&anioMax=&orden=&page=&pageSize=` — búsqueda por texto con filtros
+> - `GET /api/peliculas/mejor-valoradas` — top 10 por puntuación media
+> - `GET /api/peliculas/mas-recientes` — top 10 por año de estreno
+> - `GET /api/peliculas/estadisticas` — total películas, media global, total géneros, total valoraciones
+
 ---
 
 ## Paso 6: Registrar en `Program.cs`
@@ -226,7 +232,7 @@ public class PeliculasController : ControllerBase
 El registro del DbContext ya está hecho:
 
 ```csharp
-builder.Services.AddDbContext<DbContext>(options =>
+builder.Services.AddDbContext<MovieHubDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("MovieHubConnection")));
 ```
 
