@@ -37,6 +37,27 @@ export class MovieService {
     return this.http.get<PaginatedResponse<Movie>>(this.baseUrl, { params: httpParams });
   }
 
+  buscar(params: {
+    q?: string;
+    generoId?: number;
+    anioMin?: number;
+    anioMax?: number;
+    orden?: string;
+    page?: number;
+    pageSize?: number;
+  } = {}): Observable<PaginatedResponse<Movie>> {
+    let httpParams = new HttpParams();
+    if (params.q) httpParams = httpParams.set('q', params.q);
+    if (params.generoId) httpParams = httpParams.set('generoId', params.generoId);
+    if (params.anioMin) httpParams = httpParams.set('anioMin', params.anioMin);
+    if (params.anioMax) httpParams = httpParams.set('anioMax', params.anioMax);
+    if (params.orden) httpParams = httpParams.set('orden', params.orden);
+    if (params.page) httpParams = httpParams.set('page', params.page);
+    if (params.pageSize) httpParams = httpParams.set('pageSize', params.pageSize);
+
+    return this.http.get<PaginatedResponse<Movie>>(`${this.baseUrl}/buscar`, { params: httpParams });
+  }
+
   getById(id: number): Observable<Movie> {
     return this.http.get<Movie>(`${this.baseUrl}/${id}`);
   }
