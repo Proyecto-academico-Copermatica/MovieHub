@@ -41,9 +41,16 @@ export class MovieRowComponent {
 
       track.addEventListener('wheel', (e: WheelEvent) => {
         if (e.deltaY === 0) return;
-        e.preventDefault();
-        track.scrollLeft += e.deltaY;
-        update();
+
+        const canScrollHorizontally = e.deltaY > 0
+          ? track.scrollLeft + track.clientWidth < track.scrollWidth - 4
+          : track.scrollLeft > 4;
+
+        if (canScrollHorizontally) {
+          e.preventDefault();
+          track.scrollLeft += e.deltaY;
+          update();
+        }
       }, { passive: false });
 
       update();
