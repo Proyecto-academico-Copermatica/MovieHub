@@ -1,5 +1,6 @@
 import { Component, inject, OnInit, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 import { Router, RouterLink, RouterLinkActive } from '@angular/router';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
@@ -15,12 +16,14 @@ import { trackByGeneroId } from '../../shared/utils/track-by';
 import { AuthService } from '../services/auth.service';
 import { GeneroService } from '../services/genero.service';
 import { RegisterDialogComponent } from '../../features/auth/components/register-dialog.component';
+import { ConfirmDialogComponent } from '../../shared/components/confirm-dialog.component';
 
 @Component({
   selector: 'app-navbar',
   standalone: true,
   imports: [
     CommonModule,
+    FormsModule,
     RouterLink,
     RouterLinkActive,
     MatToolbarModule,
@@ -42,6 +45,8 @@ export class NavbarComponent implements OnInit {
 
   readonly generos = signal<Genero[]>([]);
   readonly peliculasExpanded = signal(false);
+  readonly searchOpen = signal(false);
+  readonly searchQuery = signal('');
 
   protected readonly trackByGeneroId = trackByGeneroId;
   protected readonly authService = this.auth;
@@ -55,6 +60,28 @@ export class NavbarComponent implements OnInit {
 
   togglePeliculas(): void {
     this.peliculasExpanded.update((v) => !v);
+  }
+
+  toggleSearch(): void {
+    this.searchOpen.update((v) => !v);
+    if (!this.searchOpen()) {
+      this.searchQuery.set('');
+    }
+  }
+
+  onSearchSubmit(): void {
+    const q = this.searchQuery().trim();
+    if (!q) return;
+    this.searchOpen.set(false);
+    this.searchQuery.set('');
+    this.router.navigate(['/buscar'], { queryParams: { q } });
+  }
+
+  logout(): void {
+    const ref = this.dialog.open(ConfirmDialogComponent, { width: '380px' });
+    ref.afterClosed().subscribe((confirmed) => {
+      if (confirmed) this.auth.logout();
+    });
   }
 
   openRegister(): void {

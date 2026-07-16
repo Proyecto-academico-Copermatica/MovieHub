@@ -85,6 +85,29 @@
     display: none;
   }
 
+  &__search {
+    display: flex;
+    align-items: center;
+    gap: 0;
+
+    &-input {
+      width: 0;
+      padding: 0;
+      border: none;
+      outline: none;
+      background: transparent;
+      color: var(--mh-text);
+      font-size: 0.85rem;
+      transition: width 0.25s ease, padding 0.25s ease;
+    }
+
+    &--open &-input {
+      width: 200px;
+      padding: 0.4rem 0.75rem;
+      border-bottom: 1px solid var(--mh-text-muted);
+    }
+  }
+
   &__register-btn {
     font-weight: 700 !important;
     font-size: 0.82rem !important;

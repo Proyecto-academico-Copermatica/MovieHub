@@ -6,6 +6,7 @@ namespace MovieHubAPI.Interfaces
     public interface IPeliculaService
     {
         Task<PaginadosDto<PeliculaDto>> GetAllPaginadoAsync(int page, int pageSize, string? titulo, int? generoId, string? orden);
+        Task<PaginadosDto<PeliculaDto>> BuscarAsync(string? q, int? generoId, int? anioMin, int? anioMax, string? orden, int page, int pageSize);
         Task<PeliculaDto?> GetByIdAsync(int id);
         Task<PeliculaDto> CreateAsync(CreatePeliculaDto dto);
         Task<PeliculaDto?> UpdateAsync(int id, UpdatePeliculaDto dto);
