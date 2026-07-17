@@ -133,7 +133,7 @@ Generan la mayoría de los conflictos si no se coordina. Avisa en el grupo antes
 - `*.csproj` (paquetes NuGet)
 
 **Frontend**
-- `app-routing.module.ts` (rutas)
+- `app.routes.ts` (rutas)
 - `environment.ts`
 - `angular.json` / `package.json`
 - Estilos globales
